@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI_BluePrints
+  m_EditorClassIdentifier: 
+  m_GroupName: UI_BluePrints
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a93bd68619d47954db79fe990241c814
+  m_SerializeEntries:
+  - m_GUID: 31e50e6b4f1bf844bb8d4ee1fe596f63
+    m_Address: Assets/BluePrints/UIBluePrints/HPBar_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 330973ac66de5804d9274670e4d7918c
+    m_Address: Assets/BluePrints/UIBluePrints/BattleWindow_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae070fd20ec1c4944b43bf8adc861f9a
+    m_Address: Assets/BluePrints/UIBluePrints/BlockUIOneClickWindow_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 044001d854152f04d9eb45cccdc44054
+    m_Address: Assets/BluePrints/UIBluePrints/StartScreen_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0a527f6a84fc8a4a8c072e2bd3a2a93
+    m_Address: Assets/BluePrints/UIBluePrints/FinalScreen_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3637871b1289a394eb11b57f9196023c
+    m_Address: Assets/BluePrints/UIBluePrints/Upgrade_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a639ef309183cca46bbca533a1c19aa3
+    m_Address: Assets/BluePrints/UIBluePrints/LoseScreen_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8afe70f694b778a47a5c471e11cc79a8
+    m_Address: Assets/BluePrints/UIBluePrints/SplashScreen_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29b4f27fe4b469c4fbeaf56506724fb5
+    m_Address: Assets/BluePrints/UIBluePrints/ArenaBattleWindow_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41c62499a5ac38d44adc54c870fac473
+    m_Address: Assets/BluePrints/UIBluePrints/Joystick_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07b55b30764cd6344a0731669d95538c
+    m_Address: Assets/BluePrints/UIBluePrints/Comics_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 752d29ca1c087364ba35c5d949cd8478, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5e4b71bbc68445a4595a3349c2757c63, type: 2}
+    - {fileID: 11400000, guid: bdfb5d1c5287ea746805e4bf74e066e0, type: 2}

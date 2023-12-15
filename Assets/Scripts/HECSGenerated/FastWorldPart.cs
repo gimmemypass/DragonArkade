@@ -1,0 +1,1 @@
+using Components;namespace HECSFramework.Core{	public partial class World	{		partial void FillTypeRegistrators()		{			typeRegistrators = new TypeRegistrator[]			{				new TypeRegistrator<FastActorProvider>(),			};		}	}}

@@ -1,0 +1,26 @@
+﻿using HECSFramework.Core;
+using Strategies;
+
+
+namespace Strategies
+{
+    [Documentation(Doc.NONE, "")]
+    public class #SCRIPTNAME# : DilemmaDecision
+    {
+        public override string TitleOfNode { get; } = "#SCRIPTNAME#";
+
+        protected override void Run(Entity entity)
+        {
+            if (true)
+            {
+                Positive.Execute(entity);
+                return;
+            }
+            else
+            {
+                Negative.Execute(entity);
+                return;
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+using HECSFramework.Core;using HECSFramework.Unity;namespace Components{	public class FastActorProviderFastProvider : FastComponentMonoProvider<FastActorProvider>		{		}}

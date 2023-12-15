@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8170425792649747846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423358a0736f32c4c93ca20615a6690a, type: 3}
+  m_Name: UnityTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-5750409968025632764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f8df6792c13c54786b07e5ccc1a810, type: 3}
+  m_Name: UnityRectTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-5228326259617204926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8569fd1717bf94185ca0c4e97a7c94, type: 3}
+  m_Name: UITagComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewType: {fileID: 11400000, guid: e9cb24ccc0cdcc849a87f460da2a3115, type: 2}
+--- !u!114 &-2422838829833131874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab3ebf4ff1347f4887c18941ea34e13, type: 3}
+  m_Name: HideUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: BlockUIOneClickWindowContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -5750409968025632764}
+    - {fileID: -8170425792649747846}
+    - {fileID: -5228326259617204926}
+    - {fileID: 4504991051629933067}
+    systems:
+    - {fileID: -2422838829833131874}
+    Parent: {fileID: 11400000}
+  containerIndex: 0
+--- !u!114 &4504991051629933067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dac362997677f24f97e6946b8d4de18, type: 3}
+  m_Name: UIGroupTagComponent
+  m_EditorClassIdentifier: 
+  component:
+    Groups: []

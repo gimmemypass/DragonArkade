@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9058634919918516161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4079b4cc06405443bfa80c56a4aa2c0, type: 3}
+  m_Name: SphereLevelingSystem
+  m_EditorClassIdentifier: 
+  system:
+    DamageComponent:
+      baseValue: 0
+--- !u!114 &-8821470645623752678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc719e83bb8e254fb55e4f679c5436f, type: 3}
+  m_Name: RigidbodyProviderComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-8772162827631284647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0fade3d938f564f9ec1e2c0c37654b, type: 3}
+  m_Name: SphereDamageSystem
+  m_EditorClassIdentifier: 
+  system:
+    DamageComponent:
+      baseValue: 0
+--- !u!114 &-7797400900516418882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf067d3917c46341a93dbba787de818, type: 3}
+  m_Name: SpeedUpSphereComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    ModifierBP: {fileID: 11400000, guid: 585e46429660bd841995b9538ab9fcb3, type: 2}
+    SpeedUpTime: 0.75
+--- !u!114 &-6140068009182542018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d22f132df39094ba4dcbd2e7f2fbbc, type: 3}
+  m_Name: CollisionsComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    CollisionMask:
+      serializedVersion: 2
+      m_Bits: 2935
+--- !u!114 &-5969355295587242975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514a462b7b083fd4ba0d1dd393f99947, type: 3}
+  m_Name: ViewReferenceComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewReference:
+      m_AssetGUID: ec48fbf0020ade442a0f537f35183bf5
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+--- !u!114 &-2758248142227546362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519b02f3872903942a5aa0514b98e53b, type: 3}
+  m_Name: DamageComponent
+  m_EditorClassIdentifier: 
+  component:
+    baseValue: 10
+--- !u!114 &-699090929977660434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f322ed2d597ce94489b5e81104a43854, type: 3}
+  m_Name: SpeedComponent
+  m_EditorClassIdentifier: 
+  component:
+    setupValue: 40
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: SphereContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 2441677586696550475}
+    - {fileID: -6140068009182542018}
+    - {fileID: -2758248142227546362}
+    - {fileID: -8821470645623752678}
+    - {fileID: -699090929977660434}
+    - {fileID: 3404527737103113554}
+    - {fileID: -7797400900516418882}
+    - {fileID: 5797953563766110842}
+    - {fileID: 6476758226148432466}
+    - {fileID: -5969355295587242975}
+    systems:
+    - {fileID: 1890123054490425551}
+    - {fileID: 1471502759983953908}
+    - {fileID: 5365330966654557701}
+    - {fileID: -8772162827631284647}
+    - {fileID: -9058634919918516161}
+    - {fileID: 7897600824702931868}
+    - {fileID: 6577695833099210054}
+    Parent: {fileID: 11400000}
+  containerIndex: -800719749
+--- !u!114 &1471502759983953908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b9145d369549b489c4203ca78e1dca, type: 3}
+  m_Name: SpeedUpSphereSystem
+  m_EditorClassIdentifier: 
+  system:
+    SpeedUpSphereComponent:
+      ModifierBP: {fileID: 0}
+      SpeedUpTime: 0.5
+    SpeedComponent:
+      setupValue: 0
+--- !u!114 &1890123054490425551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613ffd6a02cb66a49af2dd9e4e6c9703, type: 3}
+  m_Name: AbilitiesSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &2441677586696550475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e499f4d4c66e54a9512bf9a0a5d757, type: 3}
+  m_Name: AbilitiesHolderComponent
+  m_EditorClassIdentifier: 
+  component:
+    Abilities: []
+    AbilitiesContainers: []
+--- !u!114 &3404527737103113554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ef5c80fa22df647b5d524967e64221, type: 3}
+  m_Name: SpeedDependsOnTimeScaleComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &5365330966654557701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a24369735379e740860e07a14829cbe, type: 3}
+  m_Name: SphereCollisionsHolderSystem
+  m_EditorClassIdentifier: 
+  system:
+    CollisionsComponent:
+      CollisionMask:
+        serializedVersion: 2
+        m_Bits: 0
+--- !u!114 &5797953563766110842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e9b3d4b36e04d48bbf7fe6690341e4, type: 3}
+  m_Name: SphereComponent
+  m_EditorClassIdentifier: 
+  component:
+    Dir: {x: 0, y: 0, z: 0}
+    RadiusIncreaser: 2
+    CollisionParticle: {fileID: 198757625781246262, guid: 448e8d4f82f29da4298ec7ad31825184, type: 3}
+--- !u!114 &6476758226148432466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423358a0736f32c4c93ca20615a6690a, type: 3}
+  m_Name: UnityTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &6577695833099210054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4d1743fa58b2841a295bbf9f4b7c54, type: 3}
+  m_Name: SphereCollisionParticleSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &7897600824702931868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74df06810823d1d4ca3b7817f419e535, type: 3}
+  m_Name: SphereMovementSystem
+  m_EditorClassIdentifier: 

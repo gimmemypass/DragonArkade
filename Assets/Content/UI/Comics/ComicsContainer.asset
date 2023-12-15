@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7794644372925400571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f8df6792c13c54786b07e5ccc1a810, type: 3}
+  m_Name: UnityRectTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-5442324628724460511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423358a0736f32c4c93ca20615a6690a, type: 3}
+  m_Name: UnityTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-3499755424189942877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8569fd1717bf94185ca0c4e97a7c94, type: 3}
+  m_Name: UITagComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewType: {fileID: 11400000, guid: efe2af16db27f314792481e5a3ceb6d8, type: 2}
+--- !u!114 &-1054875895727613794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab3ebf4ff1347f4887c18941ea34e13, type: 3}
+  m_Name: HideUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-686444458305129727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dac362997677f24f97e6946b8d4de18, type: 3}
+  m_Name: UIGroupTagComponent
+  m_EditorClassIdentifier: 
+  component:
+    Groups: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: ComicsContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -7794644372925400571}
+    - {fileID: -5442324628724460511}
+    - {fileID: -3499755424189942877}
+    - {fileID: -686444458305129727}
+    - {fileID: 533504493916419667}
+    systems:
+    - {fileID: -1054875895727613794}
+    - {fileID: 8041948496173980840}
+    Parent: {fileID: 11400000}
+  containerIndex: -776472283
+--- !u!114 &533504493916419667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3f90177df5ba44d829babc118f6bc1, type: 3}
+  m_Name: ComicsComponent
+  m_EditorClassIdentifier: 
+  component:
+    Sprites:
+    - {fileID: 21300000, guid: f1dd3fa33f5e17e4c9b7f7cd0931181b, type: 3}
+    - {fileID: 21300000, guid: 794a70f8ac3647b44bdf69f3c4728225, type: 3}
+    - {fileID: 21300000, guid: bc9ec464631c8fa409c10a9f6a13e802, type: 3}
+    - {fileID: 21300000, guid: 6153267377a204e4aa4fe80ba6ee7c0d, type: 3}
+    - {fileID: 21300000, guid: 790dc95d44651294cb683b3443435689, type: 3}
+    - {fileID: 21300000, guid: e5066d40df096fe46bd4f16e393a3c63, type: 3}
+    - {fileID: 21300000, guid: 6353b7fa8a58df244936b85911ea192e, type: 3}
+--- !u!114 &8041948496173980840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54e8b7f6e45a1b4e9a34cfce4ef77ec, type: 3}
+  m_Name: ComicsWindowSystem
+  m_EditorClassIdentifier: 

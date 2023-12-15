@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6569439852281013397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0409e614eb7d509458d38f127ab2c4c6, type: 3}
+  m_Name: FloatNode
+  m_EditorClassIdentifier: 
+  coords: {x: 110, y: 409}
+  ConnectionContexts:
+  - In: FloatValue
+    Out: Out
+  Out: {fileID: 8923496230355407089}
+  SetValue: 1
+--- !u!114 &-5024203408640054029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b66d9ac3c973b242aa59e59dccdf6dc, type: 3}
+  m_Name: CheckAbilityIsReady
+  m_EditorClassIdentifier: 
+  coords: {x: 695, y: 488}
+  ConnectionContexts:
+  - In: parent
+    Out: Positive
+  - In: inputNode
+    Out: Negative
+  Input: {fileID: 8923496230355407089}
+  Positive: {fileID: 4960058459421650030}
+  Negative: {fileID: 8316941465062739873}
+  Target: {fileID: 130334319279967571}
+  AbilityOwner: {fileID: 2831073670431051198}
+  AbilityIndex: 560588535
+--- !u!114 &-2155696824634575049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a500fd6e0a7ae94ebe87cd59e6cee54, type: 3}
+  m_Name: UpdateStateNode
+  m_EditorClassIdentifier: 
+  coords: {x: -169, y: 488}
+  ConnectionContexts:
+  - In: parent
+    Out: Update
+  Update: {fileID: 8923496230355407089}
+--- !u!114 &-342535521946222506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030376cb40cd42e8938fdad163eb7dd5, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.GetMainCharacterNode
+  m_EditorClassIdentifier: 
+  coords: {x: 782, y: 355}
+  ConnectionContexts:
+  - In: Target
+    Out: Out
+  Out: {fileID: 4960058459421650030}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe9fb12ed060ba4ea46d02074b73c89, type: 3}
+  m_Name: BattleEnemyAttackState
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 3445241121957127485}
+  - {fileID: -2155696824634575049}
+  - {fileID: 5563709267124523856}
+  - {fileID: 775547988261041722}
+  - {fileID: 4821804274492009976}
+  - {fileID: -5024203408640054029}
+  - {fileID: 2831073670431051198}
+  - {fileID: 130334319279967571}
+  - {fileID: 4960058459421650030}
+  - {fileID: -342535521946222506}
+  - {fileID: 8923496230355407089}
+  - {fileID: -6569439852281013397}
+  - {fileID: 8316941465062739873}
+  - {fileID: 8220544174397254804}
+--- !u!114 &130334319279967571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030376cb40cd42e8938fdad163eb7dd5, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.GetMainCharacterNode
+  m_EditorClassIdentifier: 
+  coords: {x: 390, y: 421}
+  ConnectionContexts:
+  - In: Target
+    Out: Out
+  Out: {fileID: -5024203408640054029}
+--- !u!114 &775547988261041722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a980a2ecfac74c10b5d5bc304598cdff, type: 3}
+  m_Name: BluePrints.Strategies.SetRigidbodyIsKinematicNode
+  m_EditorClassIdentifier: 
+  coords: {x: 429, y: 72}
+  ConnectionContexts:
+  - In: inputNode
+    Out: Next
+  parent: {fileID: 3445241121957127485}
+  Next: {fileID: 4821804274492009976}
+  IsKinematic: 0
+--- !u!114 &2831073670431051198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b0d27338f106f44ac2944c26bfa32a, type: 3}
+  m_Name: Strategies.GetStrategyOwner
+  m_EditorClassIdentifier: 
+  coords: {x: 572, y: 324}
+  ConnectionContexts:
+  - In: AbilityOwner
+    Out: Out
+  Out: {fileID: -5024203408640054029}
+--- !u!114 &3445241121957127485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95d38a62ffec3e4fadf46477c6336d3, type: 3}
+  m_Name: StartDecision
+  m_EditorClassIdentifier: 
+  coords: {x: 153, y: 29}
+  ConnectionContexts:
+  - In: parent
+    Out: startDecision
+  startDecision: {fileID: 775547988261041722}
+--- !u!114 &4821804274492009976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e906006f8e1024b8f80e269db21601, type: 3}
+  m_Name: Strategies.ChainEnd
+  m_EditorClassIdentifier: 
+  coords: {x: 630, y: 86}
+  ConnectionContexts: []
+  inputNode: {fileID: 775547988261041722}
+--- !u!114 &4960058459421650030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f82a7d4b48ce647a8a32966697bcbf, type: 3}
+  m_Name: Strategies.ExecuteAbilityByIDNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1114, y: 381}
+  ConnectionContexts:
+  - In: inputNode
+    Out: Next
+  parent: {fileID: -5024203408640054029}
+  Next: {fileID: 8220544174397254804}
+  AbilityId: 560588535
+  IgnorePredicates: 1
+  Target: {fileID: -342535521946222506}
+--- !u!114 &5563709267124523856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198376c55930c0b439a80f823b0ed294, type: 3}
+  m_Name: ExitStateNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1698, y: 550}
+  ConnectionContexts: []
+  Input: {fileID: 0}
+  CallNodesWhenExit: {fileID: 0}
+--- !u!114 &8220544174397254804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e906006f8e1024b8f80e269db21601, type: 3}
+  m_Name: Strategies.ChainEnd
+  m_EditorClassIdentifier: 
+  coords: {x: 1526, y: 428}
+  ConnectionContexts: []
+  inputNode: {fileID: 4960058459421650030}
+--- !u!114 &8316941465062739873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e906006f8e1024b8f80e269db21601, type: 3}
+  m_Name: Strategies.ChainEnd
+  m_EditorClassIdentifier: 
+  coords: {x: 1371.9501, y: 721.05005}
+  ConnectionContexts: []
+  inputNode: {fileID: -5024203408640054029}
+--- !u!114 &8923496230355407089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261b3ef9761bb384d977c2ef3a275362, type: 3}
+  m_Name: Strategies.SetAnimationFloatInterDecision
+  m_EditorClassIdentifier: 
+  coords: {x: 240, y: 564}
+  ConnectionContexts:
+  - In: Input
+    Out: Next
+  parent: {fileID: -2155696824634575049}
+  Next: {fileID: -5024203408640054029}
+  AnimatorOwner: {fileID: 0}
+  FloatValue: {fileID: -6569439852281013397}
+  AnimParameter: 1784438316
+  Force: 0

@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8462116591374499394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41acbbb86bc27214b9f4d118608389f0, type: 3}
+  m_Name: PlayerTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-6597157005085677218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd9744b80559234f8cbde09af7cf35a, type: 3}
+  m_Name: PlayerLevelComponent
+  m_EditorClassIdentifier: 
+  component:
+    Level: 0
+    WaveNumber: 0
+    CurrentWave: {fileID: 0}
+--- !u!114 &-5600359889062913128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3daa6299e887a154887a1bc4f54f02c5, type: 3}
+  m_Name: SoftValueCounterComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-2590478655596876389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c25958a8d427b4aa5f5f24a43610c1, type: 3}
+  m_Name: PlayerUpgradeComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: PlayerContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -8462116591374499394}
+    - {fileID: -6597157005085677218}
+    - {fileID: -2590478655596876389}
+    - {fileID: -5600359889062913128}
+    systems:
+    - {fileID: 6231810291581840086}
+    Parent: {fileID: 11400000}
+  containerIndex: -743113290
+--- !u!114 &6231810291581840086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afcd46f6dc0eb0547a1e0607f06009f5, type: 3}
+  m_Name: SaveLoadSystem
+  m_EditorClassIdentifier: 

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4b570c74e516d44b542bc1db94e61c, type: 3}
+  m_Name: LoseScreen_UIBluePrint
+  m_EditorClassIdentifier: 
+  UIActor:
+    m_AssetGUID: fe1683b89e6bcf147aa1af60cb90d27b
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  Container:
+    m_AssetGUID: a5f4dd9d1d337a94294842f62617ed57
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  UIType: {fileID: 11400000, guid: aca688ed24382dc4da0c4d7ee7938fa3, type: 2}
+  AdditionalCanvasIdentifier: {fileID: 0}
+  Groups:
+    Groups:
+    - {fileID: 11400000, guid: 116bca0a7753138408e4166217fefb57, type: 2}

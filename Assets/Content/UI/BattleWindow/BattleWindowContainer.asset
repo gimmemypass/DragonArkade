@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8507522059101184509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6a8849c56e31b41b4a8845f2f10ab8, type: 3}
+  m_Name: LevelBattleUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-8309518295332333899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f8df6792c13c54786b07e5ccc1a810, type: 3}
+  m_Name: UnityRectTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-5714543327210457906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250b7550ecf563c4191ec4642ee48f58, type: 3}
+  m_Name: EnergyUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-5237828417163560149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4dfb4238fb04c469a3c67fec5e38c6, type: 3}
+  m_Name: SoftCurrencyCounterMonoComponentProviderComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-3236358181513194548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423358a0736f32c4c93ca20615a6690a, type: 3}
+  m_Name: UnityTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-1747774736932303409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab3ebf4ff1347f4887c18941ea34e13, type: 3}
+  m_Name: HideUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: BattleWindowContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -8309518295332333899}
+    - {fileID: -3236358181513194548}
+    - {fileID: 3151754183079685446}
+    - {fileID: 1467510348363526313}
+    - {fileID: -5237828417163560149}
+    systems:
+    - {fileID: -1747774736932303409}
+    - {fileID: 75723507938138570}
+    - {fileID: 4703421240044167258}
+    - {fileID: -5714543327210457906}
+    - {fileID: 2062905793234098066}
+    - {fileID: -8507522059101184509}
+    Parent: {fileID: 11400000}
+  containerIndex: -45358591
+--- !u!114 &75723507938138570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65790ff6f52079e4f9bce09629c931e2, type: 3}
+  m_Name: CardsControllerUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &1467510348363526313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dac362997677f24f97e6946b8d4de18, type: 3}
+  m_Name: UIGroupTagComponent
+  m_EditorClassIdentifier: 
+  component:
+    Groups:
+    - {fileID: 11400000, guid: dbfa06cc69dd332468f8a137a1b16f13, type: 2}
+--- !u!114 &2062905793234098066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f059e64a5c59734d91f84c2ef0d065b, type: 3}
+  m_Name: SoftValueUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &3151754183079685446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8569fd1717bf94185ca0c4e97a7c94, type: 3}
+  m_Name: UITagComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewType: {fileID: 11400000, guid: ab2bbc3419e380e4983a9d896fe39cbb, type: 2}
+--- !u!114 &4703421240044167258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1891cb5bcc6380c488152068b3cbb7e4, type: 3}
+  m_Name: MainCharacterHealthUISystem
+  m_EditorClassIdentifier: 

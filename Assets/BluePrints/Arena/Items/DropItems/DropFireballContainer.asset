@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1732917372792287292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905e6519380aa524aa07fba925684b72, type: 3}
+  m_Name: DropItemComponent
+  m_EditorClassIdentifier: 
+  component:
+    ItemContainer: {fileID: 11400000, guid: 965873ae5d59a84459fe12ce893a8ff9, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb991fc149f5fc4caca79459e69ab47, type: 3}
+  m_Name: DropFireballContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -1732917372792287292}
+    - {fileID: 1690700159331953082}
+    systems: []
+    Parent: {fileID: 11400000}
+  containerIndex: -200413309
+  References:
+  - {fileID: 11400000, guid: d0d42811a2fe1954cad99d7c5490ed0f, type: 2}
+--- !u!114 &1690700159331953082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514a462b7b083fd4ba0d1dd393f99947, type: 3}
+  m_Name: ViewReferenceComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewReference:
+      m_AssetGUID: 979c42852c3a54c44b0bd299358ff3cb
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0

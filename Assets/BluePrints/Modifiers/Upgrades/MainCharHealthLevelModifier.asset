@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf6f5bab56240b99c2d3e328f489474, type: 3}
+  m_Name: MainCharHealthLevelModifier
+  m_EditorClassIdentifier: 
+  modifier:
+    multipliersPerLevel:
+    - Multiplier: 1
+      Price: 100
+    - Multiplier: 1.005
+      Price: 100
+    - Multiplier: 1.01
+      Price: 100
+    - Multiplier: 1.015
+      Price: 110
+    - Multiplier: 1.02
+      Price: 110
+    - Multiplier: 1.025
+      Price: 110
+    - Multiplier: 1.03
+      Price: 120
+    - Multiplier: 1.035
+      Price: 120
+    - Multiplier: 1.04
+      Price: 120
+    - Multiplier: 1.045
+      Price: 130
+    - Multiplier: 1.05
+      Price: 130
+    - Multiplier: 1.055
+      Price: 130
+    - Multiplier: 1.06
+      Price: 140
+    - Multiplier: 1.065
+      Price: 140
+    - Multiplier: 1.07
+      Price: 140
+    - Multiplier: 1.075
+      Price: 150
+    - Multiplier: 1.08
+      Price: 150
+    - Multiplier: 1.085
+      Price: 150
+    - Multiplier: 1.09
+      Price: 160
+    - Multiplier: 1.095
+      Price: 160
+    - Multiplier: 1.1
+      Price: 160
+    - Multiplier: 1.105
+      Price: 170
+    - Multiplier: 1.11
+      Price: 170
+    - Multiplier: 1.115
+      Price: 170
+    - Multiplier: 1.12
+      Price: 180
+    - Multiplier: 1.125
+      Price: 180
+    - Multiplier: 1.13
+      Price: 180
+    - Multiplier: 1.135
+      Price: 190
+    - Multiplier: 1.14
+      Price: 190
+    - Multiplier: 1.145
+      Price: 190
+    - Multiplier: 1.15
+      Price: 200
+    - Multiplier: 1.155
+      Price: 200
+    - Multiplier: 1.16
+      Price: 200
+    defaultLevelStep: 0.1
+    defaultPrice: 10
+    calculationType: 2
+    guid: 88c11d24-278c-4d98-9522-70dd7ccc3a1a

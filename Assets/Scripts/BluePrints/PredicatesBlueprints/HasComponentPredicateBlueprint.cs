@@ -1,0 +1,1 @@
+using System;using HECSFramework.Core;using HECSFramework.Unity;using Predicates;using UnityEngine;[CreateAssetMenu(fileName = "HasComponentPredicate", menuName = "BluePrints/Predicates/HasComponentPredicate")]public class HasComponentPredicateBlueprint : PredicateBluePrintContainer<HasComponentPredicate>{}

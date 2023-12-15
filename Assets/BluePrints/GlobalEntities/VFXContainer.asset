@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4211805973238952901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47401e51aecb06438cb438552c69542, type: 3}
+  m_Name: MultipleCollectItemsSystem
+  m_EditorClassIdentifier: 
+  system: {}
+--- !u!114 &-3258427047867972094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6b5e717bde3c74fa8c995159843169, type: 3}
+  m_Name: GlobalRewardsVisualSystem
+  m_EditorClassIdentifier: 
+  system:
+    SoftCurrencyRewardVisualConfigComponent:
+      CollectConfig: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: VFXContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 2061396669357104945}
+    - {fileID: 6194577529941120532}
+    systems:
+    - {fileID: -3258427047867972094}
+    - {fileID: -4211805973238952901}
+    - {fileID: 4880413990559387044}
+    - {fileID: 7167845562406131722}
+    Parent: {fileID: 11400000}
+  containerIndex: -265986890
+--- !u!114 &2061396669357104945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c532fc375eac3614a8e69ae92b4fa76b, type: 3}
+  m_Name: SoftCurrencyRewardVisualConfigComponent
+  m_EditorClassIdentifier: 
+  component:
+    CollectConfig: {fileID: 11400000, guid: 234d95bdf37365e46af8b1b7681f4ef6, type: 2}
+--- !u!114 &4880413990559387044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2cb80bb44cd646995a61badb91893, type: 3}
+  m_Name: VFXCreationSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &6194577529941120532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e4631076821da4b9f0cf810d70159b, type: 3}
+  m_Name: VisualFXHolderComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    fXLinks:
+    - fXIdentifier: {fileID: 11400000, guid: 6df23d4b5abf33a40a9991221c286e2c, type: 2}
+      AssetReference:
+        m_AssetGUID: 918e7f25b9718004493c32f05efc9f60
+        m_SubObjectName: 
+        m_SubObjectType: 
+        m_EditorAssetChanged: 0
+--- !u!114 &7167845562406131722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c900907654add1c4092f2562600196c4, type: 3}
+  m_Name: PoolFxGlobalSystem
+  m_EditorClassIdentifier: 
+  system:
+    fXHolderComponent:
+      fXLinks: []

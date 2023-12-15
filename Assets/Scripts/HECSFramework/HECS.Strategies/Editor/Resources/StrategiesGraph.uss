@@ -1,0 +1,21 @@
+Label {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(68, 138, 255);
+}
+
+.edge
+{
+    --edge-color: rgba(95, 245, 255, 1.000);
+    --ghost-edge-color: rgba(95, 245, 255, 1.000);
+    --color: rgba(95, 245, 255, 1.000);
+    --selected-edge-color: rgba(90, 192, 121, 1.000);
+}
+
+GridBackground 
+{
+    --grid-background-color: #141414;
+    --line-color: rgba(50, 50, 50, 0.1);
+    --thick-line-color: rgba(50, 50, 50, 0.1);
+    --spacing: 10;
+}

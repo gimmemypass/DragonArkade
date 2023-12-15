@@ -1,0 +1,1 @@
+using Systems;namespace HECSFramework.Unity{	public class MoveEnemyToSpawnPointSystemBluePrint : SystemBluePrint<MoveEnemyToSpawnPointSystem>	{	}}

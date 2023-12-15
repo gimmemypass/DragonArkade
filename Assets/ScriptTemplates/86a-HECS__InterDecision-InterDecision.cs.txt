@@ -1,0 +1,17 @@
+﻿using HECSFramework.Core;
+
+
+namespace Strategies
+{
+    [Documentation(Doc.Strategy, "#SCRIPTNAME#")]
+    public class #SCRIPTNAME# : InterDecision
+    {
+        public override string TitleOfNode { get; } = "#SCRIPTNAME#";
+
+        protected override void Run(Entity entity)
+        {
+
+           Next.Execute(entity);
+        }
+    }
+}

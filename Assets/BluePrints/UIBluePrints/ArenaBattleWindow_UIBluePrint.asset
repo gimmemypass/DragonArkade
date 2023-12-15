@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4b570c74e516d44b542bc1db94e61c, type: 3}
+  m_Name: ArenaBattleWindow_UIBluePrint
+  m_EditorClassIdentifier: 
+  UIActor:
+    m_AssetGUID: 38c4e53eec9e1dd4c8b90dbe31cd80f2
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  Container:
+    m_AssetGUID: 0ec508730b58f4940bf3569a5875a21f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  UIType: {fileID: 11400000, guid: 650de35c566113845b9d3a046f59bb14, type: 2}
+  AdditionalCanvasIdentifier: {fileID: 0}
+  Groups:
+    Groups:
+    - {fileID: 11400000, guid: 1e7891e4cb05b234ab8af2b62c58220b, type: 2}

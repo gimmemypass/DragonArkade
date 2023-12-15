@@ -1,0 +1,195 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9016104537423263919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9b45561810b5941b030cd57eea7ebb, type: 3}
+  m_Name: Strategies.SetStateNode
+  m_EditorClassIdentifier: 
+  coords: {x: -2438, y: 150}
+  ConnectionContexts:
+  - In: node
+    Out: Exit
+  Input: {fileID: 7152388668985631850}
+  OnStartStateNodes: {fileID: 0}
+  EarlyUpdateNodes: {fileID: 0}
+  Exit: {fileID: -2019410345245283849}
+  State: {fileID: 11400000, guid: 54a5eaecd1425cd43bd1c0fa8887492f, type: 2}
+--- !u!114 &-8892858623359511557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da00f2ab5c5640dab12f6236d6e8c742, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.CheckLuck
+  m_EditorClassIdentifier: 
+  coords: {x: -2668, y: 234}
+  ConnectionContexts:
+  - In: Input
+    Out: Negative
+  Input: {fileID: 0}
+  Positive: {fileID: 0}
+  Negative: {fileID: 4320003510690439196}
+  Chance: 0.4
+--- !u!114 &-7475768384840291928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b9fb11d5463054d9508d389ed8c191, type: 3}
+  m_Name: Strategies.CompleteFinalNode
+  m_EditorClassIdentifier: 
+  coords: {x: -1622, y: 362}
+  ConnectionContexts: []
+  node: {fileID: 4320003510690439196}
+--- !u!114 &-3171117340664589662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9b45561810b5941b030cd57eea7ebb, type: 3}
+  m_Name: Strategies.SetStateNode
+  m_EditorClassIdentifier: 
+  coords: {x: -2640, y: -249}
+  ConnectionContexts:
+  - In: BranchA
+    Out: Exit
+  - In: node
+    Out: Exit
+  Input: {fileID: 7152388668985631850}
+  OnStartStateNodes: {fileID: 0}
+  EarlyUpdateNodes: {fileID: 0}
+  Exit: {fileID: 3706479836794294252}
+  State: {fileID: 11400000, guid: 7753d1579e0a24745b657fd581d024ff, type: 2}
+--- !u!114 &-2019410345245283849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b9fb11d5463054d9508d389ed8c191, type: 3}
+  m_Name: Strategies.CompleteFinalNode
+  m_EditorClassIdentifier: 
+  coords: {x: -1751, y: 39}
+  ConnectionContexts: []
+  node: {fileID: -9016104537423263919}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7553786a8538cd647abacef21d6b06fc, type: 3}
+  m_Name: ArenaEnemyDefaultStrategy
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 3582163412622844157}
+  - {fileID: 3706479836794294252}
+  - {fileID: 7152388668985631850}
+  - {fileID: -3171117340664589662}
+  - {fileID: -8892858623359511557}
+  - {fileID: -9016104537423263919}
+  - {fileID: 4320003510690439196}
+  - {fileID: -2019410345245283849}
+  - {fileID: -7475768384840291928}
+--- !u!114 &3582163412622844157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95d38a62ffec3e4fadf46477c6336d3, type: 3}
+  m_Name: Strategies.StartDecision
+  m_EditorClassIdentifier: 
+  coords: {x: -3052, y: 29}
+  ConnectionContexts:
+  - In: Input
+    Out: startDecision
+  startDecision: {fileID: 7152388668985631850}
+--- !u!114 &3706479836794294252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b9fb11d5463054d9508d389ed8c191, type: 3}
+  m_Name: Strategies.CompleteFinalNode
+  m_EditorClassIdentifier: 
+  coords: {x: -2122, y: -249}
+  ConnectionContexts: []
+  node: {fileID: -3171117340664589662}
+--- !u!114 &4320003510690439196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9b45561810b5941b030cd57eea7ebb, type: 3}
+  m_Name: Strategies.SetStateNode
+  m_EditorClassIdentifier: 
+  coords: {x: -2314, y: 469}
+  ConnectionContexts:
+  - In: node
+    Out: Exit
+  Input: {fileID: -8892858623359511557}
+  OnStartStateNodes: {fileID: 0}
+  EarlyUpdateNodes: {fileID: 0}
+  Exit: {fileID: -7475768384840291928}
+  State: {fileID: 11400000, guid: 373c70d830d62ed468c47504520ffaee, type: 2}
+--- !u!114 &7152388668985631850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da00f2ab5c5640dab12f6236d6e8c742, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.CheckLuck
+  m_EditorClassIdentifier: 
+  coords: {x: -2848, y: 39}
+  ConnectionContexts:
+  - In: Input
+    Out: Positive
+  - In: BranchB
+    Out: Negative
+  - In: Input
+    Out: Negative
+  Input: {fileID: 3582163412622844157}
+  Positive: {fileID: -3171117340664589662}
+  Negative: {fileID: -9016104537423263919}
+  Chance: 0.6

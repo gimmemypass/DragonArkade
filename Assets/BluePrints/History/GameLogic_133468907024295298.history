@@ -1,0 +1,98 @@
+{
+    "Name": "GameLogic",
+    "DateTimeSave": -8584991897830459977,
+    "componentHistories": [
+        {
+            "Index": 838666118,
+            "Name": "GameStateComponent",
+            "JSON": "{\n    \"component\": {}\n}"
+        },
+        {
+            "Index": 1960044224,
+            "Name": "CardsGlobalHolderComponent",
+            "JSON": "{\n    \"component\": {\n        \"cardContainers\": [\n            {\n                \"instanceID\": 35032\n            },\n            {\n                \"instanceID\": 35034\n            },\n            {\n                \"instanceID\": 34694\n            },\n            {\n                \"instanceID\": 35036\n            },\n            {\n                \"instanceID\": 35038\n            },\n            {\n                \"instanceID\": 35040\n            }\n        ]\n    }\n}"
+        },
+        {
+            "Index": 2044779682,
+            "Name": "CharactersHolderComponent",
+            "JSON": "{\n    \"component\": {\n        \"SphereContainer\": {\n            \"instanceID\": 34908\n        }\n    }\n}"
+        },
+        {
+            "Index": 1922359605,
+            "Name": "HealthBarsManagerComponent",
+            "JSON": "{\n    \"component\": {}\n}"
+        },
+        {
+            "Index": -1258897312,
+            "Name": "SlowdownComponent",
+            "JSON": "{\n    \"component\": {\n        \"RemainingTime\": 100.0,\n        \"Interval\": 0.5,\n        \"TimeScale\": 0.10000000149011612,\n        \"Speed\": 1.0,\n        \"ModifierBluePrint\": {\n            \"instanceID\": 35030\n        }\n    }\n}"
+        },
+        {
+            "Index": 745147359,
+            "Name": "TimeScaleComponent",
+            "JSON": "{\n    \"component\": {\n        \"PrevScale\": 1.0,\n        \"Scale\": 1.0\n    }\n}"
+        },
+        {
+            "Index": 203333459,
+            "Name": "LevelsHolderComponent",
+            "JSON": "{\n    \"component\": {\n        \"levelDatas\": [\n            {\n                \"WinReward\": 500,\n                \"LoseReward\": 100,\n                \"Location\": {\n                    \"instanceID\": 35042\n                },\n                \"Waves\": [\n                    {\n                        \"instanceID\": 35044\n                    }\n                ]\n            },\n            {\n                \"WinReward\": 500,\n                \"LoseReward\": 100,\n                \"Location\": {\n                    \"instanceID\": 35046\n                },\n                \"Waves\": [\n                    {\n                        \"instanceID\": 35048\n                    }\n                ]\n            },\n            {\n                \"WinReward\": 500,\n                \"LoseReward\": 100,\n                \"Location\": {\n                    \"instanceID\": 35042\n                },\n                \"Waves\": [\n                    {\n                        \"instanceID\": 35050\n                    },\n                    {\n                        \"instanceID\": 35052\n                    }\n                ]\n            },\n            {\n                \"WinReward\": 500,\n                \"LoseReward\": 100,\n                \"Location\": {\n                    \"instanceID\": 35046\n                },\n                \"Waves\": [\n                    {\n                        \"instanceID\": 35054\n                    },\n                    {\n                        \"instanceID\": 35056\n                    },\n                    {\n                        \"instanceID\": 35058\n                    }\n                ]\n            },\n            {\n                \"WinReward\": 500,\n                \"LoseReward\": 100,\n                \"Location\": {\n                    \"instanceID\": 35042\n                },\n                \"Waves\": [\n                    {\n                        \"instanceID\": 35060\n                    },\n                    {\n                        \"instanceID\": 35052\n                    },\n                    {\n                        \"instanceID\": 35062\n                    }\n                ]\n            },\n            {\n                \"WinReward\": 500,\n                \"LoseReward\": 100,\n                \"Location\": {\n                    \"instanceID\": 35046\n                },\n                \"Waves\": [\n                    {\n                        \"instanceID\": 35048\n                    },\n                    {\n                        \"instanceID\": 35064\n                    },\n                    {\n                        \"instanceID\": 35054\n                    },\n                    {\n                        \"instanceID\": 35056\n                    }\n                ]\n            },\n            {\n                \"WinReward\": 500,\n                \"LoseReward\": 100,\n                \"Location\": {\n                    \"instanceID\": 35042\n                },\n                \"Waves\": [\n                    {\n                        \"instanceID\": 35050\n                    },\n                    {\n                        \"instanceID\": 35052\n                    },\n                    {\n                        \"instanceID\": 35062\n                    },\n                    {\n                        \"instanceID\": 35066\n                    }\n                ]\n            },\n            {\n                \"WinReward\": 500,\n                \"LoseReward\": 100,\n                \"Location\": {\n                    \"instanceID\": 35046\n                },\n                \"Waves\": [\n                    {\n                        \"instanceID\": 35048\n                    },\n                    {\n                        \"instanceID\": 35064\n                    },\n                    {\n                        \"instanceID\": 35054\n                    },\n                    {\n                        \"instanceID\": 35056\n                    },\n                    {\n                        \"instanceID\": 35058\n                    }\n                ]\n            },\n            {\n                \"WinReward\": 500,\n                \"LoseReward\": 100,\n                \"Location\": {\n                    \"instanceID\": 35042\n                },\n                \"Waves\": [\n                    {\n                        \"instanceID\": 35060\n                    },\n                    {\n                        \"instanceID\": 35050\n                    },\n                    {\n                        \"instanceID\": 35052\n                    },\n                    {\n                        \"instanceID\": 35062\n                    },\n                    {\n                        \"instanceID\": 35066\n                    }\n                ]\n            }\n        ]\n    }\n}"
+        },
+        {
+            "Index": -822435144,
+            "Name": "LevelModifierHolderComponent",
+            "JSON": "{\n    \"component\": {\n        \"SphereDamage\": {\n            \"instanceID\": 35024\n        },\n        \"MainCharHealth\": {\n            \"instanceID\": 35026\n        },\n        \"MainCharEnergy\": {\n            \"instanceID\": 35028\n        }\n    }\n}"
+        }
+    ],
+    "systemHistories": [
+        {
+            "Index": -1379658499,
+            "Name": "BattleStateSystem",
+            "JSON": "{\n    \"system\": {}\n}"
+        },
+        {
+            "Index": 1014573438,
+            "Name": "FinalStateSystem",
+            "JSON": "{\n    \"system\": {}\n}"
+        },
+        {
+            "Index": 1073868643,
+            "Name": "GamePhasesSystem",
+            "JSON": "{\n    \"system\": {\n        \"GameStateComponent\": {}\n    }\n}"
+        },
+        {
+            "Index": 1907329975,
+            "Name": "HandleCooldownGlobalSystem",
+            "JSON": "{\n    \"system\": {}\n}"
+        },
+        {
+            "Index": -1921239808,
+            "Name": "HealthBarsManagerSystem",
+            "JSON": "{\n    \"system\": {}\n}"
+        },
+        {
+            "Index": -1210394817,
+            "Name": "SlowdownSpeedSystem",
+            "JSON": "{\n    \"system\": {}\n}"
+        },
+        {
+            "Index": -2082219944,
+            "Name": "SlowdownSystem",
+            "JSON": "{\n    \"system\": {\n        \"SlowdownComponent\": {\n            \"RemainingTime\": 100.0,\n            \"Interval\": 2.0,\n            \"TimeScale\": 0.25,\n            \"Speed\": 1.0,\n            \"ModifierBluePrint\": {\n                \"instanceID\": 0\n            }\n        }\n    }\n}"
+        },
+        {
+            "Index": 1530940763,
+            "Name": "StartMenuStateSystem",
+            "JSON": "{\n    \"system\": {}\n}"
+        },
+        {
+            "Index": 2008925226,
+            "Name": "PrepareBattleStateSystem",
+            "JSON": "{\n    \"system\": {}\n}"
+        },
+        {
+            "Index": -1039144537,
+            "Name": "PrepareWaveStateSystem",
+            "JSON": "{\n    \"system\": {}\n}"
+        }
+    ]
+}

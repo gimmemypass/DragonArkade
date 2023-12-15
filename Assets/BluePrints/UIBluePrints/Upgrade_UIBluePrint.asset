@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4b570c74e516d44b542bc1db94e61c, type: 3}
+  m_Name: Upgrade_UIBluePrint
+  m_EditorClassIdentifier: 
+  UIActor:
+    m_AssetGUID: 2dfb09570286f40c596034c924010c13
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  Container:
+    m_AssetGUID: bea6a5f05974398469f58d9491fcff8c
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  UIType: {fileID: 11400000, guid: 17c410b0d60a1334cb0d0a1cb662a5e2, type: 2}
+  AdditionalCanvasIdentifier: {fileID: 0}
+  Groups:
+    Groups: []

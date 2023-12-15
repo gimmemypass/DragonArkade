@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8512919827419804241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc7f06c9e5a7144d962e72467f2682c, type: 3}
+  m_Name: UpgradeWindowComponent
+  m_EditorClassIdentifier: 
+  component:
+    upgradeDatas:
+    - Name: Ball Power
+      ModifierBluePrint: {fileID: 11400000, guid: ebb78ecff7375ea48815cde84800551e, type: 2}
+      Icon: {fileID: 21300000, guid: ccdfaa8bf823b40699fedc2f2dedaafa, type: 3}
+    - Name: Energy
+      ModifierBluePrint: {fileID: 11400000, guid: 93bbcd706d194244b8bf6748e8ed1b1c, type: 2}
+      Icon: {fileID: 21300000, guid: 815519ef05e944e2d9af4ea75036220a, type: 3}
+    - Name: HP
+      ModifierBluePrint: {fileID: 11400000, guid: 8fbf203b631c44d47acccebb32f5c04e, type: 2}
+      Icon: {fileID: 21300000, guid: a85554faf902949fb939a67ad9b55625, type: 3}
+--- !u!114 &-6404656692767366338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dac362997677f24f97e6946b8d4de18, type: 3}
+  m_Name: UIGroupTagComponent
+  m_EditorClassIdentifier: 
+  component:
+    Groups:
+    - {fileID: 11400000, guid: 53cf4f5503b3f0d49b58e1b9edc20a16, type: 2}
+--- !u!114 &-4142709198494330492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8569fd1717bf94185ca0c4e97a7c94, type: 3}
+  m_Name: UITagComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewType: {fileID: 11400000, guid: 250a3000cbf11a44eafeab9a78d5e4a9, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: StartScreenContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 3992441528984863495}
+    - {fileID: 4915912484902107014}
+    - {fileID: -4142709198494330492}
+    - {fileID: -6404656692767366338}
+    - {fileID: -8512919827419804241}
+    systems:
+    - {fileID: 5073119981735554613}
+    - {fileID: 2865982897840428478}
+    - {fileID: 3744800620112228142}
+    - {fileID: 5900649246883040266}
+    Parent: {fileID: 11400000}
+  containerIndex: 1202265059
+--- !u!114 &2865982897840428478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c2bc4837ce2cd4f9f4b0d2d3c582b1, type: 3}
+  m_Name: StartMenuUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &3744800620112228142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856a25583beb76e48b6b9e62bafd86ef, type: 3}
+  m_Name: UpgradeWindowSystem
+  m_EditorClassIdentifier: 
+  system:
+    UpgradeWindowComponent:
+      upgradeDatas: []
+--- !u!114 &3992441528984863495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f8df6792c13c54786b07e5ccc1a810, type: 3}
+  m_Name: UnityRectTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &4915912484902107014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423358a0736f32c4c93ca20615a6690a, type: 3}
+  m_Name: UnityTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &5073119981735554613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab3ebf4ff1347f4887c18941ea34e13, type: 3}
+  m_Name: HideUISystem
+  m_EditorClassIdentifier: 
+--- !u!114 &5900649246883040266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f059e64a5c59734d91f84c2ef0d065b, type: 3}
+  m_Name: SoftValueUISystem
+  m_EditorClassIdentifier: 

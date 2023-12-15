@@ -1,0 +1,15 @@
+﻿using System;
+using HECSFramework.Core;
+
+namespace Components
+{
+    [Serializable]
+    [Documentation(Doc.Action, "")]
+    public sealed class #SCRIPTNAME# : IAction
+    {
+        public void Action(Entity entity)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+}

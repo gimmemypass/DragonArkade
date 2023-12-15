@@ -1,0 +1,350 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7817254179439975777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0b8bb67292f3d44bc264ec213e90e1, type: 3}
+  m_Name: GamePhasesSystem
+  m_EditorClassIdentifier: 
+  system: {}
+--- !u!114 &-7250449460403137194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b6f5e4091b80f4cb4eb3ec3a4193e7, type: 3}
+  m_Name: HandleCooldownGlobalSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-6382299850804776467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751f2297230176d41940bd92a14531cc, type: 3}
+  m_Name: LevelModifierHolderComponent
+  m_EditorClassIdentifier: 
+  component:
+    SphereDamage: {fileID: 11400000, guid: ebb78ecff7375ea48815cde84800551e, type: 2}
+    MainCharHealth: {fileID: 11400000, guid: 8fbf203b631c44d47acccebb32f5c04e, type: 2}
+    MainCharEnergy: {fileID: 11400000, guid: 93bbcd706d194244b8bf6748e8ed1b1c, type: 2}
+--- !u!114 &-6334289768187870403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710326852621928469c554d47f7de8bd, type: 3}
+  m_Name: StartMenuStateSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-6305345586966071719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62fb058b0dc01b64695f28ba2aab9aa9, type: 3}
+  m_Name: HealthBarsManagerSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-6019912970318221473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9334fe565060de747b5df7ef6825f8f5, type: 3}
+  m_Name: BattleStateSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-5960664086071112769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92d3f31457cf544bafee148acafbd41, type: 3}
+  m_Name: FinalStateSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-4998038913978911921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc389a6050b21b94fbd3c61506f83f7e, type: 3}
+  m_Name: TimeScaleComponent
+  m_EditorClassIdentifier: 
+  component:
+    PrevScale: 1
+    Scale: 1
+--- !u!114 &-1446102122806070222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226975e9060d2324482592b3e9742930, type: 3}
+  m_Name: PrepareBattleStateSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: GameLogic
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 170032190824546381}
+    - {fileID: 6616389042002194128}
+    - {fileID: 4687601531886362980}
+    - {fileID: 589520720937517759}
+    - {fileID: 2672319454149691628}
+    - {fileID: -4998038913978911921}
+    - {fileID: 7250566133635614427}
+    - {fileID: -6382299850804776467}
+    systems:
+    - {fileID: -6019912970318221473}
+    - {fileID: -5960664086071112769}
+    - {fileID: -7817254179439975777}
+    - {fileID: -7250449460403137194}
+    - {fileID: -6305345586966071719}
+    - {fileID: 4807773940768120257}
+    - {fileID: 9154436653961616136}
+    - {fileID: -6334289768187870403}
+    - {fileID: -1446102122806070222}
+    - {fileID: 5533433065058295924}
+    Parent: {fileID: 11400000}
+  containerIndex: 1594580010
+--- !u!114 &170032190824546381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dd79b622847fcc46aa011e19e86841d, type: 3}
+  m_Name: GameStateComponentBluePrint
+  m_EditorClassIdentifier: 
+--- !u!114 &589520720937517759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d04f518ca6d028f46a299bcdb60c03db, type: 3}
+  m_Name: HealthBarsManagerComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &2672319454149691628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e997a4bbc3141cb4dba3f5022d7d82db, type: 3}
+  m_Name: SlowdownComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    RemainingTime: 100
+    Interval: 0.5
+    TimeScale: 0.1
+    Speed: 1
+    ModifierBluePrint: {fileID: 11400000, guid: c7a5418b2d04a17419a9c75a2583445e, type: 2}
+--- !u!114 &4687601531886362980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d158e629f1f31954aa92038f5b8d1b6f, type: 3}
+  m_Name: CharactersHolderComponent
+  m_EditorClassIdentifier: 
+  component:
+    SphereContainer: {fileID: 11400000, guid: 461c059c59d12b741ba7a6687d3ba1dc, type: 2}
+--- !u!114 &4807773940768120257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703dd09168042be458903d1b90c32b23, type: 3}
+  m_Name: SlowdownSpeedSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &5533433065058295924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be88bf6ac7dcc841a979eacf46efa4c, type: 3}
+  m_Name: PrepareWaveStateSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &6616389042002194128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de21f5bfb3fff3e4cb57c866333fb499, type: 3}
+  m_Name: CardsGlobalHolderComponent
+  m_EditorClassIdentifier: 
+  component:
+    cardContainers:
+    - {fileID: 11400000, guid: 07867f09c1833cc46814dd48aedcd923, type: 2}
+    - {fileID: 11400000, guid: 65850d4fcc1122a42825eed3b047fb4f, type: 2}
+    - {fileID: 11400000, guid: 822be6d076a889d4aa93dbf69ae348e4, type: 2}
+    - {fileID: 11400000, guid: b09eb99a257a1444bb598cf62815b02f, type: 2}
+    - {fileID: 11400000, guid: f92cbb7e3e819e748a7707f1f6aee994, type: 2}
+    - {fileID: 11400000, guid: c7b8eab2e5bb9ba4daa6a53209b0c7b5, type: 2}
+--- !u!114 &7250566133635614427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4811d957ef5b4634cafdbe09c2e4cf75, type: 3}
+  m_Name: LevelsHolderComponent
+  m_EditorClassIdentifier: 
+  component:
+    levelDatas:
+    - WinReward: 500
+      LoseReward: 100
+      Location: {fileID: 6028241451430400228, guid: f4179e5f2b237984695c257a83016536, type: 3}
+      Waves:
+      - {fileID: 3591730011662056291, guid: c942dc90687b9453a866b053b883d09f, type: 3}
+    - WinReward: 500
+      LoseReward: 100
+      Location: {fileID: 4102024928971706081, guid: 8dda00d95e98f40438ce7feb65bebd5c, type: 3}
+      Waves:
+      - {fileID: 1067754546479187426, guid: 198bf19c3cd336348a97ba3b90540972, type: 3}
+    - WinReward: 500
+      LoseReward: 100
+      Location: {fileID: 6028241451430400228, guid: f4179e5f2b237984695c257a83016536, type: 3}
+      Waves:
+      - {fileID: 7690115643295978214, guid: 1923c3de6692b1642bec24dc7bdbbfad, type: 3}
+      - {fileID: 7690115643295978214, guid: 76cda918adeee4d7dac4952f6147a896, type: 3}
+    - WinReward: 500
+      LoseReward: 100
+      Location: {fileID: 4102024928971706081, guid: 8dda00d95e98f40438ce7feb65bebd5c, type: 3}
+      Waves:
+      - {fileID: 1067754546479187426, guid: 98c172f7095904ee198122530629dec5, type: 3}
+      - {fileID: 1067754546479187426, guid: 1ca1616df345f4bbe98ab7d80b79f594, type: 3}
+      - {fileID: 1067754546479187426, guid: ef5c59e7dcb0b4446910ec967c121367, type: 3}
+    - WinReward: 500
+      LoseReward: 100
+      Location: {fileID: 6028241451430400228, guid: f4179e5f2b237984695c257a83016536, type: 3}
+      Waves:
+      - {fileID: 3591730011662056291, guid: 29ce6e2aea935f940956a537f6700bbf, type: 3}
+      - {fileID: 7690115643295978214, guid: 76cda918adeee4d7dac4952f6147a896, type: 3}
+      - {fileID: 7690115643295978214, guid: 454313a6fc6ba489cb3456af554a7c86, type: 3}
+    - WinReward: 500
+      LoseReward: 100
+      Location: {fileID: 4102024928971706081, guid: 8dda00d95e98f40438ce7feb65bebd5c, type: 3}
+      Waves:
+      - {fileID: 1067754546479187426, guid: 198bf19c3cd336348a97ba3b90540972, type: 3}
+      - {fileID: 1067754546479187426, guid: a474a8ed48a094c72bb6320007363bc8, type: 3}
+      - {fileID: 1067754546479187426, guid: 98c172f7095904ee198122530629dec5, type: 3}
+      - {fileID: 1067754546479187426, guid: 1ca1616df345f4bbe98ab7d80b79f594, type: 3}
+    - WinReward: 500
+      LoseReward: 100
+      Location: {fileID: 6028241451430400228, guid: f4179e5f2b237984695c257a83016536, type: 3}
+      Waves:
+      - {fileID: 7690115643295978214, guid: 1923c3de6692b1642bec24dc7bdbbfad, type: 3}
+      - {fileID: 7690115643295978214, guid: 76cda918adeee4d7dac4952f6147a896, type: 3}
+      - {fileID: 7690115643295978214, guid: 454313a6fc6ba489cb3456af554a7c86, type: 3}
+      - {fileID: 7690115643295978214, guid: f16df65a109874b688a8d6b0759ae1a1, type: 3}
+    - WinReward: 500
+      LoseReward: 100
+      Location: {fileID: 4102024928971706081, guid: 8dda00d95e98f40438ce7feb65bebd5c, type: 3}
+      Waves:
+      - {fileID: 1067754546479187426, guid: 198bf19c3cd336348a97ba3b90540972, type: 3}
+      - {fileID: 1067754546479187426, guid: a474a8ed48a094c72bb6320007363bc8, type: 3}
+      - {fileID: 1067754546479187426, guid: 98c172f7095904ee198122530629dec5, type: 3}
+      - {fileID: 1067754546479187426, guid: 1ca1616df345f4bbe98ab7d80b79f594, type: 3}
+      - {fileID: 1067754546479187426, guid: ef5c59e7dcb0b4446910ec967c121367, type: 3}
+    - WinReward: 500
+      LoseReward: 100
+      Location: {fileID: 6028241451430400228, guid: f4179e5f2b237984695c257a83016536, type: 3}
+      Waves:
+      - {fileID: 3591730011662056291, guid: 29ce6e2aea935f940956a537f6700bbf, type: 3}
+      - {fileID: 7690115643295978214, guid: 1923c3de6692b1642bec24dc7bdbbfad, type: 3}
+      - {fileID: 7690115643295978214, guid: 76cda918adeee4d7dac4952f6147a896, type: 3}
+      - {fileID: 7690115643295978214, guid: 454313a6fc6ba489cb3456af554a7c86, type: 3}
+      - {fileID: 7690115643295978214, guid: f16df65a109874b688a8d6b0759ae1a1, type: 3}
+--- !u!114 &9154436653961616136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac37be6ff9b97c84b8ca44b8b8fbf78a, type: 3}
+  m_Name: SlowdownSystem
+  m_EditorClassIdentifier: 
+  system:
+    SlowdownComponent:
+      RemainingTime: 100
+      Interval: 2
+      TimeScale: 0.25
+      Speed: 1
+      ModifierBluePrint: {fileID: 0}

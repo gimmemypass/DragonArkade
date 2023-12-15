@@ -1,0 +1,303 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8583591802110833680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da78827066142a999593a6e36c54565, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.FloatLessThan
+  m_EditorClassIdentifier: 
+  coords: {x: 129, y: 696}
+  ConnectionContexts:
+  - In: Input
+    Out: Positive
+  - In: inputNode
+    Out: Negative
+  Input: {fileID: 6216441750586014760}
+  Positive: {fileID: 5012777009434975190}
+  Negative: {fileID: 2776401607928794881}
+  Value: 0
+  Float: {fileID: 8049103992777711529}
+--- !u!114 &-8109134235355687810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a505a54313017aa42ade34883aa79723, type: 3}
+  m_Name: Strategies.RandomMovingTimerComponentSetRemainingTime
+  m_EditorClassIdentifier: 
+  coords: {x: 517, y: 241}
+  ConnectionContexts:
+  - In: Input
+    Out: Next
+  parent: {fileID: -4010103612653378149}
+  Next: {fileID: -6981105379223415217}
+  SetRemainingTime: {fileID: 7557571645282261809}
+--- !u!114 &-6981105379223415217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056b34e0b4627e641970bca9be0dfac5, type: 3}
+  m_Name: Strategies.EmptyFinalNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1067, y: 289}
+  ConnectionContexts: []
+  Input: {fileID: -8109134235355687810}
+--- !u!114 &-5273811212776522619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056b34e0b4627e641970bca9be0dfac5, type: 3}
+  m_Name: Strategies.EmptyFinalNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1532, y: 1038}
+  ConnectionContexts: []
+  Input: {fileID: -695303226366625008}
+--- !u!114 &-4010103612653378149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d821e1bec06a1134db544e7750afad52, type: 3}
+  m_Name: Strategies.GetOrAddComponentNode
+  m_EditorClassIdentifier: 
+  coords: {x: 19, y: 267}
+  ConnectionContexts:
+  - In: parent
+    Out: Next
+  parent: {fileID: 7231974662334289741}
+  Next: {fileID: -8109134235355687810}
+  ComponentIndex: -1068283141
+  AdditionalEntity: {fileID: 0}
+--- !u!114 &-2223105151175102985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7e5d6d7a7f4a5f87bae974c8157ba2, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.RemoveComponentNode
+  m_EditorClassIdentifier: 
+  coords: {x: 754, y: 887}
+  ConnectionContexts:
+  - In: parent
+    Out: Next
+  parent: {fileID: 5012777009434975190}
+  Next: {fileID: -695303226366625008}
+  OptionalTarget: {fileID: 0}
+  ComponentMask: -1068283141
+--- !u!114 &-695303226366625008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7e5d6d7a7f4a5f87bae974c8157ba2, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.RemoveComponentNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1139, y: 928}
+  ConnectionContexts:
+  - In: Input
+    Out: Next
+  parent: {fileID: -2223105151175102985}
+  Next: {fileID: -5273811212776522619}
+  OptionalTarget: {fileID: 0}
+  ComponentMask: -568077539
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe9fb12ed060ba4ea46d02074b73c89, type: 3}
+  m_Name: ArenaEnemyStayState
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 301081705397332317}
+  - {fileID: 8255180259258111397}
+  - {fileID: -6981105379223415217}
+  - {fileID: -4010103612653378149}
+  - {fileID: -8109134235355687810}
+  - {fileID: 6216441750586014760}
+  - {fileID: -8583591802110833680}
+  - {fileID: 8049103992777711529}
+  - {fileID: 5012777009434975190}
+  - {fileID: 2776401607928794881}
+  - {fileID: -2223105151175102985}
+  - {fileID: -5273811212776522619}
+  - {fileID: 7557571645282261809}
+  - {fileID: 7231974662334289741}
+  - {fileID: -695303226366625008}
+--- !u!114 &301081705397332317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95d38a62ffec3e4fadf46477c6336d3, type: 3}
+  m_Name: StartDecision
+  m_EditorClassIdentifier: 
+  coords: {x: -718, y: 289}
+  ConnectionContexts:
+  - In: parent
+    Out: startDecision
+  startDecision: {fileID: 7231974662334289741}
+--- !u!114 &2776401607928794881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e906006f8e1024b8f80e269db21601, type: 3}
+  m_Name: Strategies.ChainEnd
+  m_EditorClassIdentifier: 
+  coords: {x: 485, y: 696}
+  ConnectionContexts: []
+  inputNode: {fileID: -8583591802110833680}
+--- !u!114 &5012777009434975190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198376c55930c0b439a80f823b0ed294, type: 3}
+  m_Name: Strategies.ExitStateNode
+  m_EditorClassIdentifier: 
+  coords: {x: 517, y: 881}
+  ConnectionContexts:
+  - In: parent
+    Out: CallNodesWhenExit
+  Input: {fileID: -8583591802110833680}
+  CallNodesWhenExit: {fileID: -2223105151175102985}
+--- !u!114 &6216441750586014760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546a2d439e6442509c274bc201f71a38, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.DecrementRandomMovingTimerNode
+  m_EditorClassIdentifier: 
+  coords: {x: -297, y: 676}
+  ConnectionContexts:
+  - In: Input
+    Out: Next
+  parent: {fileID: 8255180259258111397}
+  Next: {fileID: -8583591802110833680}
+--- !u!114 &7231974662334289741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d821e1bec06a1134db544e7750afad52, type: 3}
+  m_Name: Strategies.GetOrAddComponentNode
+  m_EditorClassIdentifier: 
+  coords: {x: -416, y: 257}
+  ConnectionContexts:
+  - In: parent
+    Out: Next
+  parent: {fileID: 301081705397332317}
+  Next: {fileID: -4010103612653378149}
+  ComponentIndex: -568077539
+  AdditionalEntity: {fileID: 0}
+--- !u!114 &7557571645282261809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d439467c77d4c3e9dfd81b47995f85b, type: 3}
+  m_Name: Strategies.RandomFloatNode
+  m_EditorClassIdentifier: 
+  coords: {x: 152, y: 76}
+  ConnectionContexts:
+  - In: SetRemainingTime
+    Out: Out
+  Out: {fileID: -8109134235355687810}
+  MinValue: 0
+  MaxValue: 1
+--- !u!114 &8049103992777711529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d736b48084948a4bba282056340e1e1, type: 3}
+  m_Name: Strategies.RandomMovingTimerComponentGetRemainingTime
+  m_EditorClassIdentifier: 
+  coords: {x: -297, y: 546}
+  ConnectionContexts:
+  - In: Float
+    Out: Out
+  Out: {fileID: -8583591802110833680}
+--- !u!114 &8255180259258111397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a500fd6e0a7ae94ebe87cd59e6cee54, type: 3}
+  m_Name: UpdateStateNode
+  m_EditorClassIdentifier: 
+  coords: {x: -536, y: 696}
+  ConnectionContexts:
+  - In: parent
+    Out: Update
+  Update: {fileID: 6216441750586014760}

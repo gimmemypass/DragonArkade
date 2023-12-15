@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb991fc149f5fc4caca79459e69ab47, type: 3}
+  m_Name: SpearmanEnemyContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 2331598589427888319}
+    - {fileID: 6946441959383975321}
+    systems: []
+    Parent: {fileID: 11400000}
+  containerIndex: -1263303690
+  References:
+  - {fileID: 11400000, guid: 3b45a809b58e3454aaad74e33eb5c0e3, type: 2}
+--- !u!114 &2331598589427888319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed6022625394d34a9d3432b072313bc, type: 3}
+  m_Name: HealthComponent
+  m_EditorClassIdentifier: 
+  component:
+    healthBase: 1
+--- !u!114 &6946441959383975321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519b02f3872903942a5aa0514b98e53b, type: 3}
+  m_Name: DamageComponent
+  m_EditorClassIdentifier: 
+  component:
+    baseValue: 8

@@ -1,0 +1,1 @@
+using System;using HECSFramework.Core;using HECSFramework.Unity;using Predicates;using UnityEngine;[CreateAssetMenu(fileName = "TargetEnergyMoreOwnerEnergyPredicate", menuName = "BluePrints/Predicates/TargetEnergyMoreOwnerEnergyPredicate")]public class TargetEnergyMoreOwnerEnergyPredicateBlueprint : PredicateBluePrintContainer<TargetEnergyMoreOwnerEnergyPredicate>{}

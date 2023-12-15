@@ -1,0 +1,3 @@
+DrawNodeViewGraph #title {
+    background-color: rgba(41, 87, 131, 0.91);
+}

@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2180796151874229906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef1cbeb5f107334f8b531d6d27fdb04, type: 3}
+  m_Name: InputActionsComponent
+  m_EditorClassIdentifier: 
+  component:
+    actions: {fileID: -944628639613478452, guid: 56a6364261aba7f4aaefa63901ded7c8, type: 3}
+    inputActionSettings:
+    - ActionName: Touch
+      Identifier: {fileID: 11400000, guid: f574cbb290ae0de4d87b1bab569c8f09, type: 2}
+    - ActionName: Stick
+      Identifier: {fileID: 11400000, guid: d5c09a2bdaf60ed4b9c37eae51c47d9d, type: 2}
+--- !u!114 &-1739691129774973442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c27960070847648a8b85ee32af089a, type: 3}
+  m_Name: InputOverUISystem
+  m_EditorClassIdentifier: 
+  system:
+    InputOverUIComponent:
+      InputOverUI: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: InputManager
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -2180796151874229906}
+    systems:
+    - {fileID: -1739691129774973442}
+    - {fileID: 5174334139802640486}
+    Parent: {fileID: 11400000}
+  containerIndex: -348625043
+--- !u!114 &5174334139802640486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c179d6fa5d4052340aa59b32c02309a3, type: 3}
+  m_Name: InputListenSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &6124086706251109428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e3dc9eb435d9245a2e904b47c0ead0, type: 3}
+  m_Name: StickInputSystem
+  m_EditorClassIdentifier: 

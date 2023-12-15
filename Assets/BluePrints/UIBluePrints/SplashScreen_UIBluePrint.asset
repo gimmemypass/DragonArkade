@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4b570c74e516d44b542bc1db94e61c, type: 3}
+  m_Name: SplashScreen_UIBluePrint
+  m_EditorClassIdentifier: 
+  UIActor:
+    m_AssetGUID: 577f2ca4a9ea4744b982178779c6ce9e
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  Container:
+    m_AssetGUID: ca1ea7abf1fcb3848a065d7cd6a451a9
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  UIType: {fileID: 11400000, guid: bbeaf5ba4fa85d843bdcdb082afdc733, type: 2}
+  AdditionalCanvasIdentifier: {fileID: 0}
+  Groups:
+    Groups: []

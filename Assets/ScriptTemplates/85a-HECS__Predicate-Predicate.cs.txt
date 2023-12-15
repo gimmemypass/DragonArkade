@@ -1,0 +1,16 @@
+﻿using Components;
+using HECSFramework.Core;
+using HECSFramework.Unity;
+using System;
+
+namespace Predicates
+{
+    [Serializable][Documentation(Doc.NONE, "")]
+    public sealed class #SCRIPTNAME# : IPredicate
+    {
+        public bool IsReady(Entity target, Entity owner = null)
+        {
+            return false;
+        }
+    }
+}

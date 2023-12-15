@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7898036001372872275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591ac6e3f267d7b41b13af70d083b329, type: 3}
+  m_Name: AbilityOwnerComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-6377086551924400088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9738e8eb20f9fc34b8688603e87478cc, type: 3}
+  m_Name: DefaultAttackAbilitySystem
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: BaseDefaultAttackAbilityContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 8564598477568999161}
+    - {fileID: -7898036001372872275}
+    - {fileID: 3716954853720073484}
+    - {fileID: 2820771214057577782}
+    systems:
+    - {fileID: -6377086551924400088}
+    Parent: {fileID: 11400000}
+  containerIndex: 71955399
+--- !u!114 &2820771214057577782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f8aee7a08c2854b846828c86e8c3e7, type: 3}
+  m_Name: CooldownComponent
+  m_EditorClassIdentifier: 
+  component:
+    baseValue: 2
+--- !u!114 &3716954853720073484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70768f822337b5248b34c1d6574f14fb, type: 3}
+  m_Name: AbilityPredicateComponent
+  m_EditorClassIdentifier: 
+  component:
+    AbilityPredicates:
+      savePredicates: 
+      predicatesBP:
+      - {fileID: 11400000, guid: a752b5a5c42e48e4bb82841ddc93c9ba, type: 2}
+    TargetPredicates:
+      savePredicates: 
+      predicatesBP: []
+    AbilityOwnerPredicates:
+      savePredicates: 
+      predicatesBP: []
+--- !u!114 &4397492126290392398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 451d71401e26d9546b368623fcf91a34, type: 3}
+  m_Name: DefaultEnemyAttackAbilitySystem
+  m_EditorClassIdentifier: 
+  TypeIndex: 343601306
+  system:
+    typeHashCode: 343601306
+    <Owner>k__BackingField:
+      ID: 
+      IsRegistered: 0
+      IsInited: 0
+      IsAlive: 0
+      IsPaused: 0
+      IsDisposed: 0
+      Index: 0
+      IsDirty: 0
+      Generation: 0
+    <IsDisposed>k__BackingField: 0
+--- !u!114 &8564598477568999161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1bb77b641e116b4a9f902f861be43c2, type: 3}
+  m_Name: AbilityTagComponent
+  m_EditorClassIdentifier: 

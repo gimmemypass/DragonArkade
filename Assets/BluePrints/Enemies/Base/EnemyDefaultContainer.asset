@@ -1,0 +1,296 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8339223495766790465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295709bc41dfde44782cb72c26035ce3, type: 3}
+  m_Name: AnimatorStateComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    Animator: {fileID: 0}
+    Activated: 0
+--- !u!114 &-8215703402696626184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613ffd6a02cb66a49af2dd9e4e6c9703, type: 3}
+  m_Name: AbilitiesSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-6817807794942010048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95300403a4d1b474e8080bd09a3a2dbc, type: 3}
+  m_Name: AIStrategyComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    baseStrategy: {fileID: 11400000, guid: 5a5e5be15dc8cb64881ed3d9678223ec, type: 2}
+    manualStart: 1
+--- !u!114 &-6098004065059713727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f322ed2d597ce94489b5e81104a43854, type: 3}
+  m_Name: SpeedComponent
+  m_EditorClassIdentifier: 
+  component:
+    setupValue: 4
+--- !u!114 &-3802048478628819558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed6022625394d34a9d3432b072313bc, type: 3}
+  m_Name: HealthComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    healthBase: 1
+--- !u!114 &-2301123850007583913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1207ab2fbf89594ca21e3846612fc28, type: 3}
+  m_Name: HealthSystem
+  m_EditorClassIdentifier: 
+  system:
+    healthComponent:
+      healthBase: 20
+--- !u!114 &-1782084973412122302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29f4f1cd68639d478aeaee16d4ab2f7, type: 3}
+  m_Name: MoveEnemyToSpawnPointSystem
+  m_EditorClassIdentifier: 
+  system: {}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: EnemyDefaultContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 6665646456247505258}
+    - {fileID: -6817807794942010048}
+    - {fileID: -8339223495766790465}
+    - {fileID: 4679990314767167343}
+    - {fileID: 8800588391919819196}
+    - {fileID: 6729794635555788226}
+    - {fileID: -3802048478628819558}
+    - {fileID: 5183961441132759484}
+    - {fileID: -6098004065059713727}
+    - {fileID: 6476758226148432466}
+    systems:
+    - {fileID: -8215703402696626184}
+    - {fileID: 6653266684495675613}
+    - {fileID: 6911551329399080676}
+    - {fileID: 3717006209181562770}
+    - {fileID: -2301123850007583913}
+    - {fileID: -1782084973412122302}
+    - {fileID: 7433253169953286928}
+    - {fileID: 2444601959679704576}
+    - {fileID: 2087290277286093770}
+    Parent: {fileID: 11400000}
+  containerIndex: -94059594
+--- !u!114 &2087290277286093770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b26d4a499fc6024182d16c01d1fcc0f, type: 3}
+  m_Name: IndicateDamageSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &2444601959679704576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89fde792298fae14ba0182e919e56429, type: 3}
+  m_Name: DisableCollidersWhenDeadSystem
+  m_EditorClassIdentifier: 
+  system: {}
+--- !u!114 &3717006209181562770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cfdd7632c5c96499759a051246d94a, type: 3}
+  m_Name: CountersHolderSystem
+  m_EditorClassIdentifier: 
+  system: {}
+--- !u!114 &4679990314767167343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e23cc7da5305e4697f67d466157cf9, type: 3}
+  m_Name: CountersHolderComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &5183961441132759484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc719e83bb8e254fb55e4f679c5436f, type: 3}
+  m_Name: RigidbodyProviderComponentBluePrint
+  m_EditorClassIdentifier: 
+--- !u!114 &6476758226148432466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423358a0736f32c4c93ca20615a6690a, type: 3}
+  m_Name: UnityTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &6653266684495675613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f9eb05000bb974a8a7376a732c5987, type: 3}
+  m_Name: AINPCSystem
+  m_EditorClassIdentifier: 
+  system:
+    aIStrategyComponent:
+      baseStrategy: {fileID: 0}
+      manualStart: 0
+--- !u!114 &6665646456247505258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e499f4d4c66e54a9512bf9a0a5d757, type: 3}
+  m_Name: AbilitiesHolderComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    Abilities: []
+    AbilitiesContainers:
+    - {fileID: 11400000, guid: 3e2636a235585564db0780eccab6d75c, type: 2}
+--- !u!114 &6729794635555788226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6151187c34edf344d884e43b8e7a00e6, type: 3}
+  m_Name: EnemyTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &6911551329399080676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd18667527c4c24e834ae1e39f78370, type: 3}
+  m_Name: AnimationSystem
+  m_EditorClassIdentifier: 
+  system:
+    AnimatorStateComponent:
+      Animator: {fileID: 0}
+      Activated: 0
+--- !u!114 &7433253169953286928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42645dbe12402743800e818d7c79c0c, type: 3}
+  m_Name: DestroyAfterDeadEndAnimationEventSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &8800588391919819196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519b02f3872903942a5aa0514b98e53b, type: 3}
+  m_Name: DamageComponent
+  m_EditorClassIdentifier: 
+  component:
+    baseValue: 100

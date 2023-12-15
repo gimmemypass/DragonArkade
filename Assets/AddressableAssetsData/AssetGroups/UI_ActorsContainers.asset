@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI_ActorsContainers
+  m_EditorClassIdentifier: 
+  m_GroupName: UI_ActorsContainers
+  m_Data:
+    m_SerializedData: []
+  m_GUID: eae688e6b29f75f4091b590b526bf72b
+  m_SerializeEntries:
+  - m_GUID: 06e0e1ce6ae6ad34ba6383682761c009
+    m_Address: Assets/Content/HealthBar/HPBarContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7d5b37a61302ba4cb1e97ce0b46f388
+    m_Address: Assets/Content/UI/BattleWindow/BattleWindowContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3f2ee302c9a614f4eb41d3335c432772
+    m_Address: Assets/Content/UI/BlockUIOneClickWindow/BlockUIOneClickWindowContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f82d605b270a2914a9b889bc93c376fe
+    m_Address: Assets/Content/UI/StartScreen/StartScreenContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 457d16040a0fe754b9fa25a9c65b2f65
+    m_Address: Assets/Content/UI/FinalScreen/FinalScreenContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bea6a5f05974398469f58d9491fcff8c
+    m_Address: Assets/Content/UI/Upgrade/UpgradeContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5f4dd9d1d337a94294842f62617ed57
+    m_Address: Assets/Content/UI/LoseScreen/LoseScreenContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca1ea7abf1fcb3848a065d7cd6a451a9
+    m_Address: Assets/Content/UI/SplashScreen/SplashScreenContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ec508730b58f4940bf3569a5875a21f
+    m_Address: Assets/Content/UI/BattleWindow/ArenaBattleWindowContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2f34d2415d07754f91fb5fd97efda87
+    m_Address: Assets/Content/UI/Joystick/JoystickContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a0aaf18b482655489f6aafa4c34a3a7
+    m_Address: Assets/Content/UI/Comics/ComicsContainer.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 752d29ca1c087364ba35c5d949cd8478, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: add82d5685af3f74ca57da35d0d6152b, type: 2}

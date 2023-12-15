@@ -1,0 +1,472 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9098042949814064897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0409e614eb7d509458d38f127ab2c4c6, type: 3}
+  m_Name: FloatNode
+  m_EditorClassIdentifier: 
+  coords: {x: 408, y: -58}
+  ConnectionContexts:
+  - In: SetRemainingTime
+    Out: Out
+  Out: {fileID: -8109134235355687810}
+  SetValue: 1
+--- !u!114 &-8583591802110833680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da78827066142a999593a6e36c54565, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.FloatLessThan
+  m_EditorClassIdentifier: 
+  coords: {x: 129, y: 696}
+  ConnectionContexts:
+  - In: Input
+    Out: Positive
+  - In: parent
+    Out: Negative
+  Input: {fileID: 6216441750586014760}
+  Positive: {fileID: 5012777009434975190}
+  Negative: {fileID: 7394301337252709324}
+  Value: 0
+  Float: {fileID: 8049103992777711529}
+--- !u!114 &-8109134235355687810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a505a54313017aa42ade34883aa79723, type: 3}
+  m_Name: Strategies.RandomMovingTimerComponentSetRemainingTime
+  m_EditorClassIdentifier: 
+  coords: {x: 619, y: 97}
+  ConnectionContexts:
+  - In: parent
+    Out: Next
+  parent: {fileID: -4010103612653378149}
+  Next: {fileID: -7107558132517487208}
+  SetRemainingTime: {fileID: -9098042949814064897}
+--- !u!114 &-7107558132517487208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8050232b1b34113a8f3d67ddf8a80bd, type: 3}
+  m_Name: BluePrints.Strategies.RandomDirectionNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1014, y: 151}
+  ConnectionContexts:
+  - In: Input
+    Out: Next
+  parent: {fileID: -8109134235355687810}
+  Next: {fileID: -6981105379223415217}
+  X: 1
+  Y: 0
+  Z: 1
+--- !u!114 &-6981105379223415217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056b34e0b4627e641970bca9be0dfac5, type: 3}
+  m_Name: Strategies.EmptyFinalNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1351, y: 197}
+  ConnectionContexts: []
+  Input: {fileID: -7107558132517487208}
+--- !u!114 &-6704955538479137985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee9c43ee74d41f996c9bd0d39503b63, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.GetPointInDirectionNode
+  m_EditorClassIdentifier: 
+  coords: {x: 552, y: 402}
+  ConnectionContexts:
+  - In: TargetPoint
+    Out: Out
+  Speed: {fileID: 38612853756162115}
+  Direction: {fileID: -4537570185213836095}
+  Out: {fileID: 7394301337252709324}
+--- !u!114 &-6019429095670729491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0409e614eb7d509458d38f127ab2c4c6, type: 3}
+  m_Name: FloatNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1318, y: 448}
+  ConnectionContexts:
+  - In: MinDist
+    Out: Out
+  Out: {fileID: 3255857958743039201}
+  SetValue: 4
+--- !u!114 &-5273811212776522619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056b34e0b4627e641970bca9be0dfac5, type: 3}
+  m_Name: Strategies.EmptyFinalNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1209, y: 961}
+  ConnectionContexts: []
+  Input: {fileID: -2223105151175102985}
+--- !u!114 &-4537570185213836095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f126fbdf3f5d348b1d760704c10570, type: 3}
+  m_Name: Strategies.DirectionComponentGetDirection
+  m_EditorClassIdentifier: 
+  coords: {x: 202, y: 450}
+  ConnectionContexts:
+  - In: Direction
+    Out: Out
+  Out: {fileID: -6704955538479137985}
+--- !u!114 &-4010103612653378149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d821e1bec06a1134db544e7750afad52, type: 3}
+  m_Name: Strategies.GetOrAddComponentNode
+  m_EditorClassIdentifier: 
+  coords: {x: 121, y: 123}
+  ConnectionContexts:
+  - In: parent
+    Out: Next
+  parent: {fileID: 301081705397332317}
+  Next: {fileID: -8109134235355687810}
+  ComponentIndex: -1068283141
+  AdditionalEntity: {fileID: 0}
+--- !u!114 &-2984758022518671602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52fe9cf7b1464e4c98ab216da4463b96, type: 3}
+  m_Name: Strategies.SpeedComponentGetValue
+  m_EditorClassIdentifier: 
+  coords: {x: 1647, y: 463}
+  ConnectionContexts:
+  - In: Speed
+    Out: Out
+  Out: {fileID: 4940672663909927842}
+--- !u!114 &-2223105151175102985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7e5d6d7a7f4a5f87bae974c8157ba2, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.RemoveComponentNode
+  m_EditorClassIdentifier: 
+  coords: {x: 754, y: 887}
+  ConnectionContexts:
+  - In: parent
+    Out: Next
+  - In: Input
+    Out: Next
+  parent: {fileID: 5012777009434975190}
+  Next: {fileID: -5273811212776522619}
+  OptionalTarget: {fileID: 0}
+  ComponentMask: -1068283141
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfe9fb12ed060ba4ea46d02074b73c89, type: 3}
+  m_Name: ArenaEnemyRandomMovingState
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 301081705397332317}
+  - {fileID: 8255180259258111397}
+  - {fileID: -6981105379223415217}
+  - {fileID: 7394301337252709324}
+  - {fileID: 6954741018878498662}
+  - {fileID: -7107558132517487208}
+  - {fileID: -6704955538479137985}
+  - {fileID: 38612853756162115}
+  - {fileID: -4537570185213836095}
+  - {fileID: -4010103612653378149}
+  - {fileID: -8109134235355687810}
+  - {fileID: -9098042949814064897}
+  - {fileID: 6216441750586014760}
+  - {fileID: -8583591802110833680}
+  - {fileID: 8049103992777711529}
+  - {fileID: 5012777009434975190}
+  - {fileID: 2776401607928794881}
+  - {fileID: -2223105151175102985}
+  - {fileID: -5273811212776522619}
+  - {fileID: 3255857958743039201}
+  - {fileID: -6019429095670729491}
+  - {fileID: 3417443221845825102}
+  - {fileID: 4940672663909927842}
+  - {fileID: -2984758022518671602}
+--- !u!114 &38612853756162115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52fe9cf7b1464e4c98ab216da4463b96, type: 3}
+  m_Name: Strategies.SpeedComponentGetValue
+  m_EditorClassIdentifier: 
+  coords: {x: 249, y: 346}
+  ConnectionContexts:
+  - In: Speed
+    Out: Out
+  Out: {fileID: -6704955538479137985}
+--- !u!114 &301081705397332317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95d38a62ffec3e4fadf46477c6336d3, type: 3}
+  m_Name: StartDecision
+  m_EditorClassIdentifier: 
+  coords: {x: -140, y: 159}
+  ConnectionContexts:
+  - In: parent
+    Out: startDecision
+  startDecision: {fileID: -4010103612653378149}
+--- !u!114 &2776401607928794881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34e906006f8e1024b8f80e269db21601, type: 3}
+  m_Name: Strategies.ChainEnd
+  m_EditorClassIdentifier: 
+  coords: {x: 1784, y: 857}
+  ConnectionContexts: []
+  inputNode: {fileID: 7394301337252709324}
+--- !u!114 &3255857958743039201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b04c2e13bb74415ae0ab73ba1a3f5d0, type: 3}
+  m_Name: BluePrints.Strategies.MoveAwayFromTargetNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1477, y: 602}
+  ConnectionContexts: []
+  parent: {fileID: 0}
+  Next: {fileID: 0}
+  MinDist: {fileID: -6019429095670729491}
+  Speed: {fileID: 3417443221845825102}
+--- !u!114 &3417443221845825102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52fe9cf7b1464e4c98ab216da4463b96, type: 3}
+  m_Name: Strategies.SpeedComponentGetValue
+  m_EditorClassIdentifier: 
+  coords: {x: 1160, y: 544}
+  ConnectionContexts:
+  - In: Speed
+    Out: Out
+  Out: {fileID: 3255857958743039201}
+--- !u!114 &4940672663909927842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b3573d96d84176bcf6ce561e1d8169, type: 3}
+  m_Name: BluePrints.Strategies.MoveToScreenViewNode
+  m_EditorClassIdentifier: 
+  coords: {x: 1933, y: 409}
+  ConnectionContexts: []
+  parent: {fileID: 0}
+  Next: {fileID: 0}
+  OffsetInPercent: 0.4
+  Speed: {fileID: -2984758022518671602}
+--- !u!114 &5012777009434975190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198376c55930c0b439a80f823b0ed294, type: 3}
+  m_Name: Strategies.ExitStateNode
+  m_EditorClassIdentifier: 
+  coords: {x: 517, y: 881}
+  ConnectionContexts:
+  - In: parent
+    Out: CallNodesWhenExit
+  Input: {fileID: -8583591802110833680}
+  CallNodesWhenExit: {fileID: -2223105151175102985}
+--- !u!114 &6216441750586014760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546a2d439e6442509c274bc201f71a38, type: 3}
+  m_Name: HECSFramework.Unity.Strategies.DecrementRandomMovingTimerNode
+  m_EditorClassIdentifier: 
+  coords: {x: -297, y: 676}
+  ConnectionContexts:
+  - In: Input
+    Out: Next
+  parent: {fileID: 8255180259258111397}
+  Next: {fileID: -8583591802110833680}
+--- !u!114 &6954741018878498662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52fe9cf7b1464e4c98ab216da4463b96, type: 3}
+  m_Name: Strategies.SpeedComponentGetValue
+  m_EditorClassIdentifier: 
+  coords: {x: 202, y: 546}
+  ConnectionContexts:
+  - In: Speed
+    Out: Out
+  Out: {fileID: 7394301337252709324}
+--- !u!114 &7394301337252709324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db85db5ec27d4b388e63ebffcf8b06ff, type: 3}
+  m_Name: BluePrints.Strategies.RigidbodyMoveNode
+  m_EditorClassIdentifier: 
+  coords: {x: 866, y: 527}
+  ConnectionContexts:
+  - In: inputNode
+    Out: Next
+  parent: {fileID: -8583591802110833680}
+  Next: {fileID: 2776401607928794881}
+  TargetPoint: {fileID: -6704955538479137985}
+  Speed: {fileID: 6954741018878498662}
+--- !u!114 &8049103992777711529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d736b48084948a4bba282056340e1e1, type: 3}
+  m_Name: Strategies.RandomMovingTimerComponentGetRemainingTime
+  m_EditorClassIdentifier: 
+  coords: {x: -297, y: 546}
+  ConnectionContexts:
+  - In: Float
+    Out: Out
+  Out: {fileID: -8583591802110833680}
+--- !u!114 &8255180259258111397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a500fd6e0a7ae94ebe87cd59e6cee54, type: 3}
+  m_Name: UpdateStateNode
+  m_EditorClassIdentifier: 
+  coords: {x: -536, y: 696}
+  ConnectionContexts:
+  - In: parent
+    Out: Update
+  Update: {fileID: 6216441750586014760}

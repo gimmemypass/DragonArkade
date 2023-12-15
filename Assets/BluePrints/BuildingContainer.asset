@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5173658173300868581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a190d3e29c8154a9039479b0e37c5c, type: 3}
+  m_Name: ShakeAnimationWhenDamagedSystem
+  m_EditorClassIdentifier: 
+  system: {}
+--- !u!114 &-4047623022269543882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581b33ca197358848af561755bb3011b, type: 3}
+  m_Name: DestroyDeadEntitySystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-3802048478628819558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed6022625394d34a9d3432b072313bc, type: 3}
+  m_Name: HealthComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    healthBase: 60
+--- !u!114 &-2301123850007583913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1207ab2fbf89594ca21e3846612fc28, type: 3}
+  m_Name: HealthSystem
+  m_EditorClassIdentifier: 
+  system:
+    healthComponent:
+      healthBase: 20
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: BuildingContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 6476758226148432466}
+    - {fileID: -3802048478628819558}
+    - {fileID: 4679990314767167343}
+    systems:
+    - {fileID: -2301123850007583913}
+    - {fileID: 3717006209181562770}
+    - {fileID: -4047623022269543882}
+    - {fileID: -5173658173300868581}
+    Parent: {fileID: 11400000}
+  containerIndex: -1543640249
+--- !u!114 &3717006209181562770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cfdd7632c5c96499759a051246d94a, type: 3}
+  m_Name: CountersHolderSystem
+  m_EditorClassIdentifier: 
+  system: {}
+--- !u!114 &4679990314767167343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e23cc7da5305e4697f67d466157cf9, type: 3}
+  m_Name: CountersHolderComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &6476758226148432466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423358a0736f32c4c93ca20615a6690a, type: 3}
+  m_Name: UnityTransformComponent
+  m_EditorClassIdentifier: 

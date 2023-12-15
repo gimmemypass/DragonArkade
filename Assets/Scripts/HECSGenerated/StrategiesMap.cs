@@ -1,0 +1,1 @@
+public static class StrategiesMap{	public static int EnemyDefaultStrategy => 1633959043;	public static string EnemyDefaultStrategy_string => "EnemyDefaultStrategy";}

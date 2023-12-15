@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb991fc149f5fc4caca79459e69ab47, type: 3}
+  m_Name: PushLeftDownCardContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 7725761254200836954}
+    - {fileID: 6178498636630759711}
+    systems: []
+    Parent: {fileID: 11400000}
+  containerIndex: 999840029
+  References:
+  - {fileID: 11400000, guid: 02a681965506ec84a96ab9c7f73d69e0, type: 2}
+  - {fileID: 11400000, guid: 34c72052ae9f4e34386acf4990c9f0fc, type: 2}
+--- !u!114 &6178498636630759711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b922854630ac804f9d043586afcdf54, type: 3}
+  m_Name: IconComponent
+  m_EditorClassIdentifier: 
+  component:
+    Icon: {fileID: 21300000, guid: b9cfc0bd22230c9488859cb39256ac6c, type: 3}
+--- !u!114 &7725761254200836954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4503989abb7f224a97a7a31609b6213, type: 3}
+  m_Name: PushDirectionComponent
+  m_EditorClassIdentifier: 
+  component:
+    Direction: {x: 0, y: -1, z: 1}

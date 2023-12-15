@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7898036001372872275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591ac6e3f267d7b41b13af70d083b329, type: 3}
+  m_Name: AbilityOwnerComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: HealAbility
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 8564598477568999161}
+    - {fileID: -7898036001372872275}
+    - {fileID: 3716954853720073484}
+    - {fileID: 2494115398761504041}
+    - {fileID: 8106583804500735628}
+    - {fileID: 1215728907493001968}
+    systems:
+    - {fileID: 3850825010132210424}
+    Parent: {fileID: 11400000}
+  containerIndex: -1128263586
+--- !u!114 &1215728907493001968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3892e6b34a491d84c8de5754012829fc, type: 3}
+  m_Name: HealAbilityComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    ParticleSystem: {fileID: 1778132390500520846, guid: ba726846c66893645812a3bedf8487f1, type: 3}
+--- !u!114 &2494115398761504041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26479698374c5d442a9ad025725b6631, type: 3}
+  m_Name: EnergyComponent
+  m_EditorClassIdentifier: 
+  component:
+    baseValue: 2
+--- !u!114 &3716954853720073484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70768f822337b5248b34c1d6574f14fb, type: 3}
+  m_Name: AbilityPredicateComponent
+  m_EditorClassIdentifier: 
+  component:
+    AbilityPredicates:
+      savePredicates: 
+      predicatesBP: []
+    TargetPredicates:
+      savePredicates: 
+      predicatesBP:
+      - {fileID: 11400000, guid: ff35fa1594684ff479835dddd3df2227, type: 2}
+    AbilityOwnerPredicates:
+      savePredicates: 
+      predicatesBP: []
+--- !u!114 &3850825010132210424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e128f6268c5a96148927a88a19ede408, type: 3}
+  m_Name: HealAbilitySystem
+  m_EditorClassIdentifier: 
+  system:
+    HealthComponent:
+      healthBase: 20
+    HealAbilityComponent:
+      ParticleSystem: {fileID: 0}
+--- !u!114 &8106583804500735628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed6022625394d34a9d3432b072313bc, type: 3}
+  m_Name: HealthComponent
+  m_EditorClassIdentifier: 
+  component:
+    healthBase: 400
+--- !u!114 &8564598477568999161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1bb77b641e116b4a9f902f861be43c2, type: 3}
+  m_Name: AbilityTagComponent
+  m_EditorClassIdentifier: 

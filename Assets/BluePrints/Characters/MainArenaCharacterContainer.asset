@@ -1,0 +1,433 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8060733030542437215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb60a8a68a82634d9604d2108cebdcd, type: 3}
+  m_Name: StopAIWhenDeadSystem
+  m_EditorClassIdentifier: 
+--- !u!114 &-6697508984016883729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b06dd146829f9a45bb9202f109041da, type: 3}
+  m_Name: MoveMainCharacterSystem
+  m_EditorClassIdentifier: 
+  system:
+    SpeedComponent:
+      setupValue: 0
+    input: {x: 0, y: 0}
+--- !u!114 &-5409750219968640832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41083d4af9fed224b99bac76f0186936, type: 3}
+  m_Name: AutoApplyItemsWhenStaySystem
+  m_EditorClassIdentifier: 
+  system:
+    Component:
+      Cooldown: 0.5
+      StartCooldown: 3
+    CharacterItemsComponent:
+      RotationSpeed: 1
+      Radius: 1
+      AimAngle: 15
+      ItemInAim:
+        ID: 
+        IsRegistered: 0
+        IsInited: 0
+        IsAlive: 0
+        IsPaused: 0
+        IsDisposed: 0
+        Index: 0
+        IsDirty: 0
+        Generation: 0
+--- !u!114 &-5372664856633426047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4385eafa887afb34ab5fddd17133b32a, type: 3}
+  m_Name: RotateToTargetSystem
+  m_EditorClassIdentifier: 
+  system:
+    RotationComponent:
+      RotationSpeed: 1
+--- !u!114 &-5031966706273118501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d734066cf0bc07f45b0766891b631306, type: 3}
+  m_Name: ApplyAimedItemSystem
+  m_EditorClassIdentifier: 
+  system:
+    CharacterItemsComponent:
+      RotationSpeed: 1
+      Radius: 1
+      AimAngle: 15
+      ItemInAim:
+        ID: 
+        IsRegistered: 0
+        IsInited: 0
+        IsAlive: 0
+        IsPaused: 0
+        IsDisposed: 0
+        Index: 0
+        IsDirty: 0
+        Generation: 0
+--- !u!114 &-4036285391595253827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784461bfea64a5c4585be48b405e913f, type: 3}
+  m_Name: RotationComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    RotationSpeed: 5
+--- !u!114 &-3576003188813685916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f322ed2d597ce94489b5e81104a43854, type: 3}
+  m_Name: SpeedComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    setupValue: 7
+--- !u!114 &-3131463430188987434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423358a0736f32c4c93ca20615a6690a, type: 3}
+  m_Name: UnityTransformComponentBluePrint
+  m_EditorClassIdentifier: 
+--- !u!114 &-1195937094005115147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed6022625394d34a9d3432b072313bc, type: 3}
+  m_Name: HealthComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    healthBase: 5000
+--- !u!114 &-1068766685334949629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97827347907e9564ca56ec50638de17a, type: 3}
+  m_Name: AutoApplyItemsWhenStayComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    Cooldown: 0.25
+    StartCooldown: 3
+--- !u!114 &-921571407034348329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db97fd00400650043856067d2cf48e13, type: 3}
+  m_Name: FlyDragonAnimationSystem
+  m_EditorClassIdentifier: 
+  system: {}
+--- !u!114 &-520794270077816343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fcabe9ab3bde114195f87ca38673ca1, type: 3}
+  m_Name: FindTargetEntitySystem
+  m_EditorClassIdentifier: 
+  system:
+    FactionComponent:
+      FactionIdentifier: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: MainArenaCharacterContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 2008400629610828222}
+    - {fileID: 445832446289813014}
+    - {fileID: -1068766685334949629}
+    - {fileID: 2547203297139961030}
+    - {fileID: 3342457430105099522}
+    - {fileID: -1195937094005115147}
+    - {fileID: 5873533650993173403}
+    - {fileID: 1512188192791600458}
+    - {fileID: -4036285391595253827}
+    - {fileID: -3576003188813685916}
+    - {fileID: 7561408636799368938}
+    - {fileID: -3131463430188987434}
+    - {fileID: 4622777322840672678}
+    - {fileID: 8358277770113922057}
+    systems:
+    - {fileID: -5031966706273118501}
+    - {fileID: -5409750219968640832}
+    - {fileID: -520794270077816343}
+    - {fileID: 4427719218677086970}
+    - {fileID: -6697508984016883729}
+    - {fileID: 1769481575384005733}
+    - {fileID: -5372664856633426047}
+    - {fileID: -921571407034348329}
+    - {fileID: 4019566877052772427}
+    - {fileID: -8060733030542437215}
+    Parent: {fileID: 11400000}
+  containerIndex: 1968583117
+--- !u!114 &445832446289813014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d87a327272984ba4b2f71e1f1ae05, type: 3}
+  m_Name: MainCharacterTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &1512188192791600458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc719e83bb8e254fb55e4f679c5436f, type: 3}
+  m_Name: RigidbodyProviderComponentBluePrint
+  m_EditorClassIdentifier: 
+--- !u!114 &1769481575384005733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea0dad299e7afb4db7d09aaf4ff2ead, type: 3}
+  m_Name: RotateCharacterItemsSystem
+  m_EditorClassIdentifier: 
+  system:
+    CharacterItemsComponent:
+      RotationSpeed: 1
+      Radius: 1
+      AimAngle: 15
+      ItemInAim:
+        ID: 
+        IsRegistered: 0
+        IsInited: 0
+        IsAlive: 0
+        IsPaused: 0
+        IsDisposed: 0
+        Index: 0
+        IsDirty: 0
+        Generation: 0
+--- !u!114 &2008400629610828222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd476dd054f7af1459a49272c243cf37, type: 3}
+  m_Name: InputListenerTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &2547203297139961030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1939e51f1926024fa1bc7ff4ab3c95f, type: 3}
+  m_Name: CharacterItemsComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    RotationSpeed: 200
+    Radius: 2
+    AimAngle: 5
+    ItemInAim:
+      ID: 
+      IsRegistered: 0
+      IsInited: 0
+      IsAlive: 0
+      IsPaused: 0
+      IsDisposed: 0
+      Index: 0
+      IsDirty: 0
+      Generation: 0
+--- !u!114 &3342457430105099522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad166b946ac894c8e5fb7bf10e3782, type: 3}
+  m_Name: FactionComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    FactionIdentifier: {fileID: 11400000, guid: ee10fe17460a09c46a37ec547bace3da, type: 2}
+--- !u!114 &4019566877052772427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd18667527c4c24e834ae1e39f78370, type: 3}
+  m_Name: AnimationSystem
+  m_EditorClassIdentifier: 
+  system:
+    AnimatorStateComponent:
+      Animator: {fileID: 0}
+      Activated: 0
+--- !u!114 &4427719218677086970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1207ab2fbf89594ca21e3846612fc28, type: 3}
+  m_Name: HealthSystem
+  m_EditorClassIdentifier: 
+  system:
+    healthComponent:
+      healthBase: 20
+--- !u!114 &4622777322840672678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514a462b7b083fd4ba0d1dd393f99947, type: 3}
+  m_Name: ViewReferenceComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewReference:
+      m_AssetGUID: 208f89142a704ca4092285dbf9385631
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+--- !u!114 &5873533650993173403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10b5e98e24302742bd1f835cf3fde26, type: 3}
+  m_Name: RadiusComponent
+  m_EditorClassIdentifier: 
+  component:
+    Radius: 3
+--- !u!114 &7561408636799368938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc05ee2910b3301429737ab8a1bf99c4, type: 3}
+  m_Name: TargetEntityComponentBluePrint
+  m_EditorClassIdentifier: 
+--- !u!114 &8358277770113922057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295709bc41dfde44782cb72c26035ce3, type: 3}
+  m_Name: AnimatorStateComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    Animator: {fileID: 0}
+    Activated: 0

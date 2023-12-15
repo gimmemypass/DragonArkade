@@ -1,0 +1,1 @@
+using System;using HECSFramework.Core;using HECSFramework.Unity;using Predicates;using UnityEngine;[CreateAssetMenu(fileName = "CooldownPredicate", menuName = "BluePrints/Predicates/CooldownPredicate")]public class CooldownPredicateBlueprint : PredicateBluePrintContainer<CooldownPredicate>{}
