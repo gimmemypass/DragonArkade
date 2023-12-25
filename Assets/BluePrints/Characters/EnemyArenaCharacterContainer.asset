@@ -59,36 +59,6 @@ MonoBehaviour:
   component:
     Cooldown: 0.5
     StartCooldown: 3
---- !u!114 &-5792926633843880124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41083d4af9fed224b99bac76f0186936, type: 3}
-  m_Name: AutoApplyItemsWhenStaySystem
-  m_EditorClassIdentifier: 
-  system:
-    Component:
-      Cooldown: 0.5
-      StartCooldown: 3
-    CharacterItemsComponent:
-      RotationSpeed: 1
-      Radius: 1
-      AimAngle: 15
-      ItemInAim:
-        ID: 
-        IsRegistered: 0
-        IsInited: 0
-        IsAlive: 0
-        IsPaused: 0
-        IsDisposed: 0
-        Index: 0
-        IsDirty: 0
-        Generation: 0
 --- !u!114 &-5614690555538086024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,9 +196,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder:
     components:
-    - {fileID: -4976399268853409352}
     - {fileID: 903446217755637202}
+    - {fileID: -7507106266681108503}
+    - {fileID: -6449482878854295170}
     - {fileID: 1839725384931864110}
+    - {fileID: -4976399268853409352}
     - {fileID: -5614690555538086024}
     - {fileID: 3352360046057890259}
     - {fileID: 2771609450237165263}
@@ -237,19 +209,15 @@ MonoBehaviour:
     - {fileID: -936999223993590829}
     - {fileID: 5180119689387852013}
     - {fileID: 5875333190753338815}
-    - {fileID: -6449482878854295170}
-    - {fileID: -7507106266681108503}
     systems:
-    - {fileID: 4132929353134829993}
-    - {fileID: 5597946717090470188}
+    - {fileID: 3588431385986297492}
+    - {fileID: -8772064991307245168}
     - {fileID: 518929480298343701}
+    - {fileID: -7680891769499527091}
     - {fileID: -3601998548985788320}
     - {fileID: -2666897026342082852}
     - {fileID: -4417117026455400569}
     - {fileID: 8659735941878876606}
-    - {fileID: -5792926633843880124}
-    - {fileID: -7680891769499527091}
-    - {fileID: -8772064991307245168}
     - {fileID: -5468029888087727512}
     Parent: {fileID: 11400000}
   containerIndex: -1399352187
@@ -281,7 +249,7 @@ MonoBehaviour:
   m_Name: AIStrategyComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    baseStrategy: {fileID: 11400000, guid: ac590053a5a4fb7469f2f64c0cb92a5c, type: 2}
+    baseStrategy: {fileID: 0}
     manualStart: 0
 --- !u!114 &1839725384931864110
 MonoBehaviour:
@@ -346,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     healthBase: 5000
---- !u!114 &4132929353134829993
+--- !u!114 &3588431385986297492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -391,33 +359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc05ee2910b3301429737ab8a1bf99c4, type: 3}
   m_Name: TargetEntityComponentBluePrint
   m_EditorClassIdentifier: 
---- !u!114 &5597946717090470188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d734066cf0bc07f45b0766891b631306, type: 3}
-  m_Name: ApplyAimedItemSystem
-  m_EditorClassIdentifier: 
-  system:
-    CharacterItemsComponent:
-      RotationSpeed: 1
-      Radius: 1
-      AimAngle: 15
-      ItemInAim:
-        ID: 
-        IsRegistered: 0
-        IsInited: 0
-        IsAlive: 0
-        IsPaused: 0
-        IsDisposed: 0
-        Index: 0
-        IsDirty: 0
-        Generation: 0
 --- !u!114 &5875333190753338815
 MonoBehaviour:
   m_ObjectHideFlags: 0
