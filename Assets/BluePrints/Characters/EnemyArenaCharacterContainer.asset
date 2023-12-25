@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: HealthComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    healthBase: 5000
+    healthBase: 50000
 --- !u!114 &3588431385986297492
 MonoBehaviour:
   m_ObjectHideFlags: 0

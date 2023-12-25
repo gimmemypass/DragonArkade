@@ -76,26 +76,8 @@ MonoBehaviour:
     - {fileID: 6220260726283698499}
     - {fileID: -2046089917537686803}
     - {fileID: 4357398911959891064}
-    - {fileID: 2012853869219407995}
     Parent: {fileID: 11400000}
   containerIndex: -142166732
---- !u!114 &2012853869219407995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0d5a2c02bfdb0458bb14ba0966b655, type: 3}
-  m_Name: SpawnDropItemsSystem
-  m_EditorClassIdentifier: 
-  system:
-    SpawnDropItemsComponent:
-      Radius: 0
-      AngleStep: 0
-      Cooldown: 0
 --- !u!114 &3361760807560714244
 MonoBehaviour:
   m_ObjectHideFlags: 0
