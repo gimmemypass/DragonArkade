@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4832112457730123343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1bb77b641e116b4a9f902f861be43c2, type: 3}
+  m_Name: AbilityTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-3956131419280873354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea0dad299e7afb4db7d09aaf4ff2ead, type: 3}
+  m_Name: RotateCharacterItemsSystem
+  m_EditorClassIdentifier: 
+  system:
+    CharacterItemsComponent:
+      RotationSpeed: 1
+      Radius: 1
+      AimAngle: 15
+      ItemInAim:
+        ID: 
+        IsRegistered: 0
+        IsInited: 0
+        IsAlive: 0
+        IsPaused: 0
+        IsDisposed: 0
+        Index: 0
+        IsDirty: 0
+        Generation: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: FireballRingAbility
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -4832112457730123343}
+    - {fileID: 8689573921896391695}
+    - {fileID: 907496946292443501}
+    systems:
+    - {fileID: 6389976601022593049}
+    - {fileID: 4622700854194252622}
+    - {fileID: -3956131419280873354}
+    Parent: {fileID: 11400000}
+  containerIndex: 726297247
+--- !u!114 &907496946292443501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70768f822337b5248b34c1d6574f14fb, type: 3}
+  m_Name: AbilityPredicateComponent
+  m_EditorClassIdentifier: 
+  component:
+    AbilityPredicates:
+      savePredicates: 
+      predicatesBP: []
+    TargetPredicates:
+      savePredicates: 
+      predicatesBP: []
+    AbilityOwnerPredicates:
+      savePredicates: 
+      predicatesBP: []
+--- !u!114 &4622700854194252622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41083d4af9fed224b99bac76f0186936, type: 3}
+  m_Name: AutoApplyItemsWhenStaySystem
+  m_EditorClassIdentifier: 
+  system:
+    Component:
+      Cooldown: 0.5
+      StartCooldown: 3
+    CharacterItemsComponent:
+      RotationSpeed: 1
+      Radius: 1
+      AimAngle: 15
+      ItemInAim:
+        ID: 
+        IsRegistered: 0
+        IsInited: 0
+        IsAlive: 0
+        IsPaused: 0
+        IsDisposed: 0
+        Index: 0
+        IsDirty: 0
+        Generation: 0
+--- !u!114 &6389976601022593049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d734066cf0bc07f45b0766891b631306, type: 3}
+  m_Name: ApplyAimedItemSystem
+  m_EditorClassIdentifier: 
+  system:
+    CharacterItemsComponent:
+      RotationSpeed: 1
+      Radius: 1
+      AimAngle: 15
+      ItemInAim:
+        ID: 
+        IsRegistered: 0
+        IsInited: 0
+        IsAlive: 0
+        IsPaused: 0
+        IsDisposed: 0
+        Index: 0
+        IsDirty: 0
+        Generation: 0
+--- !u!114 &8689573921896391695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591ac6e3f267d7b41b13af70d083b329, type: 3}
+  m_Name: AbilityOwnerComponent
+  m_EditorClassIdentifier: 

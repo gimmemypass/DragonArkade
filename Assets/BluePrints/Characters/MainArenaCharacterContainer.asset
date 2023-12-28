@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8060733030542437215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb60a8a68a82634d9604d2108cebdcd, type: 3}
-  m_Name: StopAIWhenDeadSystem
-  m_EditorClassIdentifier: 
 --- !u!114 &-6697508984016883729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,36 +16,6 @@ MonoBehaviour:
     SpeedComponent:
       setupValue: 0
     input: {x: 0, y: 0}
---- !u!114 &-5409750219968640832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41083d4af9fed224b99bac76f0186936, type: 3}
-  m_Name: AutoApplyItemsWhenStaySystem
-  m_EditorClassIdentifier: 
-  system:
-    Component:
-      Cooldown: 0.5
-      StartCooldown: 3
-    CharacterItemsComponent:
-      RotationSpeed: 1
-      Radius: 1
-      AimAngle: 15
-      ItemInAim:
-        ID: 
-        IsRegistered: 0
-        IsInited: 0
-        IsAlive: 0
-        IsPaused: 0
-        IsDisposed: 0
-        Index: 0
-        IsDirty: 0
-        Generation: 0
 --- !u!114 &-5372664856633426047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,33 +31,6 @@ MonoBehaviour:
   system:
     RotationComponent:
       RotationSpeed: 1
---- !u!114 &-5031966706273118501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d734066cf0bc07f45b0766891b631306, type: 3}
-  m_Name: ApplyAimedItemSystem
-  m_EditorClassIdentifier: 
-  system:
-    CharacterItemsComponent:
-      RotationSpeed: 1
-      Radius: 1
-      AimAngle: 15
-      ItemInAim:
-        ID: 
-        IsRegistered: 0
-        IsInited: 0
-        IsAlive: 0
-        IsPaused: 0
-        IsDisposed: 0
-        Index: 0
-        IsDirty: 0
-        Generation: 0
 --- !u!114 &-4036285391595253827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +144,7 @@ MonoBehaviour:
     components:
     - {fileID: 2008400629610828222}
     - {fileID: 445832446289813014}
+    - {fileID: 8358277770113922057}
     - {fileID: -1068766685334949629}
     - {fileID: 2547203297139961030}
     - {fileID: 3342457430105099522}
@@ -224,20 +156,31 @@ MonoBehaviour:
     - {fileID: 7561408636799368938}
     - {fileID: -3131463430188987434}
     - {fileID: 4622777322840672678}
-    - {fileID: 8358277770113922057}
+    - {fileID: 3893999373129541885}
     systems:
-    - {fileID: -5031966706273118501}
-    - {fileID: -5409750219968640832}
+    - {fileID: 4019566877052772427}
     - {fileID: -520794270077816343}
+    - {fileID: -921571407034348329}
     - {fileID: 4427719218677086970}
     - {fileID: -6697508984016883729}
-    - {fileID: 1769481575384005733}
     - {fileID: -5372664856633426047}
-    - {fileID: -921571407034348329}
-    - {fileID: 4019566877052772427}
-    - {fileID: -8060733030542437215}
+    - {fileID: 7211631104858730477}
+    - {fileID: 415166777562434845}
     Parent: {fileID: 11400000}
   containerIndex: 1968583117
+--- !u!114 &415166777562434845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6fb7bbe059d794392773b2e012abe7, type: 3}
+  m_Name: MainCharAttackSystem
+  m_EditorClassIdentifier: 
+  system: {}
 --- !u!114 &445832446289813014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,33 +205,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc719e83bb8e254fb55e4f679c5436f, type: 3}
   m_Name: RigidbodyProviderComponentBluePrint
   m_EditorClassIdentifier: 
---- !u!114 &1769481575384005733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bea0dad299e7afb4db7d09aaf4ff2ead, type: 3}
-  m_Name: RotateCharacterItemsSystem
-  m_EditorClassIdentifier: 
-  system:
-    CharacterItemsComponent:
-      RotationSpeed: 1
-      Radius: 1
-      AimAngle: 15
-      ItemInAim:
-        ID: 
-        IsRegistered: 0
-        IsInited: 0
-        IsAlive: 0
-        IsPaused: 0
-        IsDisposed: 0
-        Index: 0
-        IsDirty: 0
-        Generation: 0
 --- !u!114 &2008400629610828222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +257,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     FactionIdentifier: {fileID: 11400000, guid: ee10fe17460a09c46a37ec547bace3da, type: 2}
+--- !u!114 &3893999373129541885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e499f4d4c66e54a9512bf9a0a5d757, type: 3}
+  m_Name: AbilitiesHolderComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    Abilities: []
+    AbilitiesContainers:
+    - {fileID: 11400000, guid: 151a872da2bf6ac48beb4aa983c73e36, type: 2}
 --- !u!114 &4019566877052772427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +336,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     Radius: 3
+--- !u!114 &7211631104858730477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613ffd6a02cb66a49af2dd9e4e6c9703, type: 3}
+  m_Name: AbilitiesSystem
+  m_EditorClassIdentifier: 
 --- !u!114 &7561408636799368938
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4832112457730123343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1bb77b641e116b4a9f902f861be43c2, type: 3}
+  m_Name: AbilityTagComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-3895243486419733037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4675c5f3bac1ed5459c4224e8db0b3cb, type: 3}
+  m_Name: DragonDefaultAttackAbilitySystem
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: DragonDefaultAttackAbility
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: -4832112457730123343}
+    - {fileID: 8689573921896391695}
+    - {fileID: 907496946292443501}
+    - {fileID: 4456266462145491266}
+    systems:
+    - {fileID: -3895243486419733037}
+    Parent: {fileID: 11400000}
+  containerIndex: 1336719493
+--- !u!114 &907496946292443501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70768f822337b5248b34c1d6574f14fb, type: 3}
+  m_Name: AbilityPredicateComponent
+  m_EditorClassIdentifier: 
+  component:
+    AbilityPredicates:
+      savePredicates: 
+      predicatesBP:
+      - {fileID: 11400000, guid: a752b5a5c42e48e4bb82841ddc93c9ba, type: 2}
+    TargetPredicates:
+      savePredicates: 
+      predicatesBP: []
+    AbilityOwnerPredicates:
+      savePredicates: 
+      predicatesBP: []
+--- !u!114 &4456266462145491266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f8aee7a08c2854b846828c86e8c3e7, type: 3}
+  m_Name: CooldownComponent
+  m_EditorClassIdentifier: 
+  component:
+    baseValue: 2
+--- !u!114 &8689573921896391695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591ac6e3f267d7b41b13af70d083b329, type: 3}
+  m_Name: AbilityOwnerComponent
+  m_EditorClassIdentifier: 
