@@ -36,11 +36,9 @@ namespace Systems
             itemsGlobalHolderComponent = EntityManager.Default.GetSingleComponent<ItemsGlobalHolderComponent>();
             mainCharacter = EntityManager.Default.GetSingleComponent<MainCharacterTagComponent>().Owner;
             entitiesFilter.ForceUpdateFilter();
-            enemy = entitiesFilter.FirstOrDefault();
             for (int i = 0; i < 6; i++)
             {
                 AddToCharacter(mainCharacter).Forget();
-                AddToCharacter(enemy).Forget();
             }
         }
 
@@ -56,16 +54,16 @@ namespace Systems
         {
             if (!gameStateComponent.IsNeededState(State))
                 return;
-            if (FactionHelper.GetHealthSum(FactionIdentifierMap.PlayerFactionIdentifier) <= 0)
-            {
-                Owner.GetOrAddComponent<ArenaFinishComponent>().WinnerFaction = FactionIdentifierMap.EnemyFactionIdentifier;
-                EndState();      
-            } 
-            else if (FactionHelper.GetHealthSum(FactionIdentifierMap.EnemyFactionIdentifier) <= 0)
-            {
-                Owner.GetOrAddComponent<ArenaFinishComponent>().WinnerFaction = FactionIdentifierMap.PlayerFactionIdentifier;
-                EndState();      
-            }
+            // if (FactionHelper.GetHealthSum(FactionIdentifierMap.PlayerFactionIdentifier) <= 0)
+            // {
+            //     Owner.GetOrAddComponent<ArenaFinishComponent>().WinnerFaction = FactionIdentifierMap.EnemyFactionIdentifier;
+            //     EndState();      
+            // } 
+            // else if (FactionHelper.GetHealthSum(FactionIdentifierMap.EnemyFactionIdentifier) <= 0)
+            // {
+            //     Owner.GetOrAddComponent<ArenaFinishComponent>().WinnerFaction = FactionIdentifierMap.PlayerFactionIdentifier;
+            //     EndState();      
+            // }
         }
     }
 }

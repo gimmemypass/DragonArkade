@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: SpeedComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    setupValue: 7
+    setupValue: 13
 --- !u!114 &-3131463430188987434
 MonoBehaviour:
   m_ObjectHideFlags: 0

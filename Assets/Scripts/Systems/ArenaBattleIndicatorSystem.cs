@@ -31,6 +31,8 @@ namespace Systems
 
         public void UpdateLocal()
         {
+            if (enemyFilter.Count == 0)
+                return;
             var targetPos = enemyFilter.FirstOrDefault().GetComponent<UnityTransformComponent>().Transform.position;
             var screenPos = camera.WorldToScreenPoint(targetPos);
             var isInvisible = screenPos.x < 0 || screenPos.x > Screen.width || screenPos.y < 0 ||
