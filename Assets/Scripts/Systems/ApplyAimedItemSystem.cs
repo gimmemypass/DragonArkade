@@ -60,7 +60,7 @@ namespace Systems
             else
                 dir = TargetEntityComponent.Target.GetComponent<UnityTransformComponent>().Transform.position -
                       Owner.GetComponent<UnityTransformComponent>().Transform.position;
-
+            
             return dir;
         }
 
