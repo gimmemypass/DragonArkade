@@ -8,7 +8,7 @@ namespace Systems
 {
     [Serializable]
     [Documentation(Doc.NONE, "")]
-    public sealed class AutoApplyItemsWhenStaySystem : BaseSystem, IUpdatable
+    public sealed class AutoApplyItemsWhenStaySystem : BaseAbilitySystem, IUpdatable
     {
         [Required] public AutoApplyItemsWhenStayComponent Component;
         [Required] public CharacterItemsComponent CharacterItemsComponent;
@@ -16,7 +16,6 @@ namespace Systems
 
         public override void InitSystem()
         {
-            cooldown = Component.StartCooldown;
         }
 
         public void UpdateLocal()
@@ -32,6 +31,11 @@ namespace Systems
                 cooldown = Component.Cooldown;
                 Owner.Command(new TryApplyAimedItemCommand());
             }
+        }
+
+        public override void Execute(Entity owner = null, Entity target = null, bool enable = true)
+        {
+            cooldown = Component.StartCooldown;
         }
     }
 }
