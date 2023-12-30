@@ -1,0 +1,1 @@
+using System;using HECSFramework.Core;using HECSFramework.Unity;using Predicates;using UnityEngine;[CreateAssetMenu(fileName = "VisualNotInActionPredicate", menuName = "BluePrints/Predicates/VisualNotInActionPredicate")]public class VisualNotInActionPredicateBlueprint : PredicateBluePrintContainer<VisualNotInActionPredicate>{}

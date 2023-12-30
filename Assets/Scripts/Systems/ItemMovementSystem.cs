@@ -17,6 +17,8 @@ namespace Systems
 
         public void UpdateLocal()
         {
+            if (RigidbodyProviderComponent.Get.isKinematic)
+                return;
             RigidbodyProviderComponent.Get.velocity = DirectionComponent.Direction * SpeedComponent.Value;
         }
     }

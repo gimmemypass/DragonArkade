@@ -13,13 +13,11 @@ namespace Systems
 {
     [Serializable]
     [Documentation(Doc.NONE, "")]
-    public sealed class RotateCharacterItemsSystem : BaseSystem,
+    public sealed class RotateCharacterItemsSystem : BaseAbilitySystem,
         IUpdatable,
         IReactCommand<AddItemToCharacterCommand>,
-        IReactCommand<RemoveItemToCharacterCommand>,
-        IHaveActor
+        IReactCommand<RemoveItemToCharacterCommand>
     {
-        public Actor Actor { get; set; }
         [Required] public CharacterItemsComponent CharacterItemsComponent;
 
         private CharactersItemsHolderMonoComponent monoComponent;
@@ -28,18 +26,18 @@ namespace Systems
 
         public override void InitSystem()
         {
-            Actor.TryGetComponent(out monoComponent, true);
         }
 
         public void UpdateLocal()
         {
+            if (!Owner.ContainsMask<VisualInActionTagComponent>())
+                return;
             monoComponent.transform.rotation *= Quaternion.Euler(0, CharacterItemsComponent.RotationSpeed * Time.deltaTime, 0); 
             UpdatePositionsAround();
         }
 
         public void CommandReact(AddItemToCharacterCommand command)
         {
-            command.Item.GetOrAddComponent<BelongingComponent>().Entity = Owner;
             CharacterItemsComponent.Items.Add(command.Item.Index, command.Item);
             
             var itemTransform = command.Item.GetComponent<UnityTransformComponent>();
@@ -82,6 +80,11 @@ namespace Systems
             command.Item.GetComponent<UnityTransformComponent>().Transform.SetParent(null);
             CharacterItemsComponent.Items.Remove(command.Item.Index);
             entityIdToAngle.Remove(command.Item.Index);
+        }
+
+        public override void Execute(Entity owner = null, Entity target = null, bool enable = true)
+        {
+            owner.AsActor().TryGetComponent(out monoComponent, true);
         }
     }
 }

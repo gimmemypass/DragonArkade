@@ -8,7 +8,7 @@ namespace Systems
 {
     [Serializable]
     [Documentation(Doc.NONE, "")]
-    public sealed class FlyDragonAnimationSystem : BaseSystem, IUpdatable, IReactCommand<ItemAppliedCommand>, IReactCommand<DamageForVisualFXCommand>, IReactCommand<IsDeadCommand>
+    public sealed class FlyDragonAnimationSystem : BaseSystem, IUpdatable, IReactGlobalCommand<ItemAppliedCommand>, IReactCommand<DamageForVisualFXCommand>, IReactCommand<IsDeadCommand>
     {
         [Required] public UnityTransformComponent UnityTransformComponent;
         [Required] public RigidbodyProviderComponent RigidbodyProviderComponent;
@@ -39,8 +39,10 @@ namespace Systems
             });
         }
 
-        public void CommandReact(ItemAppliedCommand command)
+        public void CommandGlobalReact(ItemAppliedCommand command)
         {
+            if (command.Owner.Index != Owner.Index)
+                return;
             Owner.Command(new IntAnimationCommand()
             {
                 Index = AnimParametersMap.AttackBlend,

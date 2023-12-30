@@ -18,6 +18,16 @@ namespace Components
         [SerializeField]
         private ActorContainer[] dropContainers;
 
+        public ActorContainer GetDropByContainerId(int id)
+        {
+            foreach (var container in dropContainers)
+            {
+                if (container.ContainerIndex == id)
+                    return container;
+            }
+            throw new Exception();
+        }
+
         public ActorContainer GetByContainerId(int id)
         {
             foreach (var container in containers)
@@ -27,18 +37,5 @@ namespace Components
             }
             throw new Exception();
         }
-
-        public ActorContainer GetDropByContainerId(int id)
-        {
-            foreach (var container in dropContainers)
-            {
-                if (container.ContainerIndex == id)
-                    return container;
-            }
-            throw new Exception();           
-        }
-
-        public ActorContainer GetRandomDrop() => dropContainers.GetRandomElement();
-        public ActorContainer GetRandomItem() => containers.GetRandomElement();
     }
 }

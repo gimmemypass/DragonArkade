@@ -44,21 +44,6 @@ MonoBehaviour:
   component:
     Animator: {fileID: 0}
     Activated: 0
---- !u!114 &-6449482878854295170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97827347907e9564ca56ec50638de17a, type: 3}
-  m_Name: AutoApplyItemsWhenStayComponentBluePrint
-  m_EditorClassIdentifier: 
-  component:
-    Cooldown: 0.5
-    StartCooldown: 3
 --- !u!114 &-5614690555538086024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,16 +129,6 @@ MonoBehaviour:
       RotationSpeed: 1
       Radius: 1
       AimAngle: 15
-      ItemInAim:
-        ID: 
-        IsRegistered: 0
-        IsInited: 0
-        IsAlive: 0
-        IsPaused: 0
-        IsDisposed: 0
-        Index: 0
-        IsDirty: 0
-        Generation: 0
 --- !u!114 &-936999223993590829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,7 +173,6 @@ MonoBehaviour:
     components:
     - {fileID: 903446217755637202}
     - {fileID: -7507106266681108503}
-    - {fileID: -6449482878854295170}
     - {fileID: 1839725384931864110}
     - {fileID: -4976399268853409352}
     - {fileID: -5614690555538086024}
@@ -267,16 +241,6 @@ MonoBehaviour:
     RotationSpeed: 200
     Radius: 2
     AimAngle: 5
-    ItemInAim:
-      ID: 
-      IsRegistered: 0
-      IsInited: 0
-      IsAlive: 0
-      IsPaused: 0
-      IsDisposed: 0
-      Index: 0
-      IsDirty: 0
-      Generation: 0
 --- !u!114 &2771609450237165263
 MonoBehaviour:
   m_ObjectHideFlags: 0

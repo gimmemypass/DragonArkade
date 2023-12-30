@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8367954288204233376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97827347907e9564ca56ec50638de17a, type: 3}
+  m_Name: AutoApplyItemsWhenStayComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    Cooldown: 0.5
+    StartCooldown: 3
+--- !u!114 &-6207730933434069809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1939e51f1926024fa1bc7ff4ab3c95f, type: 3}
+  m_Name: CharacterItemsComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    RotationSpeed: 200
+    Radius: 2
+    AimAngle: 5
 --- !u!114 &-4832112457730123343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,16 +60,35 @@ MonoBehaviour:
       RotationSpeed: 1
       Radius: 1
       AimAngle: 15
-      ItemInAim:
-        ID: 
-        IsRegistered: 0
-        IsInited: 0
-        IsAlive: 0
-        IsPaused: 0
-        IsDisposed: 0
-        Index: 0
-        IsDirty: 0
-        Generation: 0
+--- !u!114 &-1555126309844876069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d734066cf0bc07f45b0766891b631306, type: 3}
+  m_Name: ApplyAimedItemSystem
+  m_EditorClassIdentifier: 
+  system:
+    CharacterItemsComponent:
+      RotationSpeed: 1
+      Radius: 1
+      AimAngle: 15
+--- !u!114 &-1173337967386209240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc05ee2910b3301429737ab8a1bf99c4, type: 3}
+  m_Name: TargetEntityComponentBluePrint
+  m_EditorClassIdentifier: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,12 +106,33 @@ MonoBehaviour:
     - {fileID: -4832112457730123343}
     - {fileID: 8689573921896391695}
     - {fileID: 907496946292443501}
+    - {fileID: -6207730933434069809}
+    - {fileID: -1173337967386209240}
+    - {fileID: -8367954288204233376}
     systems:
-    - {fileID: 6389976601022593049}
+    - {fileID: -1555126309844876069}
     - {fileID: 4622700854194252622}
     - {fileID: -3956131419280873354}
+    - {fileID: 401822457231177412}
     Parent: {fileID: 11400000}
-  containerIndex: 726297247
+  containerIndex: -1425178498
+--- !u!114 &401822457231177412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bab2014fe910c45ad9646fdc358e79, type: 3}
+  m_Name: FireballRingAbilitySystem
+  m_EditorClassIdentifier: 
+  system:
+    CharacterItemsComponent:
+      RotationSpeed: 1
+      Radius: 1
+      AimAngle: 15
 --- !u!114 &907496946292443501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +154,8 @@ MonoBehaviour:
       predicatesBP: []
     AbilityOwnerPredicates:
       savePredicates: 
-      predicatesBP: []
+      predicatesBP:
+      - {fileID: 11400000, guid: 38edf4e2f6e5d5341a3766e7f0e0aaf3, type: 2}
 --- !u!114 &4622700854194252622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,43 +176,6 @@ MonoBehaviour:
       RotationSpeed: 1
       Radius: 1
       AimAngle: 15
-      ItemInAim:
-        ID: 
-        IsRegistered: 0
-        IsInited: 0
-        IsAlive: 0
-        IsPaused: 0
-        IsDisposed: 0
-        Index: 0
-        IsDirty: 0
-        Generation: 0
---- !u!114 &6389976601022593049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d734066cf0bc07f45b0766891b631306, type: 3}
-  m_Name: ApplyAimedItemSystem
-  m_EditorClassIdentifier: 
-  system:
-    CharacterItemsComponent:
-      RotationSpeed: 1
-      Radius: 1
-      AimAngle: 15
-      ItemInAim:
-        ID: 
-        IsRegistered: 0
-        IsInited: 0
-        IsAlive: 0
-        IsPaused: 0
-        IsDisposed: 0
-        Index: 0
-        IsDirty: 0
-        Generation: 0
 --- !u!114 &8689573921896391695
 MonoBehaviour:
   m_ObjectHideFlags: 0

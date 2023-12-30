@@ -24,6 +24,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4675c5f3bac1ed5459c4224e8db0b3cb, type: 3}
   m_Name: DragonDefaultAttackAbilitySystem
   m_EditorClassIdentifier: 
+  system:
+    CooldownComponent:
+      baseValue: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,12 +66,14 @@ MonoBehaviour:
       savePredicates: 
       predicatesBP:
       - {fileID: 11400000, guid: a752b5a5c42e48e4bb82841ddc93c9ba, type: 2}
+      - {fileID: 11400000, guid: 6307e4f025338a04ea359c1c1e6a7f06, type: 2}
     TargetPredicates:
       savePredicates: 
       predicatesBP: []
     AbilityOwnerPredicates:
       savePredicates: 
-      predicatesBP: []
+      predicatesBP:
+      - {fileID: 11400000, guid: 38edf4e2f6e5d5341a3766e7f0e0aaf3, type: 2}
 --- !u!114 &4456266462145491266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,7 +87,7 @@ MonoBehaviour:
   m_Name: CooldownComponent
   m_EditorClassIdentifier: 
   component:
-    baseValue: 2
+    baseValue: 1
 --- !u!114 &8689573921896391695
 MonoBehaviour:
   m_ObjectHideFlags: 0

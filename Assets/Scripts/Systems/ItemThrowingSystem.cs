@@ -11,7 +11,7 @@ namespace Systems
     [Documentation(Doc.NONE, "")]
     public sealed class ItemThrowingSystem : BaseSystem, IReactCommand<TryApplyItemCommand>
     {
-
+        [Required] public RigidbodyProviderComponent RigidbodyProviderComponent;
         public override void InitSystem()
         {
             
@@ -20,9 +20,10 @@ namespace Systems
         public void CommandReact(TryApplyItemCommand command)
         {
             var itemOwner = Owner.GetComponent<BelongingComponent>().Entity;
-            
+
+            RigidbodyProviderComponent.Get.isKinematic = false;
             Owner.GetComponent<DirectionComponent>().Direction = GetDirection(itemOwner);
-            itemOwner.Command(new ItemAppliedCommand(){Item = Owner});
+            EntityManager.Command(new ItemAppliedCommand(){Item = Owner, Owner = itemOwner});
         }
         
         private Vector3 GetDirection(Entity itemOwner)

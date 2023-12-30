@@ -31,6 +31,18 @@ MonoBehaviour:
   system:
     RotationComponent:
       RotationSpeed: 1
+--- !u!114 &-5124227716414061139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18bdb478b9f6e964187306d6b59319d6, type: 3}
+  m_Name: CharacterItemsSourceMonoComponentProvider
+  m_EditorClassIdentifier: 
 --- !u!114 &-4036285391595253827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,13 +154,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder:
     components:
-    - {fileID: 2008400629610828222}
-    - {fileID: 445832446289813014}
+    - {fileID: 3893999373129541885}
     - {fileID: 8358277770113922057}
     - {fileID: -1068766685334949629}
-    - {fileID: 2547203297139961030}
+    - {fileID: -5124227716414061139}
     - {fileID: 3342457430105099522}
     - {fileID: -1195937094005115147}
+    - {fileID: 2008400629610828222}
+    - {fileID: 445832446289813014}
     - {fileID: 5873533650993173403}
     - {fileID: 1512188192791600458}
     - {fileID: -4036285391595253827}
@@ -156,16 +169,15 @@ MonoBehaviour:
     - {fileID: 7561408636799368938}
     - {fileID: -3131463430188987434}
     - {fileID: 4622777322840672678}
-    - {fileID: 3893999373129541885}
     systems:
+    - {fileID: 7211631104858730477}
     - {fileID: 4019566877052772427}
     - {fileID: -520794270077816343}
     - {fileID: -921571407034348329}
     - {fileID: 4427719218677086970}
+    - {fileID: 415166777562434845}
     - {fileID: -6697508984016883729}
     - {fileID: -5372664856633426047}
-    - {fileID: 7211631104858730477}
-    - {fileID: 415166777562434845}
     Parent: {fileID: 11400000}
   containerIndex: 1968583117
 --- !u!114 &415166777562434845
@@ -217,32 +229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd476dd054f7af1459a49272c243cf37, type: 3}
   m_Name: InputListenerTagComponent
   m_EditorClassIdentifier: 
---- !u!114 &2547203297139961030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1939e51f1926024fa1bc7ff4ab3c95f, type: 3}
-  m_Name: CharacterItemsComponentBluePrint
-  m_EditorClassIdentifier: 
-  component:
-    RotationSpeed: 200
-    Radius: 2
-    AimAngle: 5
-    ItemInAim:
-      ID: 
-      IsRegistered: 0
-      IsInited: 0
-      IsAlive: 0
-      IsPaused: 0
-      IsDisposed: 0
-      Index: 0
-      IsDirty: 0
-      Generation: 0
 --- !u!114 &3342457430105099522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +259,7 @@ MonoBehaviour:
     Abilities: []
     AbilitiesContainers:
     - {fileID: 11400000, guid: 151a872da2bf6ac48beb4aa983c73e36, type: 2}
+    - {fileID: 11400000, guid: 3ae6304e2d7c1674ba18755209a04971, type: 2}
 --- !u!114 &4019566877052772427
 MonoBehaviour:
   m_ObjectHideFlags: 0

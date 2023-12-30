@@ -1,0 +1,1 @@
+using System;using HECSFramework.Core;using HECSFramework.Unity;using Predicates;using UnityEngine;[CreateAssetMenu(fileName = "NoBlockingAbilityOnOwnerPredicate", menuName = "BluePrints/Predicates/NoBlockingAbilityOnOwnerPredicate")]public class NoBlockingAbilityOnOwnerPredicateBlueprint : PredicateBluePrintContainer<NoBlockingAbilityOnOwnerPredicate>{}

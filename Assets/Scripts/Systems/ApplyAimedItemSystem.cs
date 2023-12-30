@@ -10,11 +10,10 @@ namespace Systems
 {
     [Serializable]
     [Documentation(Doc.NONE, "")]
-    public sealed class ApplyAimedItemSystem : BaseSystem, IReactCommand<TryApplyAimedItemCommand>, IHaveActor, IUpdatable, IReactCommand<ItemAppliedCommand>
+    public sealed class ApplyAimedItemSystem : BaseSystem, IReactCommand<TryApplyAimedItemCommand>, IUpdatable, IReactGlobalCommand<ItemAppliedCommand>
     {
-        public Actor Actor { get; set; }
         [Required] public CharacterItemsComponent CharacterItemsComponent;
-        [Required] public TargetEntityComponent TargetEntityComponent;
+        [Required] public AbilityOwnerComponent AbilityOwnerComponent;
         public override void InitSystem()
         {
         }
@@ -22,13 +21,12 @@ namespace Systems
         public void CommandReact(TryApplyAimedItemCommand command)
         {
             var item = CharacterItemsComponent.ItemInAim;
-            if (item == null)
-                return;
-            item.Command(new TryApplyItemCommand());
+            item?.Command(new TryApplyItemCommand());
         }
-        
-        public void CommandReact(ItemAppliedCommand command)
+        public void CommandGlobalReact(ItemAppliedCommand command)
         {
+            if (command.Owner.Index != AbilityOwnerComponent.AbilityOwner.Index)
+                return;
             Owner.Command(new RemoveItemToCharacterCommand(){Item = command.Item});
         }
 
@@ -37,8 +35,9 @@ namespace Systems
              CharacterItemsComponent.ItemInAim = null;
              if (CharacterItemsComponent.Items.Count == 0)
                  return;
- 
-             var dir = GetDirection();
+
+             var target = AbilityOwnerComponent.AbilityOwner.GetComponent<TargetEntityComponent>().Target;
+             var dir = GetDirection(target);
 
              var targetAngle = Vector3.SignedAngle(Vector3.forward, dir, Vector3.up);
              var angle = CharacterItemsComponent.AimAngle;
@@ -50,16 +49,16 @@ namespace Systems
              CharacterItemsComponent.ItemInAim = item;
         }
 
-        private Vector3 GetDirection()
+        private Vector3 GetDirection(Entity target)
         {
             Vector3 dir;
-            if (TargetEntityComponent.Target == null)
+            if (target == null)
             {
                 dir = Vector3.forward;
             }
             else
-                dir = TargetEntityComponent.Target.GetComponent<UnityTransformComponent>().Transform.position -
-                      Owner.GetComponent<UnityTransformComponent>().Transform.position;
+                dir = target.GetComponent<UnityTransformComponent>().Transform.position -
+                      AbilityOwnerComponent.AbilityOwner.GetComponent<UnityTransformComponent>().Transform.position;
             
             return dir;
         }
@@ -72,7 +71,5 @@ namespace Systems
             if (angle > 180) angle -= 360;
             return angle;
         }
-
-
     }
 }

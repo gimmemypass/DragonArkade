@@ -68,7 +68,7 @@ namespace Systems
             var angle = (droppedItems - droppedItems % spawnPoints.Length) * SpawnDropItemsComponent.AngleStep;
             vector = Quaternion.Euler(0, angle, 0) * vector;
             var pos = spawnPoint.GetComponent<UnityTransformComponent>().Transform.position +vector;
-            var drop = itemsGlobalHolderComponent.GetRandomDrop();
+            var drop = itemsGlobalHolderComponent.GetDropByContainerId(EntityContainersMap.DropFireballContainer);
             var actor = await drop.GetActor(position: pos);
             actor.Init();
         }

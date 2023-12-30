@@ -55,6 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c3d68cf00a2d1468cba5813f3e00bf, type: 3}
   m_Name: ItemThrowingSystem
   m_EditorClassIdentifier: 
+  system: {}
 --- !u!114 &-2910862264615326485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +98,7 @@ MonoBehaviour:
     - {fileID: -6585981097247781220}
     - {fileID: -4223125317083452354}
     - {fileID: 8949651176833335952}
+    - {fileID: 4929602581308627882}
     Parent: {fileID: 11400000}
   containerIndex: -1553468731
   References: []
@@ -173,6 +175,18 @@ MonoBehaviour:
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
+--- !u!114 &4929602581308627882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f3dbea596f3bf489be179261cef4fe, type: 3}
+  m_Name: FireballItemVisualSystem
+  m_EditorClassIdentifier: 
 --- !u!114 &8025869359297337653
 MonoBehaviour:
   m_ObjectHideFlags: 0

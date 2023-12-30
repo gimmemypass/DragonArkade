@@ -14,6 +14,7 @@ namespace Components
         public float Radius = 1f;
         public float AimAngle = 15f;
         public Dictionary<int, Entity> Items = new();
+        [NonSerialized]
         public Entity ItemInAim;
     }
 }

@@ -33,21 +33,6 @@ namespace Systems
 
         protected override void ProcessState(int from, int to)
         {
-            itemsGlobalHolderComponent = EntityManager.Default.GetSingleComponent<ItemsGlobalHolderComponent>();
-            mainCharacter = EntityManager.Default.GetSingleComponent<MainCharacterTagComponent>().Owner;
-            entitiesFilter.ForceUpdateFilter();
-            for (int i = 0; i < 6; i++)
-            {
-                AddToCharacter(mainCharacter).Forget();
-            }
-        }
-
-        private async UniTask AddToCharacter(Entity character)
-        {
-            var container = itemsGlobalHolderComponent.GetRandomItem();
-            var actor = await container.GetActor();
-            actor.Init();
-            character.Command(new AddItemToCharacterCommand() { Item = actor.Entity });
         }
 
         public void UpdateLocal()
