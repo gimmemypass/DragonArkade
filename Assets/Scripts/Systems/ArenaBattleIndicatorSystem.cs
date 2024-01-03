@@ -12,7 +12,7 @@ namespace Systems
     public sealed class ArenaBattleIndicatorSystem : BaseSystem, IUpdatable, IGlobalStart, IHaveActor
     {
         private const float INDICATOR_OFFSET = 0.1f;
-        private const float INDICATOR_SPEED = 20;
+        private const float INDICATOR_SPEED = 30;
         public Actor Actor { get; set; }
 
         private IndicatorMonoComponent indicatorMonoComponent;
@@ -33,7 +33,11 @@ namespace Systems
         {
             var target = MainCharacter?.GetComponent<TargetEntityComponent>().Target;
             if (target is not { IsAlive: true })
+            {
+                indicatorMonoComponent.Indicator.gameObject.SetActive(false);
                 return;
+            }
+            indicatorMonoComponent.Indicator.gameObject.SetActive(true);
             var targetPos = target.GetComponent<UnityTransformComponent>().Transform.position;
             var screenPos = camera.WorldToScreenPoint(targetPos);
             // var isInvisible = screenPos.x < 0 || screenPos.x > Screen.width || screenPos.y < 0 ||
@@ -42,7 +46,6 @@ namespace Systems
             screenPos.y = Math.Clamp(screenPos.y, Screen.height * INDICATOR_OFFSET, Screen.height * (1 - INDICATOR_OFFSET));
             indicatorMonoComponent.Indicator.position = Vector3.Lerp(indicatorMonoComponent.Indicator.position,
                 screenPos, INDICATOR_SPEED*Time.deltaTime);
-            // indicatorMonoComponent.Indicator.gameObject.SetActive(isInvisible);
             var dir = screenPos - new Vector3(Screen.width / 2f, Screen.height / 2f);
             var rot = Vector2.SignedAngle(Vector2.up, dir);
             indicatorMonoComponent.Indicator.rotation = Quaternion.Euler(0,0,rot);
