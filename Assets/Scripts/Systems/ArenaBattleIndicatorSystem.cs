@@ -12,16 +12,16 @@ namespace Systems
     public sealed class ArenaBattleIndicatorSystem : BaseSystem, IUpdatable, IGlobalStart, IHaveActor
     {
         private const float INDICATOR_OFFSET = 0.1f;
+        private const float INDICATOR_SPEED = 20;
         public Actor Actor { get; set; }
 
         private IndicatorMonoComponent indicatorMonoComponent;
         private Camera camera;
-        private EntitiesFilter enemyFilter;
+        private Entity mainCharacter;
 
         public override void InitSystem()
         {
             Actor.TryGetComponent(out indicatorMonoComponent);
-            enemyFilter = EntityManager.Default.GetFilter<EnemyTagComponent>();
         }
 
         public void GlobalStart()
@@ -31,21 +31,33 @@ namespace Systems
 
         public void UpdateLocal()
         {
-            if (enemyFilter.Count == 0)
+            var target = MainCharacter?.GetComponent<TargetEntityComponent>().Target;
+            if (target is not { IsAlive: true })
                 return;
-            var targetPos = enemyFilter.FirstOrDefault().GetComponent<UnityTransformComponent>().Transform.position;
+            var targetPos = target.GetComponent<UnityTransformComponent>().Transform.position;
             var screenPos = camera.WorldToScreenPoint(targetPos);
-            var isInvisible = screenPos.x < 0 || screenPos.x > Screen.width || screenPos.y < 0 ||
-                            screenPos.y > Screen.height;
+            // var isInvisible = screenPos.x < 0 || screenPos.x > Screen.width || screenPos.y < 0 ||
+                            // screenPos.y > Screen.height;
             screenPos.x = Math.Clamp(screenPos.x, Screen.width * INDICATOR_OFFSET, Screen.width*(1 - INDICATOR_OFFSET));
             screenPos.y = Math.Clamp(screenPos.y, Screen.height * INDICATOR_OFFSET, Screen.height * (1 - INDICATOR_OFFSET));
             indicatorMonoComponent.Indicator.position = Vector3.Lerp(indicatorMonoComponent.Indicator.position,
-                screenPos, 5*Time.deltaTime);
-            indicatorMonoComponent.Indicator.gameObject.SetActive(isInvisible);
+                screenPos, INDICATOR_SPEED*Time.deltaTime);
+            // indicatorMonoComponent.Indicator.gameObject.SetActive(isInvisible);
             var dir = screenPos - new Vector3(Screen.width / 2f, Screen.height / 2f);
             var rot = Vector2.SignedAngle(Vector2.up, dir);
             indicatorMonoComponent.Indicator.rotation = Quaternion.Euler(0,0,rot);
         }
 
+        private Entity MainCharacter
+        {
+            get
+            {
+                if (mainCharacter is { IsAlive: true }) return mainCharacter;
+                
+                mainCharacter = EntityManager.Default.TryGetSingleComponent(
+                    out MainCharacterTagComponent mainCharacterTagComponent) ? mainCharacterTagComponent.Owner : null;
+                return mainCharacter;
+            }
+        }
     }
 }
