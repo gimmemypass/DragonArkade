@@ -25,15 +25,15 @@ namespace Systems
             monoComponent.PlayerHealth.SetMaxHealth(playerHealth);
             monoComponent.PlayerHealth.SetActualHealth(playerHealth);
 
-            var enemyHealth = FactionHelper.GetHealthSum(FactionIdentifierMap.EnemyFactionIdentifier);
-            monoComponent.EnemyHealth.SetMaxHealth(enemyHealth);
-            monoComponent.EnemyHealth.SetActualHealth(enemyHealth);
+            // var enemyHealth = FactionHelper.GetHealthSum(FactionIdentifierMap.EnemyFactionIdentifier);
+            // monoComponent.EnemyHealth.SetMaxHealth(enemyHealth);
+            // monoComponent.EnemyHealth.SetActualHealth(enemyHealth);
         }
 
         public void UpdateLocal()
         {
             monoComponent.PlayerHealth.SetActualHealth(FactionHelper.GetHealthSum(FactionIdentifierMap.PlayerFactionIdentifier));
-            monoComponent.EnemyHealth.SetActualHealth(FactionHelper.GetHealthSum(FactionIdentifierMap.EnemyFactionIdentifier));
+            // monoComponent.EnemyHealth.SetActualHealth(FactionHelper.GetHealthSum(FactionIdentifierMap.EnemyFactionIdentifier));
         }
 
 

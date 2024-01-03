@@ -8,10 +8,11 @@ namespace Systems
 {
     [Serializable]
     [Documentation(Doc.NONE, "")]
-    public sealed class FindTargetEntitySystem : BaseSystem, IUpdatable
+    public sealed class FindTargetEntitySystem : BaseSystem, ICustomUpdatable
     {
         [Required] public FactionComponent FactionComponent;
         [Required] public TargetEntityComponent TargetEntityComponent;
+        [Required] public UnityTransformComponent UnityTransformComponent;
         private EntitiesFilter charactersFilter;
 
         public override void InitSystem()
@@ -19,18 +20,25 @@ namespace Systems
             charactersFilter = EntityManager.Default.GetFilter<FactionComponent>();
         }
 
-        public void UpdateLocal()
+        public YieldInstruction Interval { get; } = new WaitForSeconds(1f);
+
+        public void UpdateCustom()
         {
-            if (TargetEntityComponent.Target == null)
+            var mainCharPos = UnityTransformComponent.Transform.position;
+            Entity nearest = null;
+            float nearestDist = float.MaxValue;
+            foreach (var character in charactersFilter)
             {
-                foreach (var character in charactersFilter)
+                if(character.GetComponent<FactionComponent>().FactionIdentifier.Id == FactionComponent.FactionIdentifier.Id) 
+                    continue;
+                var dist = (character.GetComponent<UnityTransformComponent>().Transform.position - mainCharPos).sqrMagnitude;
+                if (dist < nearestDist)
                 {
-                    if(character.GetComponent<FactionComponent>().FactionIdentifier.Id == FactionComponent.FactionIdentifier.Id) 
-                        continue;
-                    TargetEntityComponent.Target = character;
-                    return;
-                } 
+                    nearest = character;
+                    nearestDist = dist;
+                }
             } 
+            TargetEntityComponent.Target = nearest;
         }
     }
 }

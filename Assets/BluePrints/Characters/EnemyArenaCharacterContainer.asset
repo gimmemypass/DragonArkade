@@ -1,21 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8772064991307245168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dd18667527c4c24e834ae1e39f78370, type: 3}
-  m_Name: AnimationSystem
-  m_EditorClassIdentifier: 
-  system:
-    AnimatorStateComponent:
-      Animator: {fileID: 0}
-      Activated: 0
 --- !u!114 &-7680891769499527091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,21 +13,6 @@ MonoBehaviour:
   m_Name: FlyDragonAnimationSystem
   m_EditorClassIdentifier: 
   system: {}
---- !u!114 &-7507106266681108503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 295709bc41dfde44782cb72c26035ce3, type: 3}
-  m_Name: AnimatorStateComponentBluePrint
-  m_EditorClassIdentifier: 
-  component:
-    Animator: {fileID: 0}
-    Activated: 0
 --- !u!114 &-5614690555538086024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +141,6 @@ MonoBehaviour:
   holder:
     components:
     - {fileID: 903446217755637202}
-    - {fileID: -7507106266681108503}
     - {fileID: 1839725384931864110}
     - {fileID: -4976399268853409352}
     - {fileID: -5614690555538086024}
@@ -185,7 +153,6 @@ MonoBehaviour:
     - {fileID: 5875333190753338815}
     systems:
     - {fileID: 3588431385986297492}
-    - {fileID: -8772064991307245168}
     - {fileID: 518929480298343701}
     - {fileID: -7680891769499527091}
     - {fileID: -3601998548985788320}
