@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: AutoApplyItemsWhenStayComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    Cooldown: 0.5
-    StartCooldown: 3
+    Cooldown: 0
+    StartCooldown: 1
 --- !u!114 &-6207730933434069809
 MonoBehaviour:
   m_ObjectHideFlags: 0
