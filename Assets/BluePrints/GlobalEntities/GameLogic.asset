@@ -89,6 +89,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92d3f31457cf544bafee148acafbd41, type: 3}
   m_Name: FinalStateSystem
   m_EditorClassIdentifier: 
+--- !u!114 &-5901967634072243206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0479cc9d1fbd3c4abc0238b6d45be71, type: 3}
+  m_Name: DamageTextVisualizerManagerSystem
+  m_EditorClassIdentifier: 
+  system:
+    DamageTextVisualizerComponent:
+      Prefab: {fileID: 0}
 --- !u!114 &-4998038913978911921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +131,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 226975e9060d2324482592b3e9742930, type: 3}
   m_Name: PrepareBattleStateSystem
   m_EditorClassIdentifier: 
+--- !u!114 &-437683674061516226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec812e33a857ac479cbcf3b041730f6, type: 3}
+  m_Name: DamageTextVisualizerComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    Prefab: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +167,7 @@ MonoBehaviour:
     - {fileID: -4998038913978911921}
     - {fileID: 7250566133635614427}
     - {fileID: -6382299850804776467}
+    - {fileID: -437683674061516226}
     systems:
     - {fileID: -6019912970318221473}
     - {fileID: -5960664086071112769}
@@ -149,6 +179,7 @@ MonoBehaviour:
     - {fileID: -6334289768187870403}
     - {fileID: -1446102122806070222}
     - {fileID: 5533433065058295924}
+    - {fileID: -5901967634072243206}
     Parent: {fileID: 11400000}
   containerIndex: 1594580010
 --- !u!114 &170032190824546381
@@ -264,6 +295,8 @@ MonoBehaviour:
   m_Name: LevelsHolderComponent
   m_EditorClassIdentifier: 
   component:
+    ArenaWinReward: 500
+    ArenaLoseReward: 100
     levelDatas:
     - WinReward: 500
       LoseReward: 100

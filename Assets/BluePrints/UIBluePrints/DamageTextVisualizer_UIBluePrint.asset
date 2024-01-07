@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4b570c74e516d44b542bc1db94e61c, type: 3}
+  m_Name: DamageTextVisualizer_UIBluePrint
+  m_EditorClassIdentifier: 
+  UIActor:
+    m_AssetGUID: fb633ab58592ba94e9b0e86515470af2
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  Container:
+    m_AssetGUID: 38e80a8991c0b2d499d7398dd50262ac
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  UIType: {fileID: 11400000, guid: 5c9105c48aac3bd4bbd84b2d555942f6, type: 2}
+  AdditionalCanvasIdentifier: {fileID: 11400000, guid: faf8674cb0cba124c99dc874ee628bdc, type: 2}
+  Groups:
+    Groups: []

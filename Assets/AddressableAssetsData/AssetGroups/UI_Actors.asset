@@ -72,6 +72,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb633ab58592ba94e9b0e86515470af2
+    m_Address: Assets/Content/UI/DamageTextVisualizer/DamageTextVisualizer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 752d29ca1c087364ba35c5d949cd8478, type: 2}
   m_SchemaSet:

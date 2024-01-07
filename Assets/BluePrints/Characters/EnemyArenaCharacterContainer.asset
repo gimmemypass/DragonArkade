@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8159481987292671724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deba02d363e86654fb7e166f9c2e4ba3, type: 3}
+  m_Name: NeedHpBarComponent
+  m_EditorClassIdentifier: 
 --- !u!114 &-7680891769499527091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +138,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     RotationSpeed: 5
+--- !u!114 &-812506844036102675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8217a13a9fad498aaae5b98ec7bc2, type: 3}
+  m_Name: HealthBarPlaceMonoComponentProvider
+  m_EditorClassIdentifier: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,10 +166,14 @@ MonoBehaviour:
     components:
     - {fileID: 903446217755637202}
     - {fileID: 1839725384931864110}
+    - {fileID: 5339025229418898683}
     - {fileID: -4976399268853409352}
     - {fileID: -5614690555538086024}
+    - {fileID: -812506844036102675}
     - {fileID: 3352360046057890259}
     - {fileID: 2771609450237165263}
+    - {fileID: 2661126998114213566}
+    - {fileID: -8159481987292671724}
     - {fileID: 4981411403581399008}
     - {fileID: -881857204050150826}
     - {fileID: -936999223993590829}
@@ -153,6 +181,7 @@ MonoBehaviour:
     - {fileID: 5875333190753338815}
     systems:
     - {fileID: 3588431385986297492}
+    - {fileID: 3481217717663147614}
     - {fileID: 518929480298343701}
     - {fileID: -7680891769499527091}
     - {fileID: -3601998548985788320}
@@ -208,6 +237,18 @@ MonoBehaviour:
     RotationSpeed: 200
     Radius: 2
     AimAngle: 5
+--- !u!114 &2661126998114213566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d3fbef32bcc9d418f56c1bca598965, type: 3}
+  m_Name: NeedDefaultDamageTextVisualizerComponent
+  m_EditorClassIdentifier: 
 --- !u!114 &2771609450237165263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +286,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     healthBase: 50000
+--- !u!114 &3481217717663147614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cfdd7632c5c96499759a051246d94a, type: 3}
+  m_Name: CountersHolderSystem
+  m_EditorClassIdentifier: 
+  system: {}
 --- !u!114 &3588431385986297492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +343,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc05ee2910b3301429737ab8a1bf99c4, type: 3}
   m_Name: TargetEntityComponentBluePrint
+  m_EditorClassIdentifier: 
+--- !u!114 &5339025229418898683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e23cc7da5305e4697f67d466157cf9, type: 3}
+  m_Name: CountersHolderComponentBluePrint
   m_EditorClassIdentifier: 
 --- !u!114 &5875333190753338815
 MonoBehaviour:

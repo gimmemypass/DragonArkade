@@ -83,6 +83,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - UIBluePrints
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 80d1182591686614392e299e2f465b96
+    m_Address: Assets/BluePrints/UIBluePrints/DamageTextVisualizer_UIBluePrint.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIBluePrints
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 752d29ca1c087364ba35c5d949cd8478, type: 2}
   m_SchemaSet:

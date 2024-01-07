@@ -51,7 +51,6 @@ namespace Systems
 
         public void GlobalStart()
         {
-            mainCameraComponent = EntityManager.Default.GetSingleComponent<MainCameraComponent>();
         }
 
         public void UpdateLateLocal()
@@ -75,13 +74,11 @@ namespace Systems
                 if (!component.Owner.IsAlive() || component.Owner.IsDisposed)
                     continue;
 
-                component.Owner.AsActor().TryGetComponent(
-                    out HealthBarPlaceMonoComponent healthBarPlaceMonoComponent, true);
-                if(healthBarPlaceMonoComponent == null)
-                    continue;
+                var healthBarPlaceMonoComponent = component.Owner.GetComponent<HealthBarPlaceMonoComponentProvider>().Get;
                 var healthPlacePosition = healthBarPlaceMonoComponent.transform.position;
                 var rect = component.HpBar.GetComponent<UnityRectTransformComponent>().RectTransform;
                 
+                mainCameraComponent ??= EntityManager.Default.GetSingleComponent<MainCameraComponent>();
                 var pos = mainCameraComponent.Camera.WorldToScreenPoint(healthPlacePosition);
                 pos.z = 0;
                 rect.position = pos;

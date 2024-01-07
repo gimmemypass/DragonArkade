@@ -37,7 +37,6 @@ namespace Systems
                 indicatorMonoComponent.Indicator.gameObject.SetActive(false);
                 return;
             }
-            indicatorMonoComponent.Indicator.gameObject.SetActive(true);
             var targetPos = target.GetComponent<UnityTransformComponent>().Transform.position;
             var screenPos = camera.WorldToScreenPoint(targetPos);
             // var isInvisible = screenPos.x < 0 || screenPos.x > Screen.width || screenPos.y < 0 ||
@@ -49,6 +48,11 @@ namespace Systems
             var dir = screenPos - new Vector3(Screen.width / 2f, Screen.height / 2f);
             var rot = Vector2.SignedAngle(Vector2.up, dir);
             indicatorMonoComponent.Indicator.rotation = Quaternion.Euler(0,0,rot);
+            if (!indicatorMonoComponent.Indicator.gameObject.activeSelf)
+            {
+                indicatorMonoComponent.Indicator.position = screenPos;
+                indicatorMonoComponent.Indicator.gameObject.SetActive(true);
+            }
         }
 
         private Entity MainCharacter

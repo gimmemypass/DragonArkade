@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2981831805826961041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8569fd1717bf94185ca0c4e97a7c94, type: 3}
+  m_Name: UITagComponent
+  m_EditorClassIdentifier: 
+  component:
+    ViewType: {fileID: 11400000, guid: 5c9105c48aac3bd4bbd84b2d555942f6, type: 2}
+--- !u!114 &-2332137511980989757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423358a0736f32c4c93ca20615a6690a, type: 3}
+  m_Name: UnityTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &-442513915753542163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dac362997677f24f97e6946b8d4de18, type: 3}
+  m_Name: UIGroupTagComponent
+  m_EditorClassIdentifier: 
+  component:
+    Groups: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
+  m_Name: DamageTextVisualizerContainer
+  m_EditorClassIdentifier: 
+  holder:
+    components:
+    - {fileID: 645052413745677651}
+    - {fileID: 4400319037936979808}
+    - {fileID: -2332137511980989757}
+    - {fileID: -2981831805826961041}
+    - {fileID: -442513915753542163}
+    systems:
+    - {fileID: 8998995975334071347}
+    - {fileID: 2503102481304405141}
+    Parent: {fileID: 11400000}
+  containerIndex: 550413991
+--- !u!114 &645052413745677651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f8df6792c13c54786b07e5ccc1a810, type: 3}
+  m_Name: UnityRectTransformComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &2503102481304405141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e7738950ccefe4b8b9320a899c809b, type: 3}
+  m_Name: DamageTextVisualizerSystem
+  m_EditorClassIdentifier: 
+  system: {}
+--- !u!114 &4400319037936979808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec812e33a857ac479cbcf3b041730f6, type: 3}
+  m_Name: DamageTextVisualizerComponentBluePrint
+  m_EditorClassIdentifier: 
+--- !u!114 &8998995975334071347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab3ebf4ff1347f4887c18941ea34e13, type: 3}
+  m_Name: HideUISystem
+  m_EditorClassIdentifier: 

@@ -27,12 +27,15 @@ namespace Systems
 
             Debug.Log($"прилетел дамаг {command.DamageValue} после резиста осталось {dmg}");
 
-            Owner.Command(new DamageForVisualFXCommand()
+            var damageForVisualFXCommand = new DamageForVisualFXCommand()
             {
+                Victim = Owner,
                 StartDamage = command.DamageValue,
                 DamageAfterResist = dmg,
                 DamageType = command.DmgType
-            });
+            };
+            EntityManager.Command(damageForVisualFXCommand);
+            Owner.Command(damageForVisualFXCommand);
 
             if (Owner.ContainsMask<NeedHpBarComponent>())
             {
