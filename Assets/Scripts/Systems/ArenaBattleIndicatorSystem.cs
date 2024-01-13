@@ -11,7 +11,8 @@ namespace Systems
     [Documentation(Doc.NONE, "")]
     public sealed class ArenaBattleIndicatorSystem : BaseSystem, IUpdatable, IGlobalStart, IHaveActor
     {
-        private const float INDICATOR_OFFSET = 0.1f;
+        private const float INDICATOR_OFFSET = 6f;
+        private const float INDICATOR_SCREEN_OFFSET = 0.1f;
         private const float INDICATOR_SPEED = 30;
         public Actor Actor { get; set; }
 
@@ -37,12 +38,12 @@ namespace Systems
                 indicatorMonoComponent.Indicator.gameObject.SetActive(false);
                 return;
             }
-            var targetPos = target.GetComponent<UnityTransformComponent>().Transform.position;
+            var targetPos = target.GetComponent<UnityTransformComponent>().Transform.position + Vector3.up * INDICATOR_OFFSET;
             var screenPos = camera.WorldToScreenPoint(targetPos);
             // var isInvisible = screenPos.x < 0 || screenPos.x > Screen.width || screenPos.y < 0 ||
                             // screenPos.y > Screen.height;
-            screenPos.x = Math.Clamp(screenPos.x, Screen.width * INDICATOR_OFFSET, Screen.width*(1 - INDICATOR_OFFSET));
-            screenPos.y = Math.Clamp(screenPos.y, Screen.height * INDICATOR_OFFSET, Screen.height * (1 - INDICATOR_OFFSET));
+            screenPos.x = Math.Clamp(screenPos.x, Screen.width * INDICATOR_SCREEN_OFFSET, Screen.width*(1 - INDICATOR_SCREEN_OFFSET));
+            screenPos.y = Math.Clamp(screenPos.y, Screen.height * INDICATOR_SCREEN_OFFSET, Screen.height * (1 - INDICATOR_SCREEN_OFFSET));
             indicatorMonoComponent.Indicator.position = Vector3.Lerp(indicatorMonoComponent.Indicator.position,
                 screenPos, INDICATOR_SPEED*Time.deltaTime);
             var dir = screenPos - new Vector3(Screen.width / 2f, Screen.height / 2f);
