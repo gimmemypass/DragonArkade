@@ -9,6 +9,7 @@ namespace Components
     [Documentation(Doc.NONE, "")]
     public sealed class RotationComponent : BaseComponent
     {
+        public bool OnlyY = false;
         public float RotationSpeed = 1f;
     }
 }

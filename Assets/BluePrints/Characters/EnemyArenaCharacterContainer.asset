@@ -77,6 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   system:
     RotationComponent:
+      OnlyY: 0
       RotationSpeed: 1
 --- !u!114 &-3601998548985788320
 MonoBehaviour:
@@ -137,6 +138,7 @@ MonoBehaviour:
   m_Name: RotationComponentBluePrint
   m_EditorClassIdentifier: 
   component:
+    OnlyY: 1
     RotationSpeed: 5
 --- !u!114 &-812506844036102675
 MonoBehaviour:

@@ -24,6 +24,10 @@ namespace Systems
             var dir = TargetEntityComponent.Target.GetComponent<UnityTransformComponent>().Transform.position -
                       transform.position;
             var needRot = Quaternion.LookRotation(dir);
+            if (RotationComponent.OnlyY)
+            {
+                needRot = Quaternion.Euler(0,needRot.eulerAngles.y,0);
+            }
             transform.rotation = Quaternion.Lerp(transform.rotation, needRot, RotationComponent.RotationSpeed * Time.deltaTime);
         }
     }
