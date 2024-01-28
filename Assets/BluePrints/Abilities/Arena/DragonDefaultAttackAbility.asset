@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Name: CooldownComponent
   m_EditorClassIdentifier: 
   component:
-    baseValue: 1
+    baseValue: 0.1
 --- !u!114 &8689573921896391695
 MonoBehaviour:
   m_ObjectHideFlags: 0

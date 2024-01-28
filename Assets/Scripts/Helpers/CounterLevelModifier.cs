@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Components;
 using HECSFramework.Core;
 using Sirenix.OdinInspector;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Helpers
@@ -17,8 +19,10 @@ namespace Helpers
             public int Price;
         }
         [SerializeField] private List<DataPerLevel> multipliersPerLevel;
+        [SerializeField] private bool useExtrapolation;
         [SerializeField] private float defaultLevelStep = 0.1f;
         [SerializeField] private int defaultPrice = 10;
+        [SerializeField] private ModifierCalculationType defaultStepCalculationType = ModifierCalculationType.Add;
         [SerializeField] private ModifierCalculationType calculationType = ModifierCalculationType.Multiply;
 
         private ModifierValueType modifierType = ModifierValueType.Value;
@@ -40,11 +44,38 @@ namespace Helpers
                 {
                     return multipliersPerLevel[level].Multiplier;
                 }
-                if (multipliersPerLevel.Count > 0)
-                    return multipliersPerLevel[^1].Multiplier + defaultLevelStep * (level + 1 - multipliersPerLevel.Count);
-                return 1 + defaultLevelStep * level;
+                if(useExtrapolation)
+                    return CalcByDefaultLevelStep(level);
+                return multipliersPerLevel.Last().Multiplier;
             }
             set => throw new Exception("You cannot modify time scale modifier");
+        }
+
+        private float CalcByDefaultLevelStep(int level)
+        {
+            return defaultStepCalculationType switch
+            {
+                ModifierCalculationType.Add => CalcByDefaultAndAdding(defaultLevelStep, level),
+                ModifierCalculationType.Subtract => CalcByDefaultAndAdding(-defaultLevelStep, level),
+                ModifierCalculationType.Multiply => CalcByDefaultAndMultiply(defaultLevelStep, level),
+                ModifierCalculationType.Divide => CalcByDefaultAndMultiply(1 / defaultLevelStep, level),
+                _ => throw new ArgumentOutOfRangeException()
+            };
+        }
+
+        private float CalcByDefaultAndMultiply(float step, int level)
+        {
+            if (multipliersPerLevel.Count > 0)
+            {
+                return multipliersPerLevel[^1].Multiplier * Mathf.Pow(step, level - multipliersPerLevel.Count);
+            }
+            return Mathf.Pow(step, level);
+        }
+        private float CalcByDefaultAndAdding(float step, int level)
+        {
+            if (multipliersPerLevel.Count > 0)
+                return multipliersPerLevel[^1].Multiplier + step * (level + 1 - multipliersPerLevel.Count);
+            return 1 + step * level;
         }
 
         public int GetPrice

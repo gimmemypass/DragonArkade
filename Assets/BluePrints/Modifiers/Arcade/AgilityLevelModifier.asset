@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbf6f5bab56240b99c2d3e328f489474, type: 3}
+  m_Name: AgilityLevelModifier
+  m_EditorClassIdentifier: 
+  modifier:
+    multipliersPerLevel: []
+    useExtrapolation: 0
+    defaultLevelStep: 0.95
+    defaultPrice: 100
+    defaultStepCalculationType: 2
+    calculationType: 2
+    guid: 88c11d24-278c-4d98-9522-70dd7ccc3a1a
