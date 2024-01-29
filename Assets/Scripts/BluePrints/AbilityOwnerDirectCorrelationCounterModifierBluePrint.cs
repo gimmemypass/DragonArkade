@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace BluePrints
 {
-    [CreateAssetMenu(fileName = "AbilityOwnerDirectCorrelationCounterModifierBluePrint", menuName = "BluePrints/AbilityOwnerDirectCorrelationCounterModifierBluePrint")]
-    public sealed class AbilityOwnerDirectCorrelationCounterModifierBluePrint : ModifierBluePrint<AbilityOwnerDirectCorrelationCounterModifier>
+    [CreateAssetMenu(fileName = "AbilityOwnerCounterModifierBluePrint", menuName = "BluePrints/AbilityOwnerCounterModifierBluePrint")]
+    public sealed class AbilityOwnerCounterModifierBluePrint : ModifierBluePrint<AbilityOwnerCounterModifier>
     {
         
     }

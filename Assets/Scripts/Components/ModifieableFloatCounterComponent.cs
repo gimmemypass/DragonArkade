@@ -13,7 +13,10 @@ namespace Components
         {
             foreach (var baseModifier in baseModifiers)
             {
-                AddModifier(Owner.GUID, (IModifier<float>)baseModifier.GetModifier());        
+                var modifier = (IModifier<float>)baseModifier.GetModifier();
+                if (modifier is IHaveOwner haveOwner)
+                    haveOwner.Owner = Owner;
+                AddModifier(Owner.GUID, modifier);
             }
         }
     }

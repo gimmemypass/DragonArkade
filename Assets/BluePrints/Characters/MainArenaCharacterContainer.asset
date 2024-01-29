@@ -409,6 +409,5 @@ MonoBehaviour:
   m_Name: AgilityComponent
   m_EditorClassIdentifier: 
   component:
-    baseModifiers:
-    - {fileID: 11400000, guid: 7897bd4077215ac44960bfda2e54786e, type: 2}
-    baseValue: 1
+    baseModifiers: []
+    baseValue: 11

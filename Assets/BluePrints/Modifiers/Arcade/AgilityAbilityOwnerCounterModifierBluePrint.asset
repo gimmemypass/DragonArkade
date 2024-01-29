@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aefe0f4106ff4d5b901feba5670a78ab, type: 3}
-  m_Name: CooldownAbilityOwnerDirectCorrelationCounterModifierBluePrint
+  m_Script: {fileID: 11500000, guid: f7847b0ccc4ff644cae03692abf058b1, type: 3}
+  m_Name: AgilityAbilityOwnerCounterModifierBluePrint
   m_EditorClassIdentifier: 
-  id: -1001861292
+  id: -24777771
   modifier:
     calculationType: 2
-    counterIdentifier: {fileID: 11400000, guid: c130a4c4515054346ab93334c30ce309, type: 2}
-    multiplier: 1
-    guid: 54cd6a7b-ce85-40e6-b943-9de81a1ab9eb
+    counterIdentifier: {fileID: 11400000, guid: a96d4629ba8a3b84596cf79db6867ece, type: 2}
+    expression: 1/x
+    guid: 42cc260a-f7a6-4c1f-9200-3b42714cc416

@@ -10,11 +10,12 @@ using UnityEngine;
 namespace Helpers
 {
     [Serializable]
-    public class AbilityOwnerDirectCorrelationCounterModifier : BaseModifier<float>
+    public class AbilityOwnerCounterModifier : BaseModifier<float>, IHaveOwner
     {
         [SerializeField] private ModifierCalculationType calculationType = ModifierCalculationType.Multiply;
         [SerializeField] private CounterIdentifierContainer counterIdentifier;
-        [SerializeField] private float multiplier;
+        [InfoBox("Example: \"1/x\" or sqrt(x) or x*x where x - value from needed counter")]
+        [SerializeField] private string expression;
 
         private ModifierValueType modifierType = ModifierValueType.Value;
 
@@ -30,15 +31,21 @@ namespace Helpers
 
         public void SetModifierId(int id) => modifierId = id;
 
-        public Entity CounterOwner { get; set; }
+        public Entity Owner { get; set; }
         public override float GetValue
         {
             get
             {
-                var abilityOwner = CounterOwner.GetComponent<AbilityOwnerComponent>();
+                var abilityOwner = Owner.GetComponent<AbilityOwnerComponent>();
                 var countersHolderComponent = abilityOwner.AbilityOwner.GetComponent<CountersHolderComponent>();
                 var counter = countersHolderComponent.GetCounter<ICounterModifiable<float>>(counterIdentifier.Id);
-                return counter.GetForceCalculatedValue * multiplier;
+                var counterValue = counter.GetForceCalculatedValue;
+                var correctedExpression = expression.Replace("x", counterValue.ToString());
+                if (ExpressionEvaluator.Evaluate(correctedExpression, out float value))
+                {
+                    return value;
+                }
+                throw new Exception("Something wrong with expression");
             }
             set => throw new Exception("You cannot modify the modifier");
         }
@@ -80,7 +87,7 @@ namespace Helpers
 
 
 
-        public AbilityOwnerDirectCorrelationCounterModifier()
+        public AbilityOwnerCounterModifier()
         {
             _ = ModifierGuid;
         }
@@ -89,5 +96,6 @@ namespace Helpers
         {
             currentMod = ModifiersCalculation.GetResult(currentMod, GetValue, GetCalculationType, GetModifierType);
         }
+
     }
 }
