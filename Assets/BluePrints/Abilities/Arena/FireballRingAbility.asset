@@ -1,20 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8367954288204233376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97827347907e9564ca56ec50638de17a, type: 3}
-  m_Name: AutoApplyItemsWhenStayComponentBluePrint
-  m_EditorClassIdentifier: 
-  component:
-    Cooldown: 0
-    StartCooldown: 1
 --- !u!114 &-6207730933434069809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,6 +16,22 @@ MonoBehaviour:
     RotationSpeed: 200
     Radius: 2
     AimAngle: 5
+--- !u!114 &-5377460198559892925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f8aee7a08c2854b846828c86e8c3e7, type: 3}
+  m_Name: CooldownComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    baseModifiers:
+    - {fileID: 11400000, guid: 2240252bbc745a84ca95bdcb9763689f, type: 2}
+    baseValue: 1
 --- !u!114 &-4832112457730123343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,7 +109,7 @@ MonoBehaviour:
     - {fileID: 907496946292443501}
     - {fileID: -6207730933434069809}
     - {fileID: -1173337967386209240}
-    - {fileID: -8367954288204233376}
+    - {fileID: -5377460198559892925}
     systems:
     - {fileID: -1555126309844876069}
     - {fileID: 4622700854194252622}
@@ -169,9 +170,9 @@ MonoBehaviour:
   m_Name: AutoApplyItemsWhenStaySystem
   m_EditorClassIdentifier: 
   system:
-    Component:
-      Cooldown: 0.5
-      StartCooldown: 3
+    CooldownComponent:
+      baseModifiers: []
+      baseValue: 0
     CharacterItemsComponent:
       RotationSpeed: 1
       Radius: 1

@@ -3,6 +3,7 @@ using Commands;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
+using Unity.VisualScripting;
 
 namespace Systems
 {
@@ -10,9 +11,8 @@ namespace Systems
     [Documentation(Doc.NONE, "")]
     public sealed class AutoApplyItemsWhenStaySystem : BaseAbilitySystem, IUpdatable
     {
-        [Required] public AutoApplyItemsWhenStayComponent Component;
+        [Required] public CooldownComponent CooldownComponent;
         [Required] public CharacterItemsComponent CharacterItemsComponent;
-        private float cooldown;
 
         public override void InitSystem()
         {
@@ -20,22 +20,21 @@ namespace Systems
 
         public void UpdateLocal()
         {
-            if (cooldown > 0)
+            if (CooldownComponent.Value > 0)
             {
-                cooldown -= Time.deltaTime;
                 return;
             }
 
             if (CharacterItemsComponent.ItemInAim != null)
             {
-                cooldown = Component.Cooldown;
+                CooldownComponent.SetValue(CooldownComponent.CalculatedMaxValue);
                 Owner.Command(new TryApplyAimedItemCommand());
             }
         }
 
         public override void Execute(Entity owner = null, Entity target = null, bool enable = true)
         {
-            cooldown = Component.StartCooldown;
+            CooldownComponent.SetValue(CooldownComponent.CalculatedMaxValue);
         }
     }
 }
