@@ -80,7 +80,9 @@ MonoBehaviour:
       Price: 200
     - Multiplier: 1.16
       Price: 200
+    useExtrapolation: 1
     defaultLevelStep: 0.1
-    defaultPrice: 10
+    defaultPrice: 100
+    defaultStepCalculationType: 0
     calculationType: 2
     guid: 88c11d24-278c-4d98-9522-70dd7ccc3a1a

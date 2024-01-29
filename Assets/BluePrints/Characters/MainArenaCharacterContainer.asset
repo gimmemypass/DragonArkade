@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   system:
     SpeedComponent:
+      baseModifiers: []
       setupValue: 0
     input: {x: 0, y: 0}
 --- !u!114 &-5372664856633426047
@@ -30,6 +31,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   system:
     RotationComponent:
+      OnlyY: 0
       RotationSpeed: 1
 --- !u!114 &-5124227716414061139
 MonoBehaviour:
@@ -56,6 +58,7 @@ MonoBehaviour:
   m_Name: RotationComponentBluePrint
   m_EditorClassIdentifier: 
   component:
+    OnlyY: 0
     RotationSpeed: 5
 --- !u!114 &-3576003188813685916
 MonoBehaviour:
@@ -70,6 +73,7 @@ MonoBehaviour:
   m_Name: SpeedComponentBluePrint
   m_EditorClassIdentifier: 
   component:
+    baseModifiers: []
     setupValue: 13
 --- !u!114 &-3131463430188987434
 MonoBehaviour:
@@ -96,6 +100,7 @@ MonoBehaviour:
   m_Name: HealthComponentBluePrint
   m_EditorClassIdentifier: 
   component:
+    baseModifiers: []
     healthBase: 5000
 --- !u!114 &-1068766685334949629
 MonoBehaviour:
@@ -154,14 +159,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holder:
     components:
+    - {fileID: 2008400629610828222}
+    - {fileID: 445832446289813014}
     - {fileID: 3893999373129541885}
     - {fileID: 8358277770113922057}
     - {fileID: -1068766685334949629}
     - {fileID: -5124227716414061139}
     - {fileID: 3342457430105099522}
     - {fileID: -1195937094005115147}
-    - {fileID: 2008400629610828222}
-    - {fileID: 445832446289813014}
     - {fileID: 5873533650993173403}
     - {fileID: 1512188192791600458}
     - {fileID: -4036285391595253827}
@@ -169,6 +174,7 @@ MonoBehaviour:
     - {fileID: 7561408636799368938}
     - {fileID: -3131463430188987434}
     - {fileID: 4622777322840672678}
+    - {fileID: 8940839690063389126}
     systems:
     - {fileID: 7211631104858730477}
     - {fileID: 4019566877052772427}
@@ -290,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   system:
     healthComponent:
+      baseModifiers: []
       healthBase: 20
 --- !u!114 &4622777322840672678
 MonoBehaviour:
@@ -362,3 +369,18 @@ MonoBehaviour:
   component:
     Animator: {fileID: 0}
     Activated: 0
+--- !u!114 &8940839690063389126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b5f7e14c4f48c45b7b84b0508fd4b0, type: 3}
+  m_Name: AgilityComponent
+  m_EditorClassIdentifier: 
+  component:
+    baseModifiers: []
+    baseValue: 0

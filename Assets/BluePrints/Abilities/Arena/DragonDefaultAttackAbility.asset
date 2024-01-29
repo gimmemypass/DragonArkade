@@ -26,6 +26,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   system:
     CooldownComponent:
+      baseModifiers: []
       baseValue: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -87,6 +88,7 @@ MonoBehaviour:
   m_Name: CooldownComponent
   m_EditorClassIdentifier: 
   component:
+    baseModifiers: []
     baseValue: 0.1
 --- !u!114 &8689573921896391695
 MonoBehaviour:
