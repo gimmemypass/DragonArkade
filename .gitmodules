@@ -1,3 +1,6 @@
 [submodule "Assets/Scripts/HECSFramework"]
 	path = Assets/Scripts/HECSFramework
 	url = https://github.com/Brightori/HECSUnityStart.git
+[submodule "Assets/Scripts/HECSJSON"]
+	path = Assets/Scripts/HECSJSON
+	url = https://gitlab.com/el.brightori/hecsframework.jsonserialize.git
