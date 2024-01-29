@@ -31,7 +31,11 @@ namespace Helpers
 
         private Guid currentGuid;
         private int modifierId;
-        public override int ModifierID => modifierId;
+        public override int ModifierID
+        {
+            get => modifierId;
+            set => modifierId = value;
+        }
 
         public void SetModifierId(int id) => modifierId = id;
         public override float GetValue

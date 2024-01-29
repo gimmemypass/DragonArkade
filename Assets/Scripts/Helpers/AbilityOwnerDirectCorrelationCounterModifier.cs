@@ -23,7 +23,11 @@ namespace Helpers
 
         private Guid currentGuid;
         private int modifierId;
-        public override int ModifierID => modifierId;
+        public override int ModifierID
+        {
+            get => modifierId;
+            set => modifierId = value;
+        }
 
         public void SetModifierId(int id) => modifierId = id;
 
@@ -34,8 +38,8 @@ namespace Helpers
             {
                 var abilityOwner = CounterOwner.GetComponent<AbilityOwnerComponent>();
                 var countersHolderComponent = abilityOwner.AbilityOwner.GetComponent<CountersHolderComponent>();
-                var counter = countersHolderComponent.GetCounter<ICounter<float>>(counterIdentifier.Id);
-                return counter.Value * multiplier;
+                var counter = countersHolderComponent.GetCounter<ICounterModifiable<float>>(counterIdentifier.Id);
+                return counter.GetForceCalculatedValue * multiplier;
             }
             set => throw new Exception("You cannot modify the modifier");
         }

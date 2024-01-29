@@ -18,7 +18,11 @@ namespace Helpers
         private string guid;
 
         private Guid currentGuid;
-        public override int ModifierID => ModifierIdentifierMap.TimeScale;
+        public override int ModifierID
+        {
+            get => ModifierIdentifierMap.TimeScale;
+            set { }
+        }
 
         public override float GetValue
         {
