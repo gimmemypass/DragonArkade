@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefe0f4106ff4d5b901feba5670a78ab, type: 3}
+  m_Name: CooldownAbilityOwnerDirectCorrelationCounterModifierBluePrint
+  m_EditorClassIdentifier: 
+  id: -1001861292
+  modifier:
+    calculationType: 2
+    counterIdentifier: {fileID: 11400000, guid: c130a4c4515054346ab93334c30ce309, type: 2}
+    multiplier: 1
+    guid: 54cd6a7b-ce85-40e6-b943-9de81a1ab9eb

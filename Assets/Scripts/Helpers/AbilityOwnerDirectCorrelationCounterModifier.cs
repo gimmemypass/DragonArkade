@@ -12,7 +12,6 @@ namespace Helpers
     [Serializable]
     public class AbilityOwnerDirectCorrelationCounterModifier : BaseModifier<float>
     {
-        [SerializeField] private ModifierCalculationType defaultStepCalculationType = ModifierCalculationType.Add;
         [SerializeField] private ModifierCalculationType calculationType = ModifierCalculationType.Multiply;
         [SerializeField] private CounterIdentifierContainer counterIdentifier;
         [SerializeField] private float multiplier;
