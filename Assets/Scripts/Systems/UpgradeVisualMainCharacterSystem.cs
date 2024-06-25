@@ -9,7 +9,7 @@ using HECSFramework.Unity;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, Doc.Visual, "upgrade visual main character system")]
     public sealed class UpgradeVisualMainCharacterSystem : BaseSystem, IReactGlobalCommand<LevelUpCommand>, IGlobalStart, IHaveActor
     {
         public Actor Actor { get; set; }
@@ -68,6 +68,5 @@ namespace Systems
                 } 
             }
         }
-
     }
 }

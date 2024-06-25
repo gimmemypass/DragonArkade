@@ -899,7 +899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1407860977927588186, guid: bf70c9ff48c7cd64f994eb45a45b80df, type: 3}
       propertyPath: m_Name
-      value: dragon
+      value: mainChar
       objectReference: {fileID: 0}
     - target: {fileID: 7341968981261365020, guid: bf70c9ff48c7cd64f994eb45a45b80df, type: 3}
       propertyPath: m_LocalPosition.x

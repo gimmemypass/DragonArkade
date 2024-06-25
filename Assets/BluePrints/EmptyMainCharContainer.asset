@@ -12,18 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5238c3dd50bf25142a5ec681a0da09aa, type: 3}
   m_Name: SpheresControllerTagComponent
   m_EditorClassIdentifier: 
---- !u!114 &-6800398563635433112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4588f037bfee174b8938aaefc0318ac, type: 3}
-  m_Name: PlayUpgradeParticleSystem
-  m_EditorClassIdentifier: 
 --- !u!114 &-3979432911921986017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,37 +41,6 @@ MonoBehaviour:
   component:
     baseModifiers: []
     healthBase: 5000
---- !u!114 &-3294659124092373402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 295709bc41dfde44782cb72c26035ce3, type: 3}
-  m_Name: AnimatorStateComponentBluePrint
-  m_EditorClassIdentifier: 
-  component:
-    Animator: {fileID: 0}
-    Activated: 0
---- !u!114 &-2481200001166806890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dd18667527c4c24e834ae1e39f78370, type: 3}
-  m_Name: AnimationSystem
-  m_EditorClassIdentifier: 
-  system:
-    AnimatorStateComponent:
-      Animator: {fileID: 0}
-      Activated: 0
 --- !u!114 &-2301123850007583913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,22 +57,6 @@ MonoBehaviour:
     healthComponent:
       baseModifiers: []
       healthBase: 20
---- !u!114 &-2115821652037252117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7161606b7ff62ef4a8fb4f3eb8751bd3, type: 3}
-  m_Name: SendLocalAnimationEventCommandsToAbilitiesSystem
-  m_EditorClassIdentifier: 
-  system:
-    AbilitiesHolderComponent:
-      Abilities: []
-      AbilitiesContainers: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +67,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379295890174cec4b8e7a0ac2e17af01, type: 3}
-  m_Name: MainCharContainer
+  m_Name: EmptyMainCharContainer
   m_EditorClassIdentifier: 
   holder:
     components:
@@ -140,21 +81,15 @@ MonoBehaviour:
     - {fileID: 3991476594338670707}
     - {fileID: 6032200872509431856}
     - {fileID: -3979432911921986017}
-    - {fileID: -3294659124092373402}
     systems:
     - {fileID: -2301123850007583913}
     - {fileID: 3717006209181562770}
     - {fileID: 3726706754492762199}
     - {fileID: 162670671520768945}
     - {fileID: 697592001280100737}
-    - {fileID: 2749109721783964438}
-    - {fileID: -2481200001166806890}
-    - {fileID: -2115821652037252117}
-    - {fileID: 8402812129071905362}
-    - {fileID: 5004722897202083569}
-    - {fileID: -6800398563635433112}
+    - {fileID: 2202161617375226179}
     Parent: {fileID: 11400000}
-  containerIndex: -1601112874
+  containerIndex: -1567252484
 --- !u!114 &162670671520768945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +139,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6973f33bbacb448ad835cbc365d2ab, type: 3}
   m_Name: CustomHpBarComponent
   m_EditorClassIdentifier: 
+--- !u!114 &2202161617375226179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4588f037bfee174b8938aaefc0318ac, type: 3}
+  m_Name: PlayUpgradeParticleSystem
+  m_EditorClassIdentifier: 
 --- !u!114 &2320435678807329514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,18 +162,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: deba02d363e86654fb7e166f9c2e4ba3, type: 3}
   m_Name: NeedHpBarComponent
-  m_EditorClassIdentifier: 
---- !u!114 &2749109721783964438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8620b28b20658ef44a562aee3126eb59, type: 3}
-  m_Name: UpgradeVisualMainCharacterSystem
   m_EditorClassIdentifier: 
 --- !u!114 &3492917849070227143
 MonoBehaviour:
@@ -297,18 +232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e23cc7da5305e4697f67d466157cf9, type: 3}
   m_Name: CountersHolderComponent
   m_EditorClassIdentifier: 
---- !u!114 &5004722897202083569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fb0d27ab040afc42ba6e9878219fab0, type: 3}
-  m_Name: DeathAnimationWhenDeadSystem
-  m_EditorClassIdentifier: 
 --- !u!114 &6032200872509431856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,16 +258,4 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 423358a0736f32c4c93ca20615a6690a, type: 3}
   m_Name: UnityTransformComponent
-  m_EditorClassIdentifier: 
---- !u!114 &8402812129071905362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 046d3c6f8394c9a4b8422b648499a6ca, type: 3}
-  m_Name: RandomAttackAnimationSystem
   m_EditorClassIdentifier: 
