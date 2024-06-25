@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component:
     baseModifiers: []
-    setupValue: 13
+    setupValue: 18
 --- !u!114 &-3131463430188987434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,5 +409,6 @@ MonoBehaviour:
   m_Name: AgilityComponent
   m_EditorClassIdentifier: 
   component:
-    baseModifiers: []
-    baseValue: 5
+    baseModifiers:
+    - {fileID: 11400000, guid: 7897bd4077215ac44960bfda2e54786e, type: 2}
+    baseValue: 1

@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8834805481192434792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f8aee7a08c2854b846828c86e8c3e7, type: 3}
+  m_Name: CooldownComponentBluePrint
+  m_EditorClassIdentifier: 
+  component:
+    baseModifiers:
+    - {fileID: 11400000, guid: 2240252bbc745a84ca95bdcb9763689f, type: 2}
+    baseValue: 1
 --- !u!114 &-6207730933434069809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,9 +45,8 @@ MonoBehaviour:
   m_Name: CooldownComponentBluePrint
   m_EditorClassIdentifier: 
   component:
-    baseModifiers:
-    - {fileID: 11400000, guid: 2240252bbc745a84ca95bdcb9763689f, type: 2}
-    baseValue: 1
+    baseModifiers: []
+    baseValue: 0
 --- !u!114 &-4832112457730123343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +124,7 @@ MonoBehaviour:
     - {fileID: 907496946292443501}
     - {fileID: -6207730933434069809}
     - {fileID: -1173337967386209240}
-    - {fileID: -5377460198559892925}
+    - {fileID: -8834805481192434792}
     systems:
     - {fileID: -1555126309844876069}
     - {fileID: 4622700854194252622}

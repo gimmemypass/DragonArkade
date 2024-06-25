@@ -88,8 +88,7 @@ MonoBehaviour:
   m_Name: CooldownComponent
   m_EditorClassIdentifier: 
   component:
-    baseModifiers:
-    - {fileID: 11400000, guid: 2240252bbc745a84ca95bdcb9763689f, type: 2}
+    baseModifiers: []
     baseValue: 1
 --- !u!114 &8689573921896391695
 MonoBehaviour:

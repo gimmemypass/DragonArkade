@@ -17,11 +17,12 @@ namespace Systems
         private Entity mainCharacter;
         private Entity enemy;
         private EntitiesFilter entitiesFilter;
+        private EntitiesFilter spawnPointFilter;
 
         public override void InitSystem()
         {
             entitiesFilter = EntityManager.Default.GetFilter<EnemyTagComponent>();
-            
+            spawnPointFilter = EntityManager.Default.GetFilter<SpawnPointComponent>();
         }
 
         public void GlobalStart()
