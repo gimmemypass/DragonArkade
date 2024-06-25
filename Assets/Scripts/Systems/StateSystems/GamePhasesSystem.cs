@@ -18,8 +18,8 @@ namespace Systems
 
         public void LateStart()
         {
-            // ChangeGameState(GameStateIdentifierMap.StartMenu); 
-            ChangeGameState(GameStateIdentifierMap.PrepareArena); 
+            ChangeGameState(GameStateIdentifierMap.StartMenu); 
+//            ChangeGameState(GameStateIdentifierMap.PrepareArena); 
         }
 
         protected override void ProcessEndState(EndGameStateCommand endGameStateCommand)
