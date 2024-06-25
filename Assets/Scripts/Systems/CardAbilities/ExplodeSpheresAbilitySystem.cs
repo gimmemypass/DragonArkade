@@ -16,12 +16,12 @@ namespace Systems
         [Required] public ExplodeSpheresAbilityComponent Component;
         [Required] public DamageComponent DamageComponent;
         private EntitiesFilter spheresFilter;
-        private RaycastHit[] raycastHits;
+        private Collider[] raycastHits;
 
         public override void InitSystem()
         {
             spheresFilter = EntityManager.Default.GetFilter<SphereComponent>();
-            raycastHits = new RaycastHit[16];
+            raycastHits = new Collider[16];
         }
 
         public override UniTask ExecuteCard(Entity owner = null, Entity target = null, bool enable = true)
@@ -31,10 +31,10 @@ namespace Systems
                 var position = sphere.GetComponent<UnityTransformComponent>().Transform.position;
                 var particleSystem = Object.Instantiate(Component.ParticleSystem, position, Quaternion.identity);
                 particleSystem.Play();
-                var count = Physics.SphereCastNonAlloc(position, Component.Radius, Vector3.up, raycastHits, Component.Radius);
+                var count = Physics.OverlapSphereNonAlloc(position, Component.Radius, raycastHits);
                 for (int i = 0; i < count; i++)
                 {
-                    if (raycastHits[i].collider.TryGetActorFromCollision(out var actor) && actor != null)
+                    if (raycastHits[i].GetComponent<Collider>().TryGetActorFromCollision(out var actor) && actor != null)
                     {
                         actor.Command(new DamageCommand<float> {DamageDealer = target, DamageValue = DamageComponent.Value, DmgType = 0});
                     }
