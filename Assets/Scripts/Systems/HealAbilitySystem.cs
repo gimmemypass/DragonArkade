@@ -19,8 +19,8 @@ namespace Systems
         public override void Execute(Entity owner = null, Entity target = null, bool enable = true)
         {
             Object.Instantiate(HealAbilityComponent.ParticleSystem);
-            target.Command(new TriggerAnimationCommand(){Index = AnimParametersMap.Heal});
-            target!.Command(new HealCommand()
+            target?.Command(new TriggerAnimationCommand(){Index = AnimParametersMap.Heal});
+            target?.Command(new HealCommand()
             {
                 Amount = HealthComponent.Value
             });

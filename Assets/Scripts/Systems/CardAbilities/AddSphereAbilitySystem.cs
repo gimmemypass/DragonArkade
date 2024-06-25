@@ -11,25 +11,42 @@ namespace Systems
 {
     [Serializable]
     [Documentation(Doc.NONE, "")]
-    public sealed class AddSphereAbilitySystem : BaseCardAbilitySystem, IReactCommand<AnimationEventCommand>
+    public sealed class AddSphereAbilitySystem : BaseCardAbilitySystem, IReactCommand<AnimationEventCommand>, IGlobalStart
     {
         private const float OFFSET = 0.5f;
         private int toAdd = 0;
+        private EntitiesFilter spheresFilter;
+        private EntitiesFilter spawnPointsFilter;
+        private CharactersHolderComponent charactersHolderComponent;
+
         public override void InitSystem()
         {
+            spheresFilter = EntityManager.Default.GetFilter<SphereComponent>();
+            spawnPointsFilter = EntityManager.Default.GetFilter<SpawnPointComponent>();
         }
-
+        public void GlobalStart()
+        {
+            charactersHolderComponent = EntityManager.Default.GetSingleComponent<CharactersHolderComponent>();
+        }
         public override UniTask ExecuteCard(Entity owner = null, Entity target = null, bool enable = true)
         {
-            target?.Command(new TriggerAnimationCommand(){Index = AnimParametersMap.Ball_Appear});
             toAdd++;
+            if(target != null && target.ContainsMask<AnimatorStateComponent>())
+                target.Command(new TriggerAnimationCommand(){Index = AnimParametersMap.Ball_Appear});
+            else
+                AddAllSpheres();
             return UniTask.CompletedTask;
         }
 
         public void CommandReact(AnimationEventCommand command)
         {
             if (command.Id != AnimationEventIdentifierMap.CreateBall) return;
-            
+
+            AddAllSpheres();
+        }
+
+        private void AddAllSpheres()
+        {
             for (int i = 0; i < toAdd; i++)
             {
                 AddSphere().Forget();
@@ -41,21 +58,20 @@ namespace Systems
             if (toAdd <= 0)
                 throw new Exception();
             toAdd--;
-            var charactersHolderComponent = EntityManager.Default.GetSingleComponent<CharactersHolderComponent>();
             var sphereContainer = charactersHolderComponent.SphereContainer;
-            var spheres = EntityManager.Default.GetFilter<SphereComponent>();
 
-            var spawnPoint = EntityManager.Default.GetFilter<SpawnPointComponent>().FirstOrDefault(a =>
+            spawnPointsFilter.ForceUpdateFilter();
+            var spawnPoint = spawnPointsFilter.FirstOrDefault(a =>
                     a.GetComponent<SpawnPointComponent>().SpawnPointIdentifier.Id ==
                     SpawnPointIdentifierMap.SphereSpawnPointIdentifier)
                 .GetComponent<UnityTransformComponent>()
                 .Transform.position;
             var position = spawnPoint;
 
-            foreach (var sph in spheres)
+            foreach (var sph in spheresFilter)
             {
                 var offset = (spawnPoint - sph.GetComponent<UnityTransformComponent>().Transform.position).normalized * OFFSET /
-                             spheres.Count;
+                             spheresFilter.Count;
                 if (offset == Vector3.zero)
                     offset = Vector3.up;
                 position += offset;
@@ -63,12 +79,14 @@ namespace Systems
 
             var sphere = await sphereContainer.GetActor(position: position);
             sphere.Init();
-            foreach (var sphereEnt in EntityManager.Default.GetFilter<SphereComponent>())
+            foreach (var sphereEnt in spheresFilter)
             {
                 sphere.GetHECSComponent<SphereComponent>().Dir = sphereEnt.GetComponent<SphereComponent>().Dir;
                 sphere.GetHECSComponent<SpeedComponent>().SetValue(sphereEnt.GetComponent<SpeedComponent>().Value);
                 break;
             }
         }
+
+
     }
 }

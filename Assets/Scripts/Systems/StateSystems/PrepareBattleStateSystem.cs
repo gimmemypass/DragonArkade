@@ -50,7 +50,7 @@ namespace Systems
             var spheresController = EntityManager.Default.GetSingleComponent<SpheresControllerTagComponent>().Owner;
             spheresController.Command(new ExecuteAbilityByIDCommand
             {
-                AbilityIndex = EntityContainersMap.AddSphereAbility,
+                AbilityIndex = AbilitiesMap.AddSphereAbility,
                 Owner = Owner,
                 Target = spheresController,
                 Enable = true
