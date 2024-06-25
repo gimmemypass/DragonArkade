@@ -87,7 +87,7 @@ MonoBehaviour:
     - {fileID: 162670671520768945}
     - {fileID: -2301123850007583913}
     - {fileID: 697592001280100737}
-    - {fileID: 2202161617375226179}
+    - {fileID: 3199020440352807876}
     Parent: {fileID: 11400000}
   containerIndex: -1567252484
 --- !u!114 &162670671520768945
@@ -139,18 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6973f33bbacb448ad835cbc365d2ab, type: 3}
   m_Name: CustomHpBarComponent
   m_EditorClassIdentifier: 
---- !u!114 &2202161617375226179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4588f037bfee174b8938aaefc0318ac, type: 3}
-  m_Name: PlayUpgradeParticleSystem
-  m_EditorClassIdentifier: 
 --- !u!114 &2320435678807329514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +150,18 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: deba02d363e86654fb7e166f9c2e4ba3, type: 3}
   m_Name: NeedHpBarComponent
+  m_EditorClassIdentifier: 
+--- !u!114 &3199020440352807876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8620b28b20658ef44a562aee3126eb59, type: 3}
+  m_Name: UpgradeVisualMainCharacterSystem
   m_EditorClassIdentifier: 
 --- !u!114 &3492917849070227143
 MonoBehaviour:

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7341968981261365020}
   - component: {fileID: 5080649133739478564}
   - component: {fileID: 6991133199102954928}
-  - component: {fileID: 8204488330086333486}
+  - component: {fileID: 2695955079852006146}
   m_Layer: 0
-  m_Name: EmptyMainChar
+  m_Name: FireballChar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e0a8cb9615cff44be7126cb1f8375a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8204488330086333486
+--- !u!114 &2695955079852006146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

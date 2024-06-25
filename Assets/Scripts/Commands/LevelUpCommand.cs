@@ -2,7 +2,7 @@
 
 namespace Commands
 {
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "level up command")]
     public struct LevelUpCommand : IGlobalCommand
     {
         public int CurrentLevel;

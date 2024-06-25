@@ -30,14 +30,16 @@ namespace Systems
         {
             monoComponent.ParticleSystem.Play();
             var level = playerUpgradeComponent.CurrentLevel;
-            foreach (var data in monoComponent.Datas)
-            {
-                if (data.lvl == level)
+            if (monoComponent.Datas != null)
+                foreach (var data in monoComponent.Datas)
                 {
-                    Owner.Command(new TriggerAnimationCommand() { Index = AnimParametersMap.Upgrade });
-                    break;
+                    if (data.lvl == level)
+                    {
+                        Owner.Command(new TriggerAnimationCommand() { Index = AnimParametersMap.Upgrade });
+                        break;
+                    }
                 }
-            }
+
             UpdateVisual();
         }
 
@@ -45,6 +47,8 @@ namespace Systems
         {
             DisableAll();
             var level = playerUpgradeComponent.CurrentLevel;
+            if (monoComponent.Datas == null || monoComponent.Datas.Length == 0)
+                return;
             var needed = monoComponent.Datas[0];
             foreach (var data in monoComponent.Datas)
             {
@@ -60,12 +64,13 @@ namespace Systems
 
         private void DisableAll()
         {
+            if (monoComponent.Datas == null) return;
             foreach (var data in monoComponent.Datas)
             {
                 foreach (var element in data.Elements)
                 {
-                    element.gameObject.SetActive(false); 
-                } 
+                    element.gameObject.SetActive(false);
+                }
             }
         }
     }
