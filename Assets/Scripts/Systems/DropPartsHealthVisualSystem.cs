@@ -8,7 +8,7 @@ using UnityEngine;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "drop parts health visual system")]
     public sealed class DropPartsHealthVisualSystem : BaseSystem, IUpdatable, IHaveActor
     {
         [Required] public HealthComponent HealthComponent;

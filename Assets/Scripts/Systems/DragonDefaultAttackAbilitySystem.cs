@@ -12,7 +12,7 @@ using UnityEngine;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "default attack ability system")]
     public sealed class DragonDefaultAttackAbilitySystem : BaseAbilitySystem
     {
         [Required] public CooldownComponent CooldownComponent;

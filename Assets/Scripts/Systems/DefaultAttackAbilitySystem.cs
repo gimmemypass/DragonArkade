@@ -6,7 +6,7 @@ using HECSFramework.Core;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "default attack ability system")]
     public sealed class DefaultAttackAbilitySystem : BaseAbilitySystem
     {
         private CooldownComponent cooldownComponent;

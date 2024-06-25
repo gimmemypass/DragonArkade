@@ -9,7 +9,7 @@ using Helpers;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "drop item system")]
     public sealed class DropItemSystem : BaseSystem, IReactCommand<TriggerEnterCommand>
     {
         [Required] public DropItemComponent DropItemComponent;

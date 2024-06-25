@@ -7,7 +7,7 @@ using Components;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "find target entity system")]
     public sealed class FindTargetEntitySystem : BaseSystem, ICustomUpdatable
     {
         [Required] public FactionComponent FactionComponent;

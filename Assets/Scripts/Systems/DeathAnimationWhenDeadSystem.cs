@@ -8,7 +8,7 @@ using Components;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "death animation when dead system")]
     public sealed class DeathAnimationWhenDeadSystem : BaseSystem, IReactComponentLocal<IsDeadTagComponent>
     {
         public override void InitSystem()

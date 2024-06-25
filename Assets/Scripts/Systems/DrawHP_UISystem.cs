@@ -2,14 +2,12 @@
 using Commands;
 using HECSFramework.Unity;
 using HECSFramework.Core;
-using UnityEngine;
-using Components;
 using Components.MonoBehaviourComponents;
 
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, Doc.UI, "draw hp ui system")]
     public sealed class DrawHP_UISystem : BaseSystem, IHaveActor, IReactCommand<RedrawBarCommand<float>>, IReactCommand<SetColorCommand>
     {
         public Actor Actor { get; set; }

@@ -7,7 +7,7 @@ using Helpers;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "custom collide item system")]
     public sealed class CollideItemSystem : BaseSystem, IReactCommand<TriggerEnterCommand>
     {
         [Required] public DamageComponent DamageComponent;

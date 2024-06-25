@@ -7,7 +7,7 @@ using Components;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "energy regeneration system")]
     public sealed class EnergyRegenerationSystem : BaseSystem, ICustomUpdatable
     {
         [Required] public EnergyRegenerationComponent EnergyRegenerationComponent;

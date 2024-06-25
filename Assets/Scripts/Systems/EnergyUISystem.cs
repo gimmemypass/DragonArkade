@@ -8,7 +8,7 @@ using DG.Tweening;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.UI, "energy ui system")]
     public sealed class EnergyUISystem : BaseSystem, IHaveActor, IUpdatable
     {
         public Actor Actor { get; set; }

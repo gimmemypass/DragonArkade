@@ -10,7 +10,7 @@ using Cysharp.Threading.Tasks;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.UI, "system for visualize damage text")]
     public sealed class DamageTextVisualizerSystem : BaseSystem, IHaveActor, IReactCommand<DamageForVisualFXCommand>, IUpdatable
     {
         public Actor Actor { get; set; }

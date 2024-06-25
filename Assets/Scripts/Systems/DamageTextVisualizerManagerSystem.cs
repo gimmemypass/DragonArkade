@@ -2,17 +2,14 @@
 using Commands;
 using HECSFramework.Core;
 using Components;
-using Cysharp.Threading.Tasks;
-using UnityEngine;
-using Object = UnityEngine.Object;
+
 
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.UI, Doc.Global, "")]
+    [Documentation(Doc.UI, Doc.Global, "global manager for damage visualization")]
     public sealed class DamageTextVisualizerManagerSystem : BaseSystem, IReactGlobalCommand<DamageForVisualFXCommand>
     {
-        private MainCameraComponent mainCameraComponent;
         public override void InitSystem()
         {
         }

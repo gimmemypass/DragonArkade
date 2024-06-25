@@ -9,7 +9,7 @@ using HECSFramework.Unity.Helpers;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "system for disable colliders when dead")]
     public sealed class DisableCollidersWhenDeadSystem : BaseSystem, IReactCommand<IsDeadCommand>, IHaveActor
     {
         [Required] public RigidbodyProviderComponent rigidbodyProviderComponent;

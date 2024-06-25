@@ -7,7 +7,7 @@ using HECSFramework.Core;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.UI, "window system for comics")]
     public sealed class ComicsWindowSystem : BaseSystem, IHaveActor, IGlobalStart
     {
         public Actor Actor { get; set; }

@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.UI, "final screen ui system")]
     public sealed class FinalScreenUISystem : BaseSystem, IHaveActor
     {
         [Required] public FinalLevelScreenComponent FinalLevelScreenComponent;
