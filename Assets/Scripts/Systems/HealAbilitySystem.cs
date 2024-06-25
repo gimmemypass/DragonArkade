@@ -7,7 +7,7 @@ using Object = UnityEngine.Object;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "heal ability system")]
     public sealed class HealAbilitySystem : BaseAbilitySystem
     {
         [Required] public HealthComponent HealthComponent;

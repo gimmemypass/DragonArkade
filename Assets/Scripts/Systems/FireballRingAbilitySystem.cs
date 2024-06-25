@@ -12,7 +12,7 @@ using UnityEngine;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, Doc.Arena, "fireball ring ability system")]
     public sealed class FireballRingAbilitySystem : BaseAbilitySystem
     {
         [Required] public CharacterItemsComponent CharacterItemsComponent;

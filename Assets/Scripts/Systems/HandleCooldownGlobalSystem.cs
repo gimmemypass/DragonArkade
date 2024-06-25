@@ -7,7 +7,7 @@ using Components;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "handle cooldown global system")]
     public sealed class HandleCooldownGlobalSystem : BaseSystem, IUpdatable
     {
         private EntitiesFilter filter;

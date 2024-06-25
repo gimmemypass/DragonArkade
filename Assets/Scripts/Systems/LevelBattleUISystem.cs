@@ -5,7 +5,6 @@ using Components;
 using HECSFramework.Unity;
 using HECSFramework.Core;
 using Components.MonoBehaviourComponents;
-using UnityEngine;
 using Object = UnityEngine.Object;
 
 namespace Systems

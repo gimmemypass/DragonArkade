@@ -8,7 +8,7 @@ using Components;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.Item, "item throwing system")]
     public sealed class ItemThrowingSystem : BaseSystem, IReactCommand<TryApplyItemCommand>
     {
         [Required] public RigidbodyProviderComponent RigidbodyProviderComponent;

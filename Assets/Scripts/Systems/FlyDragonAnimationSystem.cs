@@ -7,7 +7,7 @@ using Components;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "fly dragon animation system")]
     public sealed class FlyDragonAnimationSystem : BaseSystem, IUpdatable, IReactGlobalCommand<ItemAppliedCommand>, IReactCommand<DamageForVisualFXCommand>, IReactCommand<IsDeadCommand>
     {
         [Required] public UnityTransformComponent UnityTransformComponent;

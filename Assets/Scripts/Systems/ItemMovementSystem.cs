@@ -5,7 +5,7 @@ using HECSFramework.Core;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, Doc.Item, "item movement system")]
     public sealed class ItemMovementSystem : BaseSystem, IUpdatable
     {
         [Required] public SpeedComponent SpeedComponent;

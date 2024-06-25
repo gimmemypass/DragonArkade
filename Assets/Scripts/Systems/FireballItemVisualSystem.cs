@@ -8,7 +8,7 @@ using Components;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "fireball item visual system")]
     public sealed class FireballItemVisualSystem : BaseSystem, IReactCommand<TryApplyItemCommand>, IHaveActor, IAfterEntityInit
     {
         private FireballMonoComponent monoComponent;

@@ -7,7 +7,7 @@ using HECSFramework.Core;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "init spawn point system")]
     public sealed class InitSpawnPointSystem : BaseSystem, IHaveActor
     {
         [Required] public SpawnPointComponent SpawnPointComponent;
