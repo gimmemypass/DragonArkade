@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Commands;
 using Components;
 using Cysharp.Threading.Tasks;
@@ -22,7 +23,12 @@ namespace Systems
             itemsGlobalHolderComponent = EntityManager.Default.GetSingleComponent<ItemsGlobalHolderComponent>();
         }
 
-        public override async void Execute(Entity abilityOwner = null, Entity target = null, bool enable = true)
+        public override void Execute(Entity abilityOwner = null, Entity target = null, bool enable = true)
+        {
+            ExecuteAsync(abilityOwner).Forget();
+        }
+
+        private async UniTask ExecuteAsync(Entity abilityOwner)
         {
             abilityOwner.AddComponent<BlockingAbilityInActionComponent>();
             await UniTask.Delay(200);
@@ -32,24 +38,22 @@ namespace Systems
                 Owner.Command(new AddItemToCharacterCommand()
                 {
                     Item = fireballActor.Entity
-                }); 
+                });
             }
-            
+
             foreach (var item in CharacterItemsComponent.Items.Values)
             {
                 item.AsActor().transform.DOScale(Vector3.one, 0.5f);
             }
-            
+
             Owner.AddComponent<VisualInActionTagComponent>();
-            await new FireballRingJob(){CharacterItemsComponent = CharacterItemsComponent}.RunJob();
+            await new FireballRingJob() { CharacterItemsComponent = CharacterItemsComponent }.RunJob();
             await UniTask.Delay(1000);
-            
+
             Owner.RemoveComponent<VisualInActionTagComponent>();
             abilityOwner.RemoveComponent<BlockingAbilityInActionComponent>();
-
-
         }
-        
+
         private async UniTask<Actor> SpawnAttackItem(Entity owner)
         {
             var item = itemsGlobalHolderComponent.GetByContainerId(EntityContainersMap.FireballContainer);

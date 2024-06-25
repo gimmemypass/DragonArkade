@@ -9,7 +9,7 @@ using UnityEngine;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "system that try to apply aimed item")]
     public sealed class ApplyAimedItemSystem : BaseSystem, IReactCommand<TryApplyAimedItemCommand>, IUpdatable, IReactGlobalCommand<ItemAppliedCommand>
     {
         [Required] public CharacterItemsComponent CharacterItemsComponent;
@@ -39,6 +39,7 @@ namespace Systems
              var target = AbilityOwnerComponent.AbilityOwner.GetComponent<TargetEntityComponent>().Target;
              var dir = GetDirection(target);
 
+             //todo rewrite to remove boxing
              var targetAngle = Vector3.SignedAngle(Vector3.forward, dir, Vector3.up);
              var angle = CharacterItemsComponent.AimAngle;
              var item = CharacterItemsComponent.Items.Values

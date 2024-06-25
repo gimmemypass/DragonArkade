@@ -8,7 +8,7 @@ using Components.MonoBehaviourComponents;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, Doc.Arena, "Control arena battle indicator")]
     public sealed class ArenaBattleIndicatorSystem : BaseSystem, IUpdatable, IGlobalStart, IHaveActor
     {
         private const float INDICATOR_OFFSET = 6f;

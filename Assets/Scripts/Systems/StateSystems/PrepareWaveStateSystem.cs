@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Commands;
 using Components;
 using Cysharp.Threading.Tasks;
@@ -36,25 +37,34 @@ namespace Systems
             AsSingle(ref levelsHolderComponent);
         }
 
-        protected override async void ProcessState(int from, int to)
+        protected override void ProcessState(int from, int to)
+        {
+            ProcessStateAsync().Forget();
+        }
+
+        private async UniTask ProcessStateAsync()
         {
             if (playerLevelComponent.CurrentWave != null)
             {
                 await playerLevelComponent.CurrentWave.Finish();
                 Object.Destroy(playerLevelComponent.CurrentWave.gameObject);
             }
-            var wavePrefab = levelsHolderComponent.LevelDatas[playerLevelComponent.Level].Waves[playerLevelComponent.WaveNumber];
+
+            var wavePrefab = levelsHolderComponent.LevelDatas[playerLevelComponent.Level]
+                .Waves[playerLevelComponent.WaveNumber];
             var wave = Object.Instantiate(wavePrefab);
             foreach (var actor in wave.GetComponentsInChildren<Actor>())
             {
-                actor.InitWithContainer(); 
+                actor.InitWithContainer();
             }
+
             await wave.Prepare();
             enemies.ForceUpdateFilter();
             foreach (var enemy in enemies)
             {
                 enemy.Command(new ForceStartAICommand());
             }
+
             playerLevelComponent.CurrentWave = wave;
 
             HandleSpheres();

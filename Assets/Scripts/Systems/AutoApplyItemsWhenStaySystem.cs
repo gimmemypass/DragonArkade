@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "apply items when character stay")]
     public sealed class AutoApplyItemsWhenStaySystem : BaseAbilitySystem, IUpdatable
     {
         [Required] public CooldownComponent CooldownComponent;

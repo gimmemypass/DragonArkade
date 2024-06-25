@@ -20,7 +20,7 @@ namespace Systems
         public override void InitSystem()
         {
             Actor.TryGetComponent(out monoComponent);
-            monoComponent.ResetButton.onClick.AddListener(Reset);
+            monoComponent.ResetButton.onClick.AddListener(() => Reset().Forget());
             
             var reward = FinalLevelScreenComponent.Reward;
             monoComponent.SoftValueReward.text = $"{reward.ToString()}";
@@ -28,10 +28,10 @@ namespace Systems
 
         public override void Dispose()
         {
-            monoComponent.ResetButton.onClick.RemoveListener(Reset);
+            monoComponent.ResetButton.onClick.RemoveAllListeners();
         }
 
-        private async void Reset()
+        private async UniTask Reset()
         {
             monoComponent.ResetButton.interactable = false;
             monoComponent.SoftValueReward.text = "0";

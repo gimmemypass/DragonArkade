@@ -9,7 +9,7 @@ using Helpers;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.UI, "control ui for arena battle")]
     public sealed class ArenaBattleUIWindow : BaseSystem, IUpdatable, IHaveActor, IGlobalStart
     {
         private ArenaBattleHealthsMonoComponent monoComponent;
@@ -24,16 +24,11 @@ namespace Systems
             var playerHealth = FactionHelper.GetHealthSum(FactionIdentifierMap.PlayerFactionIdentifier);
             monoComponent.PlayerHealth.SetMaxHealth(playerHealth);
             monoComponent.PlayerHealth.SetActualHealth(playerHealth);
-
-            // var enemyHealth = FactionHelper.GetHealthSum(FactionIdentifierMap.EnemyFactionIdentifier);
-            // monoComponent.EnemyHealth.SetMaxHealth(enemyHealth);
-            // monoComponent.EnemyHealth.SetActualHealth(enemyHealth);
         }
 
         public void UpdateLocal()
         {
             monoComponent.PlayerHealth.SetActualHealth(FactionHelper.GetHealthSum(FactionIdentifierMap.PlayerFactionIdentifier));
-            // monoComponent.EnemyHealth.SetActualHealth(FactionHelper.GetHealthSum(FactionIdentifierMap.EnemyFactionIdentifier));
         }
 
 

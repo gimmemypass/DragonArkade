@@ -7,7 +7,6 @@ using HECSFramework.Core;
 using Components;
 using Components.MonoBehaviourComponents;
 using Cysharp.Threading.Tasks;
-using HECSFramework.Unity.Helpers;
 
 namespace Systems
 {
@@ -44,11 +43,17 @@ namespace Systems
             return card;
         }
 
-        public async void CommandGlobalReact(CardActivatedCommand command)
+        public void CommandGlobalReact(CardActivatedCommand command)
         {
             var transform = command.Entity.GetComponent<UnityTransformComponent>().Transform;
             var siblingIndex = transform.GetSiblingIndex();
             CloseCard(command).Forget();
+            AddNewCard(siblingIndex).Forget();
+
+        }
+
+        private async UniTask AddNewCard(int siblingIndex)
+        {
             foreach (var cardContainer in cardsHolder.Containers.OrderBy(a => Guid.NewGuid()))
             {
                 var alreadyInHands = false;
@@ -59,13 +64,13 @@ namespace Systems
                     alreadyInHands = true;
                     break;
                 }
-                if(alreadyInHands)
+
+                if (alreadyInHands)
                     continue;
                 var card = await AddCard(cardContainer);
                 card.transform.SetSiblingIndex(siblingIndex);
                 break;
             }
-
         }
 
         private void AddDeck()
@@ -77,7 +82,7 @@ namespace Systems
             }
         }
 
-        private static async UniTaskVoid CloseCard(CardActivatedCommand command)
+        private static async UniTask CloseCard(CardActivatedCommand command)
         {
             command.Entity.AsActor().TryGetComponent(out CardMonoComponent monoComponent);
             monoComponent.transform.SetParent(monoComponent.transform.parent.parent);
