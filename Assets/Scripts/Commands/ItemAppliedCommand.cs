@@ -2,7 +2,7 @@
 
 namespace Commands
 {
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "when item applied")]
     public struct ItemAppliedCommand : IGlobalCommand
     {
         public Entity Owner;

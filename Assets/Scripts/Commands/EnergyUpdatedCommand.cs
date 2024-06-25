@@ -2,7 +2,7 @@
 
 namespace Commands
 {
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "when energy updated")]
     public struct EnergyUpdatedCommand : IGlobalCommand
     {
     }

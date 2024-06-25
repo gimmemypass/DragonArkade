@@ -2,7 +2,7 @@
 
 namespace Commands
 {
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "Command to add item")]
     public struct AddItemToCharacterCommand : ICommand
     {
         public Entity Item;
