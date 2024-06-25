@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Commands;
 using HECSFramework.Core;
 using Components;
 using HECSFramework.Unity;
+using Helpers;
 using UnityEngine;
 
 namespace Systems
@@ -39,16 +41,13 @@ namespace Systems
              var target = AbilityOwnerComponent.AbilityOwner.GetComponent<TargetEntityComponent>().Target;
              var dir = GetDirection(target);
 
-             //todo rewrite to remove boxing
              var targetAngle = Vector3.SignedAngle(Vector3.forward, dir, Vector3.up);
              var angle = CharacterItemsComponent.AimAngle;
-             var item = CharacterItemsComponent.Items.Values
-                 .Where(a => Mathf.Abs(NormalizeAngle(a.GetComponent<UnityTransformComponent>().Transform.rotation
-                     .eulerAngles.y) - targetAngle) <= angle)
-                 .OrderBy(a => Mathf.Abs(NormalizeAngle(a.GetComponent<UnityTransformComponent>().Transform.rotation.eulerAngles.y - targetAngle)))
-                 .FirstOrDefault();
-             CharacterItemsComponent.ItemInAim = item;
+
+             CharacterItemsComponent.ItemInAim = ItemsHelper.GetAimedItem(CharacterItemsComponent.Items.Values, targetAngle, angle);
         }
+
+
 
         private Vector3 GetDirection(Entity target)
         {
@@ -62,15 +61,6 @@ namespace Systems
                       AbilityOwnerComponent.AbilityOwner.GetComponent<UnityTransformComponent>().Transform.position;
             
             return dir;
-        }
-
-        private static float NormalizeAngle(float angle) //-180 to 180
-        {
-            //short way to get normalized between 0 and 360 degree
-            angle = Quaternion.Euler(0, angle, 0).eulerAngles.y;
-            
-            if (angle > 180) angle -= 360;
-            return angle;
         }
     }
 }
