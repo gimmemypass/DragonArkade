@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Commands;
 using Components;
+using Cysharp.Threading.Tasks;
 using HECSFramework.Core;
 
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameState, "game state controller for start menu")]
     public sealed class StartMenuStateSystem : BaseGameStateSystem, IGlobalStart
     {
         private ScenesHolderComponent scenesHolderComponent;
@@ -22,19 +24,20 @@ namespace Systems
         }
 
         protected override int State { get; } = GameStateIdentifierMap.StartMenu;
-        protected override async void ProcessState(int from, int to)
+        protected override void ProcessState(int from, int to)
+        {
+            ProcessStateAsync().Forget();
+        }
+
+        private async UniTask ProcessStateAsync()
         {
             await EntityManager.Default.GetSingleSystem<SceneManagerSystem>().LoadScene(scenesHolderComponent.Customization);
             //
             var mainChar = EntityManager.Default.GetSingleComponent<MainCharacterTagComponent>().Owner;
-            mainChar.Command(new FloatAnimationCommand(){Index = AnimParametersMap.IdleBlend, Value = 1f});
-            EntityManager.Default.Command(new UIGroupCommand(){Show = true, UIGroup = UIGroupIdentifierMap.StartScreenGroup, OnLoadUI = StartMenuOpened});            
+            mainChar.Command(new FloatAnimationCommand() { Index = AnimParametersMap.IdleBlend, Value = 1f });
+            EntityManager.Default.Command(new UIGroupCommand()
+                { Show = true, UIGroup = UIGroupIdentifierMap.StartScreenGroup});
         }
 
-        private void StartMenuOpened()
-        {
-            if(playerLevelComponent.Level == 0)
-                EntityManager.Default.Command(new ShowUICommand(){UIViewType = UIIdentifierMap.Comics_UIIdentifier});
-        }
     }
 }
