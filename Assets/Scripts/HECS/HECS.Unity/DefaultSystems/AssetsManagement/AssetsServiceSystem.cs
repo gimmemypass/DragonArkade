@@ -95,7 +95,8 @@ namespace Systems
 
             try
             {
-                await reference.LoadAssetAsync<TObject>().ToUniTask();
+                if(!reference.IsDone || !reference.IsValid())
+                    await reference.LoadAssetAsync<TObject>().ToUniTask();
 
                 exceptionsCount = 0;
                 AssetRefContainer<TRef, TObject> refContainer = new AssetRefContainer<TRef, TObject>(reference);
