@@ -6,7 +6,7 @@ using HECSFramework.Core;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "handle leveling")]
     public sealed class MainCharLevelingSystem : BaseSystem, IGlobalStart, IReactGlobalCommand<TransitionGameStateCommand>
     {
         [Required] public HealthComponent HealthComponent;

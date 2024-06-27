@@ -8,7 +8,7 @@ using Random = Unity.Mathematics.Random;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.Sphere, Doc.Abilities, "")]
+    [Documentation(Doc.Sphere, Doc.Abilities, "ability to push")]
     public sealed class SpherePushAbilitySystem : BaseCardAbilitySystem
     {
         private const float AttackAnimationRange = 3;

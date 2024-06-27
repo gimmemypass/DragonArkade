@@ -7,7 +7,7 @@ using Helpers;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.Cards, "card to choosing push dir")]
     public sealed class ChoosingPushDirCardSystem : BaseCardSystem
     {
         private Entity spheresController;

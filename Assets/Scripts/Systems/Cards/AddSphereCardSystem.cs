@@ -7,7 +7,7 @@ using Helpers;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.Cards, "add sphere card system")]
     public sealed class AddSphereCardSystem : BaseCardSystem
     {
         private Entity spheresController;

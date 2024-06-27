@@ -15,7 +15,7 @@ using Random = UnityEngine.Random;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.Abilities, "choosing push direction ability")]
     public sealed class ChoosingPushDirectionSphereAbilitySystem : BaseCardAbilitySystem, IReactCommand<InputStartedCommand>, IReactGlobalCommand<TransitionGameStateCommand>
     {
         [Required] public ChoosingPushDirectionSphereAbilityComponent Component;

@@ -9,7 +9,7 @@ using DG.Tweening;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.Animation, "")]
+    [Documentation(Doc.Animation, "shake animation when damaged")]
     public sealed class ShakeAnimationWhenDamagedSystem : BaseSystem, IReactCommand<DamageForVisualFXCommand>, IHaveActor
     {
         [Required] public UnityTransformComponent TransformComponent;

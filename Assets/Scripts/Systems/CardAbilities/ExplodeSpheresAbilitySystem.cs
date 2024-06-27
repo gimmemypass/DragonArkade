@@ -10,7 +10,7 @@ using Object = UnityEngine.Object;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.Sphere, Doc.Abilities, "")]
+    [Documentation(Doc.Sphere, Doc.Abilities, "explode sphere ability")]
     public sealed class ExplodeSpheresAbilitySystem : BaseCardAbilitySystem
     {
         [Required] public ExplodeSpheresAbilityComponent Component;

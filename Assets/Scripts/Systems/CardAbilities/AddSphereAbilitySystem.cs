@@ -10,7 +10,7 @@ using UnityEngine;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.Abilities, "add sphere ability")]
     public sealed class AddSphereAbilitySystem : BaseCardAbilitySystem, IReactCommand<AnimationEventCommand>, IGlobalStart
     {
         private const float OFFSET = 0.5f;

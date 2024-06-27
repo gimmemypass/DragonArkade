@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "handle movement for pegasus")]
     public sealed class PegasusMovementSystem : BaseSystem, IUpdatable
     {
         [Required] public RigidbodyProviderComponent RigidbodyProviderComponent;

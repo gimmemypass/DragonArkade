@@ -8,7 +8,7 @@ using Helpers;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.Cards, "card to push sphere")]
     public sealed class CardPushSystem : BaseCardSystem
     {
         [Required] public PushDirectionComponent PushDirectionComponent;

@@ -9,7 +9,7 @@ using Components.MonoBehaviourComponents;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.Spawn, "")]
+    [Documentation(Doc.Spawn, "move enemy to spawn point")]
     public sealed class MoveEnemyToSpawnPointSystem : BaseSystem, IHaveActor, IAfterEntityInit
     {
         [Required] public UnityTransformComponent UnityTransformComponent;

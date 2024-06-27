@@ -9,7 +9,7 @@ using Helpers;
 namespace Systems
 {
     [Serializable]
-    [Documentation(Doc.NONE, "")]
+    [Documentation(Doc.GameLogic, "card to heal ")]
     public sealed class HealCardSystem : BaseCardSystem
     {
         private Entity mainCharacter;

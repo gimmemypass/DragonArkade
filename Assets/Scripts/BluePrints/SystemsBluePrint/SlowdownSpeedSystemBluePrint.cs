@@ -1,1 +1,1 @@
-using Systems;namespace HECSFramework.Unity{	public class SlowdownSpeedSystemBluePrint : SystemBluePrint<SlowdownSpeedSystem>	{	}}
+using Systems;namespace HECSFramework.Unity{	public class SlowdownSpeedSystemBluePrint : SystemBluePrint<DependOnTimeScaleSpeedSystem>	{	}}

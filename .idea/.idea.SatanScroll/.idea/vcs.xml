@@ -3,13 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECSFramework" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECSFramework/HECS.Core" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECSFramework/HECS.Serialize" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECSFramework/HECS.Strategies" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECSFramework/HECS.Strategies.Serialization" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECSFramework/HECS.Strategies.Unity" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECSFramework/HECS.Unity" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECSFramework/HECS.UnitySerialization" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Assets/Scripts/HECSJSON" vcs="Git" />
   </component>
 </project>
