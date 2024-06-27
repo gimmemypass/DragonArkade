@@ -23,7 +23,12 @@ namespace Systems
             itemsGlobalHolderComponent = EntityManager.Default.GetSingleComponent<ItemsGlobalHolderComponent>();
         }
 
-        public override async void Execute(Entity owner = null, Entity target = null, bool enable = true)
+        public override void Execute(Entity owner = null, Entity target = null, bool enable = true)
+        {
+            ExecuteAsync(owner).Forget();
+        }
+
+        private async UniTask ExecuteAsync(Entity owner)
         {
             HECSDebug.Log("Attack");
             if (Owner.ContainsMask<VisualInActionTagComponent>())
@@ -32,7 +37,7 @@ namespace Systems
             var position = owner.GetComponent<CharacterItemsSourceMonoComponentProvider>().Get.transform.position;
             var actor = await SpawnAttackItem(owner, position);
             await actor.transform.DOScale(Vector3.one, 0.25f);
-            
+
             actor.transform.SetParent(null, true);
             actor.Command(new TryApplyItemCommand());
             CooldownComponent.SetValue(CooldownComponent.CalculatedMaxValue);

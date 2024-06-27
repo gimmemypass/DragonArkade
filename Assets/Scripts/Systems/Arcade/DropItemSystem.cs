@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Commands;
 using HECSFramework.Unity;
 using HECSFramework.Core;
 using UnityEngine;
 using Components;
+using Cysharp.Threading.Tasks;
 using Helpers;
 
 namespace Systems
@@ -17,16 +19,21 @@ namespace Systems
         {
         }
 
-        public async void CommandReact(TriggerEnterCommand command)
+        public void CommandReact(TriggerEnterCommand command)
         {
             if (command.Collider.TryGetActorFromCollision(out var actor) && actor != null &&
                 actor.Entity.ContainsMask<CharacterItemsComponent>())
             {
-                var item = await DropItemComponent.ItemContainer.GetActor();
-                item.Init();
-                actor.Command(new AddItemToCharacterCommand() { Item = item.Entity });
-                Owner.HecsDestroy();
+                SpawnItem(actor).Forget();
             } 
+        }
+
+        private async UniTask SpawnItem(Actor actor)
+        {
+            var item = await DropItemComponent.ItemContainer.GetActor();
+            item.Init();
+            actor.Command(new AddItemToCharacterCommand() { Item = item.Entity });
+            Owner.HecsDestroy();
         }
     }
 }

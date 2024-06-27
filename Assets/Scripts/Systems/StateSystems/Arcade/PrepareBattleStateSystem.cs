@@ -33,10 +33,15 @@ namespace Systems
             AsSingle(ref scenesHolderComponent);
         }
 
-        protected override async void ProcessState(int from, int to)
+        protected override void ProcessState(int from, int to)
+        {
+            ProcessStateAsync().Forget();
+        }
+
+        private async UniTask ProcessStateAsync()
         {
             //load scene
-            await EntityManager.Default.GetSingleSystem<SceneManagerSystem>().LoadScene(scenesHolderComponent.Battle); 
+            await EntityManager.Default.GetSingleSystem<SceneManagerSystem>().LoadScene(scenesHolderComponent.Battle);
             //
 
             SpawnSphere();

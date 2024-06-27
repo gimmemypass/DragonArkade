@@ -1,7 +1,9 @@
 using System;
+using System.Threading.Tasks;
 using Commands;
 using Components;
 using Components.MonoBehaviourComponents;
+using Cysharp.Threading.Tasks;
 using HECSFramework.Core;
 using HECSFramework.Unity;
 using UnityEngine;
@@ -17,10 +19,15 @@ namespace Systems
         private MainCameraComponent mainCameraComponent;
         private HealthBarsManagerComponent healthBarsManagerComponent;
 
-        public async void ComponentReactGlobal(ShowHpBarTagComponent component, bool isAdded)
+        public void ComponentReactGlobal(ShowHpBarTagComponent component, bool isAdded)
         {
             if (component.Owner.ContainsMask<CustomHpBarComponent>())
                 return;
+            ProcessShowHpBarTagComponentAsync(component, isAdded).Forget();
+        }
+
+        private async UniTask ProcessShowHpBarTagComponentAsync(ShowHpBarTagComponent component, bool isAdded)
+        {
             if (isAdded)
             {
                 var healthBar = await uiSystem.ShowUI(UIIdentifierMap.HPBar_UIIdentifier,
@@ -33,7 +40,7 @@ namespace Systems
                 component.HpBar?.Command(new HideUICommand());
             }
 
-            if(isAdded)
+            if (isAdded)
                 healthBarsManagerComponent.ShowHpBarTags.Add(component);
             else
                 healthBarsManagerComponent.ShowHpBarTags.Remove(component);

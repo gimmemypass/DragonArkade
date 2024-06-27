@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Commands;
 using Components;
 using HECSFramework.Core;
@@ -20,16 +21,22 @@ namespace Systems
             fxPool = Owner.GetSystem<PoolFxGlobalSystem>();
         }
 
-        public async void CommandGlobalReact(SpawnFXCommand command)
+        public void CommandGlobalReact(SpawnFXCommand command)
+        {
+            SpawnFXAsync(command).Forget();
+        }
+
+        private async UniTask SpawnFXAsync(SpawnFXCommand command)
         {
             GameObject effect = await fxPool.GetEffectById(command.VfxId);
-            
+
             effect.transform.position = command.Position;
             if (command.Parent != null)
             {
                 effect.transform.SetParent(command.Parent);
                 effect.transform.localPosition = Vector3.zero;
             }
+
             effect.transform.localRotation = command.LocalRotation;
             effect.transform.localScale = command.Scale;
 

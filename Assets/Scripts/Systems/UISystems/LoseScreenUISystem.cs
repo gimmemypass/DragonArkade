@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Commands;
 using Components;
 using Components.MonoBehaviourComponents;
@@ -30,7 +31,12 @@ namespace Systems
             monoComponent.ResetButton.onClick.RemoveListener(Reset);
         }
 
-        private async void Reset()
+        private void Reset()
+        {
+            ResetAsync().Forget();
+        }
+
+        private async UniTask ResetAsync()
         {
             monoComponent.ResetButton.interactable = false;
             monoComponent.SoftValueReward.text = "0";

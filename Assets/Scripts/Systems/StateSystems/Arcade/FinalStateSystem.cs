@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Commands;
 using HECSFramework.Unity;
 using HECSFramework.Core;
@@ -34,7 +35,12 @@ namespace Systems
 
         protected override int State { get; } = GameStateIdentifierMap.Final;
 
-        protected override async void ProcessState(int from, int to)
+        protected override void ProcessState(int from, int to)
+        {
+            ProcessStateAsync().Forget();
+        }
+
+        private async UniTask ProcessStateAsync()
         {
             await ShowEmptyGroup();
             var levelData = levelsHolderComponent.LevelDatas[playerLevelComponent.Level];
@@ -46,12 +52,13 @@ namespace Systems
                 finalScreen.Init();
                 return;
             }
-            
+
             if (levelData.Waves.Length >
                 playerLevelComponent.WaveNumber + 1)
             {
                 playerLevelComponent.WaveNumber++;
-                EntityManager.Command(new ForceGameStateTransitionGlobalCommand(){GameState = GameStateIdentifierMap.PrepareWave});
+                EntityManager.Command(new ForceGameStateTransitionGlobalCommand()
+                    { GameState = GameStateIdentifierMap.PrepareWave });
             }
             else
             {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Commands;
 using Components;
 using Cysharp.Threading.Tasks;
@@ -28,12 +29,18 @@ namespace Systems
 
         protected override int State { get; } = GameStateIdentifierMap.FinishArena;
 
-        protected override async void ProcessState(int from, int to)
+        protected override void ProcessState(int from, int to)
+        {
+            ProcessStateAsync().Forget();
+        }
+
+        private async UniTask ProcessStateAsync()
         {
             foreach (var ai in aiFilter)
             {
                 ai.Command(new ForceStopAICommand());
             }
+
             await ShowEmptyGroup();
             var arenaFinishComponent = Owner.GetComponent<ArenaFinishComponent>();
             if (arenaFinishComponent.WinnerFaction == FactionIdentifierMap.PlayerFactionIdentifier)
@@ -49,7 +56,7 @@ namespace Systems
                 finalScreen.Init();
             }
         }
-        
+
         private UniTask ShowEmptyGroup()
         {
             return uiSystem.ShowUIGroup(new UIGroupCommand()
