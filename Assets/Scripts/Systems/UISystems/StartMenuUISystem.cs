@@ -24,7 +24,7 @@ namespace Systems
             
             monoComponent.StartButton.onClick.AddListener(StartBattle);
             monoComponent.ArenaButton.onClick.AddListener(StartArenaBattle);
-            ArenaButtonUpdateVisual(playerLevelComponent.Level);
+            // ArenaButtonUpdateVisual(playerLevelComponent.Level);
         }
 
         public override void Dispose()
@@ -47,12 +47,12 @@ namespace Systems
         {
         }
 
-        private void ArenaButtonUpdateVisual(int currentLevel)
-        {
-            // var arenaIsOpen = currentLevel >= arenaBattleGlobalConfigComponent.OpenAfterLevel;
-            var arenaIsOpen = true;
-            monoComponent.ArenaButton.gameObject.SetActive(arenaIsOpen);            
-            monoComponent.LockedArenaButton.gameObject.SetActive(!arenaIsOpen);            
-        }
+        // private void ArenaButtonUpdateVisual(int currentLevel)
+        // {
+        //     // var arenaIsOpen = currentLevel >= arenaBattleGlobalConfigComponent.OpenAfterLevel;
+        //     var arenaIsOpen = true;
+        //     monoComponent.ArenaButton.gameObject.SetActive(arenaIsOpen);            
+        //     monoComponent.LockedArenaButton.gameObject.SetActive(!arenaIsOpen);            
+        // }
     }
 }
